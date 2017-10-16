@@ -14,7 +14,8 @@
 * [Week 10](#weekten)
 
 ## <a name='weekthree'></a>
-
++ Create an outline for the project
++ Split into smaller groups (Pair up)  to work on individual sections of the project
 ## <a name='weekfour'></a>
 
 ## <a name='weekfive'></a>
