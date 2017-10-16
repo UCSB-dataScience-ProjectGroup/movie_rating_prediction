@@ -13,7 +13,7 @@
 * [Week 9](#weeknine)
 * [Week 10](#weekten)
 
-## <a name='weekthree'></a>
+## <a name='weekthree'></a>Week 3:
 + Create an outline for the project
 + Split into smaller groups (Pair up)  to work on individual sections of the project
 ## <a name='weekfour'></a>
