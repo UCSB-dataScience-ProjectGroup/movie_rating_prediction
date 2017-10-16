@@ -1,4 +1,4 @@
-# movie_rating_prediction
+# Movie Rating Prediction
 ### Contributors: Victoria Sneddon, Andrew Polk, Ivy Tran, Brandon Tran, Ari Gilmore, Danielle Rabinson, Jake Hickey
 
 ## Abstract
