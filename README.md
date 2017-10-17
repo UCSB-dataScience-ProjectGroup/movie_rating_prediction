@@ -16,16 +16,44 @@
 ## <a name='weekthree'></a>Week 3:
 + Create an outline for the project
 + Split into smaller groups (Pair up)  to work on individual sections of the project
-## <a name='weekfour'></a>
+## <a name='weekfour'></a>Week 4:
++ Work on group section of project
+## <a name='weekfive'></a>Week 5:
++ Work on group section of project
+## <a name='weeksix'></a>Week 6:
++ Start putting together the different portions that the smaller groups have been working on
+## <a name='weekseven'></a>Week 7:
++ Finish merging different sections of the project
+## <a name='weekeight'></a>Week 8:
++ Bug fixes
++ Add functionality (ex. Custom movies as input, Rate TV shows, add more parameters)
+## <a name='weeknine'></a>Week 9:
++ Bug fixes
++ Clean up project 
+## <a name='weekten'></a>Week 10:
++ Bug fixes
++ Clean up project
 
-## <a name='weekfive'></a>
+## Data Sources:
++ API rotten tomatoes
++ API imdb
++ API themoviedb
++ Kaggle
 
-## <a name='weeksix'></a>
+## Aspects:
++ Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
++ Data Algorithms (weighting actors vs. directors vs. budget…)
 
-## <a name='weekseven'></a>
++ Query data about movie title or movie id to get parameters
++ Query previous ratings of rating parameters
++ Create a method of storing data and accessing it from different parts of the program
++ Some sort of statistical analysis on ratings (Data algorithms)
++ Create an interface or web app to take input and display results
 
-## <a name='weekeight'></a>
+## Languages:
++ Python
++ HTML
 
-## <a name='weeknine'></a>
-
-## <a name='weekten'></a>
+## Blockers
++ Themoviedb has a 40 query per 10 second limit per api key.
++ Other api's probably have similar restrictions.
