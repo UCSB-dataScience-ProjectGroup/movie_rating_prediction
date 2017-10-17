@@ -14,6 +14,9 @@ We want to be able to predict the rating of a movie before it is released. We wa
 * [Week 9](#weeknine)
 * [Week 10](#weekten)
 
+## Basic flowchart outline of the project
+![Alt Text](/MovieRatings.png?raw=true "flow chart")
+
 ## <a name='weekthree'></a>Week 3:
 + Create an outline for the project
 + Split into smaller groups (Pair up)  to work on individual sections of the project
