@@ -1,5 +1,5 @@
 ![Alt text](/TitlePoster.png?raw=true "Movie Rating Prediction")
-### Contributors: Victoria Sneddon (Project Manager), Andrew Polk, Ivy Tran, Brandon Tran, Ari Gilmore, Danielle Rabinson, Jake Hickey
+### Contributors: Victoria Sneddon (Project Manager), Andrew Polk, Ivy Tran (LATE), Brandon Tran, Ari Gilmore, Danielle Rabinson, Jake Hickey
 
 ## Abstract
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
