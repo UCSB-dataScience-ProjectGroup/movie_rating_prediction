@@ -2,7 +2,7 @@
 ### Contributors: \n Victoria Sneddon, Andrew Polk, Ivy Tran, Brandon Tran, Ari Gilmore, Danielle Rabinson, Jake Hickey
 
 ## Abstract
-We want to be able to predict the rating of a movie before it is released.
+We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
 
 # Table of Contents
 * [Week 3](#weekthree)
