@@ -20,10 +20,9 @@ We want to be able to predict the rating of a movie before it is released. We wa
 ## Aspects:
 + Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
 + Data Algorithms (weighting actors vs. directors vs. budget…)
-
+#
 + Query data about movie title or movie id to get parameters
 + Query previous ratings of rating parameters
-#
 + Create a method of storing data and accessing it from different parts of the program
 + Some sort of statistical analysis on ratings (Data algorithms)
 + Create an interface or web app to take input and display results
