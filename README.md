@@ -17,33 +17,6 @@ We want to be able to predict the rating of a movie before it is released. We wa
 ## Basic flowchart outline of the project
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
 
-## <a name='weekthree'></a>Week 3:
-+ Create an outline for the project
-+ Split into smaller groups (Pair up)  to work on individual sections of the project
-## <a name='weekfour'></a>Week 4:
-+ Work on group section of project
-## <a name='weekfive'></a>Week 5:
-+ Work on group section of project
-## <a name='weeksix'></a>Week 6:
-+ Start putting together the different portions that the smaller groups have been working on
-## <a name='weekseven'></a>Week 7:
-+ Finish merging different sections of the project
-## <a name='weekeight'></a>Week 8:
-+ Bug fixes
-+ Add functionality (ex. Custom movies as input, Rate TV shows, add more parameters)
-## <a name='weeknine'></a>Week 9:
-+ Bug fixes
-+ Clean up project 
-## <a name='weekten'></a>Week 10:
-+ Bug fixes
-+ Clean up project
-
-## Data Sources:
-+ API rotten tomatoes
-+ API imdb
-+ API themoviedb
-+ Kaggle
-
 ## Aspects:
 + Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
 + Data Algorithms (weighting actors vs. directors vs. budget…)
@@ -66,6 +39,12 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Music
   + ect...
 
+## Data Sources:
++ API rotten tomatoes
++ API imdb
++ API themoviedb
++ Kaggle
+
 ## Languages:
 + Python
 + HTML
@@ -73,3 +52,25 @@ We want to be able to predict the rating of a movie before it is released. We wa
 ## Blockers
 + Themoviedb has a 40 query per 10 second limit per api key.
 + Other api's probably have similar restrictions.
+
+## Basic Project Timeline
+## <a name='weekthree'></a>Week 3:
++ Create an outline for the project
++ Split into smaller groups (Pair up)  to work on individual sections of the project
+## <a name='weekfour'></a>Week 4:
++ Work on group section of project
+## <a name='weekfive'></a>Week 5:
++ Work on group section of project
+## <a name='weeksix'></a>Week 6:
++ Start putting together the different portions that the smaller groups have been working on
+## <a name='weekseven'></a>Week 7:
++ Finish merging different sections of the project
+## <a name='weekeight'></a>Week 8:
++ Bug fixes
++ Add functionality (ex. Custom movies as input, Rate TV shows, add more parameters)
+## <a name='weeknine'></a>Week 9:
++ Bug fixes
++ Clean up project 
+## <a name='weekten'></a>Week 10:
++ Bug fixes
++ Clean up project
