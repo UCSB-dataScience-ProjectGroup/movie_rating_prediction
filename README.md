@@ -1,4 +1,5 @@
 ![Alt text](/TitlePoster.png?raw=true "Movie Rating Prediction")
+### REEL RATINGS
 ### Contributors: Victoria Sneddon (Project Manager), Andrew Polk, Ivy Tran (LATE), Brandon Tran, Ari Gilmore, Danielle Rabinson, Jake Hickey
 
 ## Abstract
