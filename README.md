@@ -63,21 +63,21 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
   + ### Week 3 Update:
-  	+ ####Brandon/Danielle:
+  	+ #### Brandon/Danielle:
 		+ Made an account for Amazon Web Services (AWS)
 		+ Downloaded AWS SDK for Java
 		+ Downloaded legacy Java 6 for Eclipse
 		+ Downloaded JVM 1.8 for Eclipse
 		+ Configured AWS Toolkit for Eclipse, and samples successfully
 		+ https://569112368633.signin.aws.amazon.com/console log in
-  	+ ####Ari/Ivy/Jake
+  	+ #### Ari/Ivy/Jake
 		+ What do u want to statistic?
 		+ Will weight the ratings of directors previous films based on date.
 		+ Take the sample mean of the ratings of the director’s movies and that will be the prediction
 		+ Award data? (how many oscars won) (later)
 		+ Age of the director (later)
 		+ Regression chart for when other factors come in
-  	+ ####Andrew/Victoria
+  	+ #### Andrew/Victoria
 		+ Created a simple script in python, using libraries: json, requests, datetime
 		+ The script accesses themoviedb and get the works and ratings for a director parsed into json
 		+ Working on ways to pass the information from the script to the stats team
