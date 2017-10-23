@@ -9,7 +9,7 @@ def getDirector(id):
 
     total = 0                                                       #int for total works
 
-    response = requests.get("https://api.themoviedb.org/3/" + combined_credits + "?api_key=cf52691a09177baa489ec3c13b1d5788&language=en-US") #query
+    response = requests.get("https://api.themoviedb.org/3/" + combined_credits + "?api_key=" + api_key + "&language=en-US") #query
     data = response.json() #parse data into json
     
     #print(json.dumps(data, skipkeys=True, sort_keys=True, indent=2))
@@ -27,8 +27,21 @@ def getDirector(id):
                 print("")
 
     print("Total works as director: " + str(total))                                                 #print total works number
+    print("")
 
+def getAPI_Key():
+    fo = open("api_keys.txt", "r")  #open file with api key
+    string = fo.read()              #copy file to string
+    temp = json.loads(string)       #parse string to json
+    fo.close()                      #close file
+    return temp["themoviedb"]       #return key for themoviedb
 
-person = input("ex(Spielberg = 488, Joss Whedon = 12891) \n Enter a director id: ") #Get input for director id from user
-print("")                                                                           
-getDirector(person)                                                                 #call getDirector method to start query
+# Main routine --------------------------------------------------------------------
+
+api_key = getAPI_Key() # get api key to be used for all queries
+person = "0" 
+while person != "": #if input is empty then exit
+    person = input("ex(Spielberg = 488, Joss Whedon = 12891) \n Enter a director id: ") #Get input for director id from user
+    print("")                                                                           
+    if(person != ""):
+        getDirector(person)                                                                 #call getDirector method to start query
