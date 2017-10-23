@@ -62,6 +62,16 @@ We want to be able to predict the rating of a movie before it is released. We wa
   ## <a name='weekthree'></a>Week 3:
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
+  + Week 3 Update:
+  + Brandon/Danielle:
+	+ Made an account for Amazon Web Services (AWS)
+	+ Downloaded AWS SDK for Java
+	+ Downloaded legacy Java 6 for Eclipse
+	+ Downloaded JVM 1.8 for Eclipse
+	+ Configured AWS Toolkit for Eclipse, and samples successfully
+	+ https://569112368633.signin.aws.amazon.com/console log in
+  + Ari/Ivy/Jake
+	+ What do u want to statistic?
   ## <a name='weekfour'></a>Week 4:
   + Work on group section of project
   ## <a name='weekfive'></a>Week 5:
