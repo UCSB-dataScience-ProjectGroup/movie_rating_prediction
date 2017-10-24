@@ -3,12 +3,12 @@ import json     #used for parsing data
 import datetime #used to get current time
 
 class GetParameter:
-    def getAPI_Key(api="themoviedb"):
+    def getAPI_Key(database="themoviedb"):
         fo = open("api_keys.txt", "r")  #open file with api key
         string = fo.read()              #copy file to string
         temp = json.loads(string)       #parse string to json
         fo.close()                      #close file
-        return temp[api]                #return key for chosen api
+        return temp[database]                #return key for chosen api
 
     # Get Director -----------------------------------------------------
     def getDirector(id, api_key):
