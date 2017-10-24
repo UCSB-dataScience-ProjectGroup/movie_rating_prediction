@@ -71,7 +71,6 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Configured AWS Toolkit for Eclipse, and samples successfully
 		+ https://569112368633.signin.aws.amazon.com/console log in
   	+ #### Ari/Ivy/Jake
-		+ What do u want to statistic?
 		+ Will weight the ratings of directors previous films based on date.
 		+ Take the sample mean of the ratings of the director’s movies and that will be the prediction
 		+ Award data? (how many oscars won) (later)
