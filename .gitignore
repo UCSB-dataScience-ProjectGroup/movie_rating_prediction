@@ -3,5 +3,6 @@
 api_keys.txt
 __pycache__
 
-#VirtualEnv Folder
+#VirtualEnv
 peerenv/
+Pipfile*
