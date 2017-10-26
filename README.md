@@ -136,6 +136,10 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	    │   ├── parameter_query.py 	<- downloads rating data for parameters
 	    |   └── api_keys.txt 	<- stores api keys to be used in query
 	    │
+	    ├── examples	<- Examples to help the stats team
+	    │   ├── actor_datacall_example.py
+	    │   └── director_datacall_example.py
+	    |
 	    ├── models         <- Scripts to train models and then use trained models to make
 	    │   │                 predictions
 	    │   └── predict_model.py <- replace with stats model
