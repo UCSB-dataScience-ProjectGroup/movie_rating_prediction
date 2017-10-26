@@ -58,6 +58,16 @@ We want to be able to predict the rating of a movie before it is released. We wa
 + Themoviedb has a 40 query per 10 second limit per api key.
 + Other api's probably have similar restrictions.
 
+## Creating a virtual environment
+   # First time run:
+   + ```sudo apt install virtualenv (if needed)
+   + ```virtualenv peerenv
+   # Starting virtualenv
+   + ```source peerenv/bin/activate
+   + ```pip install -r requirements.txt
+   # Closing virtualenv
+   + ```deactivate
+
 ## Basic Project Timeline
   ## <a name='weekthree'></a>Week 3:
   + Create an outline for the project
