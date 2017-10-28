@@ -131,14 +131,12 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	│
 	└── src                <- Source code for use in this project.
 	    ├── __init__.py    <- Makes src a Python module
+	    ├── example1.py    <- have to be here or cant import modules
+	    ├── example2.py
+	    ├── api_keys.txt 	<- stores api keys to be used in query
 	    │
 	    ├── data           <- Scripts to download or generate data
-	    │   ├── parameter_query.py 	<- downloads rating data for parameters
-	    |   └── api_keys.txt 	<- stores api keys to be used in query
-	    │
-	    ├── examples	<- Examples to help the stats team
-	    │   ├── actor_datacall_example.py
-	    │   └── director_datacall_example.py
+	    │   └── parameter_query.py 	<- downloads rating data for parameters 
 	    |
 	    ├── models         <- Scripts to train models and then use trained models to make
 	    │   │                 predictions
