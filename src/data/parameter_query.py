@@ -24,6 +24,7 @@ class GetParameter:
         data = response.json() #parse data into json
 
         results = {"works":[],          #temp dictionary for output
+                   "total_works": 0,
                    "awards":"unknown"}
 
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
@@ -37,7 +38,7 @@ class GetParameter:
                     results["works"].append(temp)                                                       #add temp dict to list of all works
                     total += 1                                                                          #add work to total
 
-        results["works"].append({"total_works":total})                                                  #add total to list of works
+        results["total_works"] = total;                                                  #add total to list of works
         return results                                                                                  #return json data
 
     # Get Actor -----------------------------------------------------
@@ -53,6 +54,7 @@ class GetParameter:
         data = response.json()
 
         results = {"works":[],
+                   "total_works":0,
                    "awards":"unknown"}
 
         for val in data["cast"]:
@@ -66,8 +68,9 @@ class GetParameter:
                             "popularity":val["popularity"],
                             "release_date":val["release_date"]}     
                     results["works"].append(temp)                                                       #add temp dict to list of all works
-                    total += 1     
-        results["works"].append({"total_works":total})
+                    total += 1
+                    
+        results["total_works"] = total;
         return results
 
     # Get Factor ------------------------------------------------------    
