@@ -3,21 +3,26 @@ import json                                 #json for output
 
 person = "0"
 data = ""
+
 while person != "": #if input is empty then exit
-    person = input("ex(SimonPegg = 11108, Ian McKellen = 1327) \n Enter a actor id: ") #Get input for director id from user
+    person = input("x(Spielberg = 488, Joss Whedon = 12891) \n Enter a director id: ") #Get input for director id from user
     print("")
     addition = 0
     mean = 0
     if(person != ""): #call director if not empty
         
         ### This is the code you really need V
-        data = GetParameter.getFactor(person, parameter="Actor")                                                               #call getDirector method to start query
-        print(json.dumps(data, indent=2)) #print output with indents
-        ###
+        data = GetParameter.getFactor(person, parameter="Director")             #call getDirector method to start query
+        print(json.dumps(data, indent=2))                                        #print output with indents
+        length = 0
         for val in data["works"]:
             if("rating" in val):
-                addition += val["rating"]
-                print(val["rating"])
-        #print(data["works"]["title"])#prints first title in works
-        mean = addition/(len(data["works"])-1)
-        print("Mean: ", mean)
+                if(val["rating"] != 0):
+                    length += 1
+                    addition += val["rating"]
+                    print(val["rating"])
+    
+    if(length > 0):
+        mean = addition/length
+
+    print("The following preview has been approved for a", round(mean,1), "rating!")
