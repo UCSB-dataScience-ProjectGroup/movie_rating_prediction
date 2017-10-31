@@ -24,5 +24,6 @@ while person != "": #if input is empty then exit
     
     if(length > 0):
         mean = addition/length
-
+    
     print("The following preview has been approved for a", round(mean,1), "rating!")
+
