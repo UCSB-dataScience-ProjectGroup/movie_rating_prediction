@@ -8,6 +8,7 @@ while person != "": #if input is empty then exit
     print("")
     addition = 0
     mean = 0
+    length =0;
     if(person != ""): #call director if not empty
         
         ### This is the code you really need V
@@ -16,8 +17,10 @@ while person != "": #if input is empty then exit
         ###
         for val in data["works"]:
             if("rating" in val):
-                addition += val["rating"]
-                print(val["rating"])
+                if(val["rating"] != 0):
+                    length += 1
+                    addition += val["rating"]
+                    print(val["rating"])
         #print(data["works"]["title"])#prints first title in works
-        mean = addition/(len(data["works"])-1)
+        mean = addition/(length)
         print("Mean: ", mean)
