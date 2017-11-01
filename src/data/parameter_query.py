@@ -28,9 +28,12 @@ class GetParameter:
                    "awards":"unknown"}
 
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
-            if(val["media_type"] == "movie" and val["job"] == "Director" and "release_date" in val):    #check movie type, if director, and contains release date
-                date = val["release_date"].split('-')                                                   #divide release date up into comparable parts
-                if(now.year >= int(date[0])):                                                           #check if movie has been released yet.... TODO:FIX
+            if(val["media_type"] == "movie" and val["job"] == "Director" and "release_date" in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
+                dateNow = int(str(now.year) + str(now.month) + str(now.day))
+                date = dateNow
+                if(val["release_date"] != ""):
+                    date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
+                if(dateNow > date):                                                                     #check if movie has been released yet....
                     temp = {"title":val["original_title"],                                              #create a temp dict with wanted values
                             "rating":val["vote_average"],
                             "popularity":val["popularity"],
@@ -43,6 +46,7 @@ class GetParameter:
 
     # Get Actor -----------------------------------------------------
     def getActor(id, api_key):
+        
         now = datetime.datetime.now()
 
         total = 0
@@ -58,11 +62,12 @@ class GetParameter:
                    "awards":"unknown"}
 
         for val in data["cast"]:
-            if(val["media_type"] == "movie" and "release_date" in val):    #check movie type, if director, and contains release date
-                date = "2017-11-10"
+            if(val["media_type"] == "movie" and "release_date" in val):                                 #check movie type, if director, and contains release date
+                dateNow = int(str(now.year) + str(now.month) + str(now.day))                            #TODO: replace dateNow with date of movie being looked at
+                date = dateNow
                 if(val["release_date"] != ""):
-                    date = val["release_date"].split('-')                                                   #divide release date up into comparable parts
-                if(now.year >= int(date[0])):                                                           #check if movie has been released yet.... TODO:FIX
+                    date = int(val["release_date"].replace("-", ""))
+                if(dateNow > date):                                                                     #check if movie has been released yet....
                     temp = {"title":val["original_title"],                                              #create a temp dict with wanted values
                             "rating":val["vote_average"],
                             "popularity":val["popularity"],
