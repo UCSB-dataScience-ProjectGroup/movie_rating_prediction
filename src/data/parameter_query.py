@@ -29,11 +29,12 @@ class GetParameter:
 
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
             if(val["media_type"] == "movie" and val["job"] == "Director" and "release_date" in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
-                dateNow = int(str(now.year) + str(now.month) + str(now.day))
+                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
                 date = dateNow
                 if(val["release_date"] != ""):
                     date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
                 if(dateNow > date):                                                                     #check if movie has been released yet....
+                    print(json.dumps(val, indent=2))
                     temp = {"title":val["original_title"],                                              #create a temp dict with wanted values
                             "rating":val["vote_average"],
                             "popularity":val["popularity"],
@@ -63,7 +64,7 @@ class GetParameter:
 
         for val in data["cast"]:
             if(val["media_type"] == "movie" and "release_date" in val):                                 #check movie type, if director, and contains release date
-                dateNow = int(str(now.year) + str(now.month) + str(now.day))                            #TODO: replace dateNow with date of movie being looked at
+                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))          #TODO: replace dateNow with date of movie being looked at
                 date = dateNow
                 if(val["release_date"] != ""):
                     date = int(val["release_date"].replace("-", ""))
@@ -80,6 +81,7 @@ class GetParameter:
 
     # Get Factor ------------------------------------------------------    
     def getFactor(id, parameter="Director", database="themoviedb"):
+        print("Getting factor")
         api_key = GetParameter.getAPI_Key(database)             # get api key to be used for all queries
         data = 0                                                #set data to something to prevent error
         if(database == "themoviedb"):                           #check if using themoviedb
