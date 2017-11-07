@@ -7,7 +7,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 # Table of Contents
 * [Week 3](#weekthree)
-* [Week 3-6](#weekthree-six)
+* [Week 4-6](#weekfour-six)
 * [Week 7](#weekseven)
 * [Week 8](#weekeight)
 * [Week 9](#weeknine)
@@ -91,7 +91,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Still need to get director age, awards and any other data the stats team wants
 		+ Get data from rottenTomatoes/IMDB ect...?
 
-  ## <a name='weekthree-six'></a>Week 3-6:
+  ## <a name='weekfour-six'></a>Week 4-6:
   + Start putting together the different portions that the smaller groups have been working on
   + ### Week 3-6 Update:
   	+ #### Brandon/Danielle:
