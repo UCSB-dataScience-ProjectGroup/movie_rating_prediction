@@ -7,9 +7,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 # Table of Contents
 * [Week 3](#weekthree)
-* [Week 4](#weekfour)
-* [Week 5](#weekfive)
-* [Week 6](#weeksix)
+* [Week 3-6](#weekthree-six)
 * [Week 7](#weekseven)
 * [Week 8](#weekeight)
 * [Week 9](#weeknine)
@@ -93,12 +91,19 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Still need to get director age, awards and any other data the stats team wants
 		+ Get data from rottenTomatoes/IMDB ect...?
 
-  ## <a name='weekfour'></a>Week 4:
-  + Work on group section of project
-  ## <a name='weekfive'></a>Week 5:
-  + Work on group section of project
-  ## <a name='weeksix'></a>Week 6:
+  ## <a name='weekthree-six'></a>Week 3-6:
   + Start putting together the different portions that the smaller groups have been working on
+  + ### Week 3-6 Update:
+  	+ #### Brandon/Danielle:
+		+ Downloaded IMDb's datasets using AWS S3 services
+		+ Gave Andrew the data to merge
+  	+ #### Ari/Ivy/Jake
+		+ Considering date of directors' previous movies as a factor in rating
+		+ Using number of ratings per movie rating to calculate mean value of directors' previous films
+  	+ #### Andrew/Victoria
+		+ Created script to access IMBDb's title names, ratings, etc.
+		+ Created script to merge ratings and title info tsv files
+		+ Will utilize both Movie DB and IMDb as foundation of project's data
   ## <a name='weekseven'></a>Week 7:
   + Finish merging different sections of the project
   ## <a name='weekeight'></a>Week 8:
