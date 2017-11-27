@@ -1,6 +1,8 @@
 from data.parameter_query import GetParameter    #Get parameter class to call query
 import json                                 #json for output
 
+print("Depreciated: use datacall_example.py instead")
+'''
 person = "0"
 data = ""
 while person != "": #if input is empty then exit
@@ -21,3 +23,4 @@ while person != "": #if input is empty then exit
         #print(data["works"]["title"])#prints first title in works
         mean = addition/(len(data["works"])-1)
         print("Mean: ", mean)
+'''

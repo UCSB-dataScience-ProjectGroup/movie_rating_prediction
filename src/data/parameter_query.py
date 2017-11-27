@@ -3,12 +3,12 @@ import json     #used for parsing data
 import datetime #used to get current time
 
 class GetParameter:
-    def getAPI_Key(database="themoviedb"):
+    def getAPI_Key():
         fo = open("api_keys.txt", "r")  #open file with api key
         string = fo.read()              #copy file to string
         temp = json.loads(string)       #parse string to json
         fo.close()                      #close file
-        return temp[database]                #return key for chosen api
+        return temp["themoviedb"]       #return key for chosen api
 
     # Get Director -----------------------------------------------------
     def getDirector(id, api_key):
@@ -80,13 +80,12 @@ class GetParameter:
         return results
 
     # Get Factor ------------------------------------------------------    
-    def getFactor(id, parameter="Director", database="themoviedb"):
+    def getFactor(id, parameter="Director"):
         print("Getting factor")
-        api_key = GetParameter.getAPI_Key(database)             # get api key to be used for all queries
+        api_key = GetParameter.getAPI_Key()                     # get api key to be used for all queries
         data = 0                                                #set data to something to prevent error
-        if(database == "themoviedb"):                           #check if using themoviedb
-            if(parameter == "Director"):                        #check parameter we're looking for
-                data = GetParameter.getDirector(id, api_key)    #call query to get paramters
-            if(parameter == "Actor"):
-                data = GetParameter.getActor(id, api_key)
+        if(parameter == "Director"):                            #check parameter we're looking for
+            data = GetParameter.getDirector(id, api_key)        #call query to get paramters
+        if(parameter == "Actor"):
+            data = GetParameter.getActor(id, api_key)
         return data                                             #return data
