@@ -43,10 +43,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + ect...
 
 ## Data Sources:
-+ API rotten tomatoes
 + API imdb
-+ API themoviedb
-+ Kaggle
++ API TheMovieDB
 
 ## Languages:
 + Python
@@ -65,6 +63,24 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	+ > pip install -r requirements.txt
 + ### Closing virtualenv
 	+ > deactivate
+
+## Running the code
++ ### Make sure you have:
+	+ api_keys.txt
+	+ IMDBRatings.tsv
+	+ TMDBRatings.tsv
++ ### Running in terminal
+	+ Start virtual environment
+	+ > cd movie_rating_prediction/src/
+	+ > python3 dataCall_example.py
+	+ Enter Movie Name
++ ### Running in Idle
+	+ Start virtual environment
+	+ > cd movie_rating_prediction/src/
+	+ > idle3
+	+ Open dataCall_example.py
+	+ Run Module
+	+Enter Movie Name
 
 ## Basic Project Timeline
   ## <a name='weekthree'></a>Week 3:
@@ -120,7 +136,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 	├── LICENSE
 	├── README.md          <- The top-level README for developers using this project.
-	├── data
+	│
+	├── data	<- We cant save the data online so this is empty
 	│   ├── external       <- Data from third party sources.
 	│   ├── interim        <- Intermediate data that has been transformed.
 	│   ├── processed      <- The final, canonical data sets for modeling.
@@ -136,16 +153,22 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	│
 	└── src                <- Source code for use in this project.
 	    ├── __init__.py    <- Makes src a Python module
-	    ├── example1.py    <- have to be here or cant import modules
-	    ├── example2.py
-	    ├── api_keys.txt 	<- stores api keys to be used in query
+	    ├── dataCall_example.py    <- Whole script run from here
+	    │
+	    ├── api_keys.txt 	<- stores api keys to be used in query (Not online)
+	    ├── IMDBRatings.tsv <- stores the ratings sorted by IMDB ids
+	    ├── TMDBRatings.tsv <- stores the ratings sorted by TMDB ids
 	    │
 	    ├── data           <- Scripts to download or generate data
-	    │   └── parameter_query.py 	<- downloads rating data for parameters 
+	    │   └── GetParamters.py 	<- downloads parameters from movie name
+	    │   └── FactorQuery.py 	<- downloads paramter info and finds movie ratings
+	    │   └── LineCount.py 	<- counts the lines in a file, used for searching IMDB ratings
+	    │   └── Search.py 		<- searches the IMDB rating files with either IMDB id or TMDB id
+	    │   └── SaveLoadJson.py 	<- standardizes the saving and loading of Json data between scripts
 	    |
 	    ├── models         <- Scripts to train models and then use trained models to make
 	    │   │                 predictions
-	    │   └── predict_model.py <- replace with stats model
+	    │   └── Stats.py <- generates some guess based on ratings.txt
 	    │
 	    └── visualization  <- Scripts to create exploratory and results oriented visualizations
 	        └── visualize.py
