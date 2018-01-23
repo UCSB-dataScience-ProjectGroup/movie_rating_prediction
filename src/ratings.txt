@@ -1,0 +1,1510 @@
+{
+  "Directors": [
+    {
+      "works": [
+        {
+          "title": "The Rocketeer",
+          "votes": "45706",
+          "rating": "6.4",
+          "release_date": "1991-06-21"
+        },
+        {
+          "title": "Honey, I Shrunk the Kids",
+          "votes": "117360",
+          "rating": "6.3",
+          "release_date": "1989-06-22"
+        },
+        {
+          "title": "The Pagemaster",
+          "votes": "17456",
+          "rating": "6.0",
+          "release_date": "1994-11-23"
+        }
+      ],
+      "name": "Joe Johnston",
+      "total_works": 3
+    }
+  ],
+  "Actors": [
+    {
+      "works": [
+        {
+          "title": "The Fisher King",
+          "votes": "68037",
+          "rating": "7.6",
+          "release_date": "1991-09-20"
+        },
+        {
+          "title": "Dead Poets Society",
+          "votes": "304656",
+          "rating": "8.0",
+          "release_date": "1989-06-09"
+        },
+        {
+          "title": "Mrs. Doubtfire",
+          "votes": "199641",
+          "rating": "6.9",
+          "release_date": "1993-11-24"
+        },
+        {
+          "title": "Good Morning, Vietnam",
+          "votes": "107299",
+          "rating": "7.3",
+          "release_date": "1987-12-23"
+        },
+        {
+          "title": "Aladdin",
+          "votes": "288413",
+          "rating": "8.0",
+          "release_date": "1992-11-25"
+        },
+        {
+          "title": "Hook",
+          "votes": "197220",
+          "rating": "6.7",
+          "release_date": "1991-12-11"
+        },
+        {
+          "title": "Cadillac Man",
+          "votes": "11418",
+          "rating": "5.6",
+          "release_date": "1990-05-18"
+        },
+        {
+          "title": "Awakenings",
+          "votes": "101810",
+          "rating": "7.8",
+          "release_date": "1990-12-19"
+        },
+        {
+          "title": "Robin Williams: An Evening with Robin Williams",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1982-01-01"
+        },
+        {
+          "title": "Robin Williams: A Night at the Met",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-08-09"
+        },
+        {
+          "title": "The World According to Garp",
+          "votes": "22002",
+          "rating": "7.2",
+          "release_date": "1982-08-13"
+        },
+        {
+          "title": "Popeye",
+          "votes": "25115",
+          "rating": "5.2",
+          "release_date": "1980-12-12"
+        },
+        {
+          "title": "The Best of Times",
+          "votes": "5538",
+          "rating": "5.9",
+          "release_date": "1986-01-31"
+        },
+        {
+          "title": "Nine Months",
+          "votes": "31485",
+          "rating": "5.4",
+          "release_date": "1995-07-12"
+        },
+        {
+          "title": "Dead Again",
+          "votes": "22842",
+          "rating": "7.0",
+          "release_date": "1991-08-23"
+        },
+        {
+          "title": "Moscow on the Hudson",
+          "votes": "9369",
+          "rating": "6.5",
+          "release_date": "1984-06-04"
+        },
+        {
+          "title": "Toys",
+          "votes": "27803",
+          "rating": "5.0",
+          "release_date": "1992-12-18"
+        },
+        {
+          "title": "To Wong Foo, Thanks for Everything! Julie Newmar",
+          "votes": "23054",
+          "rating": "6.4",
+          "release_date": "1995-09-07"
+        },
+        {
+          "title": "Shakes the Clown",
+          "votes": "3967",
+          "rating": "5.6",
+          "release_date": "1991-03-13"
+        },
+        {
+          "title": "Club Paradise",
+          "votes": "5061",
+          "rating": "4.9",
+          "release_date": "1986-07-11"
+        },
+        {
+          "title": "FernGully: The Last Rainforest",
+          "votes": "22596",
+          "rating": "6.5",
+          "release_date": "1992-04-10"
+        },
+        {
+          "title": "The Survivors",
+          "votes": "3748",
+          "rating": "5.8",
+          "release_date": "1983-06-24"
+        },
+        {
+          "title": "The Adventures of Baron Munchausen",
+          "votes": "44019",
+          "rating": "7.2",
+          "release_date": "1989-03-10"
+        },
+        {
+          "title": "Being Human",
+          "votes": "3446",
+          "rating": "5.4",
+          "release_date": "1994-05-06"
+        },
+        {
+          "title": "In Search of Dr. Seuss",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-11-06"
+        },
+        {
+          "title": "Seize the Day",
+          "votes": "1044",
+          "rating": "6.1",
+          "release_date": "1986-09-09"
+        },
+        {
+          "title": "But... Seriously",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-03-25"
+        },
+        {
+          "title": "Robin Williams: An Evening With, Live And Uncensored",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1984-08-21"
+        },
+        {
+          "title": "Saturday Night Live: 15th Anniversary",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1989-09-24"
+        },
+        {
+          "title": "I'm from Hollywood",
+          "votes": "444",
+          "rating": "7.6",
+          "release_date": "1989-06-15"
+        },
+        {
+          "title": "A Wish for Wings That Work",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-12-18"
+        },
+        {
+          "title": "The First 100 Years: A Celebration of American Movies",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1995-06-05"
+        },
+        {
+          "title": "Can I Do It Till I Need Glasses?",
+          "votes": "314",
+          "rating": "4.3",
+          "release_date": "1977-08-01"
+        },
+        {
+          "title": "The Earth Day Special",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-04-22"
+        },
+        {
+          "title": "The Tale of the Frog Prince",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1982-09-11"
+        },
+        {
+          "title": "Un Voyage \u00e0 Travers le Temps",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-01-11"
+        },
+        {
+          "title": "Back to Neverland",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1989-04-30"
+        },
+        {
+          "title": "Portrait of a White Marriage",
+          "votes": "54",
+          "rating": "5.3",
+          "release_date": "1988-01-01"
+        },
+        {
+          "title": "Rabbit Ears - The Fool and the Flying Ship",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-06-22"
+        },
+        {
+          "title": "Bob Goldthwait -- Don't Watch This Show",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-05-24"
+        },
+        {
+          "title": "Sitcom: The Adventures of Garry Marshall",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1979-01-01"
+        },
+        {
+          "title": "The Young Comedians All-Star Reunion",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-03-01"
+        },
+        {
+          "title": "E.T. and Friends: Magical Movie Visitors",
+          "votes": "0",
+          "rating": "0",
+          "release_date": ""
+        },
+        {
+          "title": "Andy Kaufman Plays Carnegie Hall",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1980-06-12"
+        }
+      ],
+      "name": "Robin Williams",
+      "total_works": 44
+    },
+    {
+      "works": [
+        {
+          "title": "A.D.",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1985-03-31"
+        },
+        {
+          "title": "Ri\u00a2hie Ri\u00a2h",
+          "votes": "53842",
+          "rating": "5.3",
+          "release_date": "1994-12-21"
+        },
+        {
+          "title": "Caravaggio",
+          "votes": "4096",
+          "rating": "6.7",
+          "release_date": "1986-08-29"
+        },
+        {
+          "title": "Lace",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1984-02-26"
+        },
+        {
+          "title": "An Indecent Obsession",
+          "votes": "74",
+          "rating": "6.7",
+          "release_date": "1985-05-23"
+        },
+        {
+          "title": "Being Human",
+          "votes": "3446",
+          "rating": "5.4",
+          "release_date": "1994-05-06"
+        }
+      ],
+      "name": "Jonathan Hyde",
+      "total_works": 6
+    },
+    {
+      "works": [
+        {
+          "title": "Interview with the Vampire",
+          "votes": "256064",
+          "rating": "7.6",
+          "release_date": "1994-11-11"
+        },
+        {
+          "title": "High Strung",
+          "votes": "1744",
+          "rating": "7.0",
+          "release_date": "1991-01-01"
+        },
+        {
+          "title": "The Bonfire of the Vanities",
+          "votes": "18928",
+          "rating": "5.5",
+          "release_date": "1990-12-21"
+        },
+        {
+          "title": "Little Women",
+          "votes": "39434",
+          "rating": "7.3",
+          "release_date": "1994-12-21"
+        },
+        {
+          "title": "Darkness Before Dawn",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-02-15"
+        },
+        {
+          "title": "Greedy",
+          "votes": "11060",
+          "rating": "6.3",
+          "release_date": "1994-03-04"
+        },
+        {
+          "title": "New York Stories",
+          "votes": "14688",
+          "rating": "6.4",
+          "release_date": "1989-03-10"
+        }
+      ],
+      "name": "Kirsten Dunst",
+      "total_works": 7
+    },
+    {
+      "works": [
+        {
+          "title": "Man's Best Friend",
+          "votes": "3275",
+          "rating": "5.1",
+          "release_date": "1993-11-19"
+        },
+        {
+          "title": "Cries from the Heart",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-10-16"
+        },
+        {
+          "title": "Casey's Gift: For Love of a Child",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-09-24"
+        }
+      ],
+      "name": "Bradley Pierce",
+      "total_works": 3
+    },
+    {
+      "works": [
+        {
+          "title": "Rain Man",
+          "votes": "409898",
+          "rating": "8.0",
+          "release_date": "1988-12-11"
+        },
+        {
+          "title": "Beethoven's 2nd",
+          "votes": "21092",
+          "rating": "4.8",
+          "release_date": "1993-12-16"
+        },
+        {
+          "title": "Dave",
+          "votes": "42916",
+          "rating": "6.8",
+          "release_date": "1993-05-07"
+        },
+        {
+          "title": "Beethoven",
+          "votes": "54394",
+          "rating": "5.6",
+          "release_date": "1992-04-03"
+        },
+        {
+          "title": "Only You",
+          "votes": "16798",
+          "rating": "6.5",
+          "release_date": "1994-09-17"
+        },
+        {
+          "title": "Now and Then",
+          "votes": "22787",
+          "rating": "6.8",
+          "release_date": "1995-10-20"
+        }
+      ],
+      "name": "Bonnie Hunt",
+      "total_works": 6
+    },
+    {
+      "works": [
+        {
+          "title": "Malice",
+          "votes": "19468",
+          "rating": "6.4",
+          "release_date": "1993-09-29"
+        },
+        {
+          "title": "Green Card",
+          "votes": "19662",
+          "rating": "6.2",
+          "release_date": "1990-12-23"
+        },
+        {
+          "title": "The Paint Job",
+          "votes": "162",
+          "rating": "7.0",
+          "release_date": "1993-09-30"
+        },
+        {
+          "title": "Say Anything...",
+          "votes": "71026",
+          "rating": "7.4",
+          "release_date": "1989-04-14"
+        },
+        {
+          "title": "Bugsy",
+          "votes": "22278",
+          "rating": "6.8",
+          "release_date": "1991-12-10"
+        },
+        {
+          "title": "Wild Palms",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-05-16"
+        }
+      ],
+      "name": "Bebe Neuwirth",
+      "total_works": 6
+    },
+    {
+      "works": [
+        {
+          "title": "The Player",
+          "votes": "45396",
+          "rating": "7.6",
+          "release_date": "1992-04-03"
+        },
+        {
+          "title": "Boomerang",
+          "votes": "21788",
+          "rating": "5.4",
+          "release_date": "1992-06-30"
+        },
+        {
+          "title": "Blankman",
+          "votes": "7062",
+          "rating": "4.8",
+          "release_date": "1994-08-19"
+        },
+        {
+          "title": "Loose Cannons",
+          "votes": "3798",
+          "rating": "4.8",
+          "release_date": "1990-02-09"
+        },
+        {
+          "title": "Tales from the Hood",
+          "votes": "5124",
+          "rating": "6.2",
+          "release_date": "1995-05-24"
+        },
+        {
+          "title": "In the Army Now",
+          "votes": "10658",
+          "rating": "4.8",
+          "release_date": "1994-08-12"
+        },
+        {
+          "title": "A Soldier's Story",
+          "votes": "7257",
+          "rating": "7.2",
+          "release_date": "1984-09-14"
+        },
+        {
+          "title": "Streamers",
+          "votes": "1512",
+          "rating": "6.7",
+          "release_date": "1983-01-01"
+        },
+        {
+          "title": "Beer",
+          "votes": "555",
+          "rating": "5.2",
+          "release_date": "1985-08-30"
+        },
+        {
+          "title": "Ich und Er",
+          "votes": "408",
+          "rating": "4.2",
+          "release_date": "1988-09-14"
+        },
+        {
+          "title": "Amazon Women on the Moon",
+          "votes": "8773",
+          "rating": "6.2",
+          "release_date": "1987-09-18"
+        },
+        {
+          "title": "I'm Gonna Git You Sucka",
+          "votes": "10489",
+          "rating": "6.6",
+          "release_date": "1988-12-14"
+        },
+        {
+          "title": "Goldilocks and the Three Bears",
+          "votes": "72",
+          "rating": "5.9",
+          "release_date": "1995-01-01"
+        },
+        {
+          "title": "From the Hip",
+          "votes": "1830",
+          "rating": "6.2",
+          "release_date": "1987-02-06"
+        },
+        {
+          "title": "Almost an Angel",
+          "votes": "3313",
+          "rating": "5.4",
+          "release_date": "1990-12-21"
+        }
+      ],
+      "name": "David Alan Grier",
+      "total_works": 15
+    },
+    {
+      "works": [
+        {
+          "title": "The Untouchables",
+          "votes": "235100",
+          "rating": "7.9",
+          "release_date": "1987-06-02"
+        },
+        {
+          "title": "The Dead Pool",
+          "votes": "33445",
+          "rating": "6.3",
+          "release_date": "1988-07-12"
+        },
+        {
+          "title": "Everybody's All-American",
+          "votes": "2560",
+          "rating": "6.2",
+          "release_date": "1988-11-04"
+        },
+        {
+          "title": "Rocket Gibraltar",
+          "votes": "1598",
+          "rating": "6.6",
+          "release_date": "1988-09-02"
+        },
+        {
+          "title": "Pharaoh's  Army",
+          "votes": "488",
+          "rating": "6.9",
+          "release_date": "1995-01-01"
+        },
+        {
+          "title": "The Old Man and the Sea",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-03-25"
+        },
+        {
+          "title": "An American Story",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-11-29"
+        },
+        {
+          "title": "Four Eyes and Six-Guns",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-12-07"
+        },
+        {
+          "title": "She Led Two Lives",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-11-20"
+        },
+        {
+          "title": "Caught in the Act",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-07-22"
+        },
+        {
+          "title": "Legacy of Lies",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-04-22"
+        },
+        {
+          "title": "Alex Haley's Queen",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-02-14"
+        }
+      ],
+      "name": "Patricia Clarkson",
+      "total_works": 12
+    },
+    {
+      "works": [
+        {
+          "title": "Little Man Tate",
+          "votes": "12210",
+          "rating": "6.7",
+          "release_date": "1991-09-06"
+        },
+        {
+          "title": "Digger",
+          "votes": "169",
+          "rating": "5.7",
+          "release_date": "1993-04-22"
+        }
+      ],
+      "name": "Adam Hann-Byrd",
+      "total_works": 2
+    },
+    {
+      "works": [],
+      "name": "Laura Bell Bundy",
+      "total_works": 0
+    },
+    {
+      "works": [
+        {
+          "title": "K-9",
+          "votes": "27383",
+          "rating": "6.0",
+          "release_date": "1989-04-28"
+        },
+        {
+          "title": "Arachnophobia",
+          "votes": "53819",
+          "rating": "6.4",
+          "release_date": "1990-08-09"
+        },
+        {
+          "title": "Samaritan: The Mitch Snyder Story",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-05-19"
+        },
+        {
+          "title": "The Verdict",
+          "votes": "29086",
+          "rating": "7.8",
+          "release_date": "1982-12-17"
+        },
+        {
+          "title": "Bird",
+          "votes": "9711",
+          "rating": "7.2",
+          "release_date": "1988-09-30"
+        },
+        {
+          "title": "Unspeakable Acts",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-01-15"
+        },
+        {
+          "title": "Popeye Doyle",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-01-01"
+        },
+        {
+          "title": "The Room Upstairs",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-01-31"
+        },
+        {
+          "title": "Drive Like Lightning",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-01-08"
+        },
+        {
+          "title": "The Rocketeer",
+          "votes": "45706",
+          "rating": "6.4",
+          "release_date": "1991-06-21"
+        },
+        {
+          "title": "False Arrest",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-11-03"
+        },
+        {
+          "title": "Burglar",
+          "votes": "3466",
+          "rating": "5.0",
+          "release_date": "1987-03-20"
+        },
+        {
+          "title": "The Preppie Murder",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1989-09-24"
+        },
+        {
+          "title": "Quiet Victory: The Charlie Wedemeyer Story",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1988-12-16"
+        },
+        {
+          "title": "Brighton Beach Memoirs",
+          "votes": "2727",
+          "rating": "6.9",
+          "release_date": "1986-01-01"
+        },
+        {
+          "title": "Guilty Until Proven Innocent",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-01-01"
+        },
+        {
+          "title": "Who Is Julia?",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1986-10-26"
+        }
+      ],
+      "name": "James Handy",
+      "total_works": 17
+    },
+    {
+      "works": [
+        {
+          "title": "The Stepfather",
+          "votes": "10017",
+          "rating": "6.8",
+          "release_date": "1987-01-23"
+        },
+        {
+          "title": "Gold Diggers: The Secret of Bear Mountain",
+          "votes": "3570",
+          "rating": "6.0",
+          "release_date": "1995-11-03"
+        },
+        {
+          "title": "Matinee",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1988-10-12"
+        },
+        {
+          "title": "Someone Else's Child",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-12-04"
+        },
+        {
+          "title": "Needful Things",
+          "votes": "18353",
+          "rating": "6.2",
+          "release_date": "1993-08-27"
+        }
+      ],
+      "name": "Gillian Barber",
+      "total_works": 5
+    },
+    {
+      "works": [
+        {
+          "title": "Someone Else's Child",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-12-04"
+        }
+      ],
+      "name": "Brandon Obray",
+      "total_works": 1
+    },
+    {
+      "works": [],
+      "name": "Cyrus Thiedeke",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Gary Joseph Thorup",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Leonard Zola",
+      "total_works": 0
+    },
+    {
+      "works": [
+        {
+          "title": "April Fool's Day",
+          "votes": "11529",
+          "rating": "6.2",
+          "release_date": "1986-03-28"
+        },
+        {
+          "title": "The Adventures of Captain Zoom in Outer Space",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1995-12-01"
+        },
+        {
+          "title": "Wild Horse Hank",
+          "votes": "98",
+          "rating": "6.0",
+          "release_date": "1979-01-01"
+        },
+        {
+          "title": "Walls",
+          "votes": "13",
+          "rating": "6.5",
+          "release_date": "1984-01-01"
+        },
+        {
+          "title": "That Cold Day in the Park",
+          "votes": "980",
+          "rating": "7.0",
+          "release_date": "1969-06-08"
+        }
+      ],
+      "name": "Lloyd Berry",
+      "total_works": 5
+    },
+    {
+      "works": [
+        {
+          "title": "Le peloton d'ex\u00e9cution",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-01-01"
+        },
+        {
+          "title": "Heart of a Child",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-05-09"
+        },
+        {
+          "title": "Always Remember I Love You",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-12-23"
+        }
+      ],
+      "name": "Malcolm Stewart",
+      "total_works": 3
+    },
+    {
+      "works": [
+        {
+          "title": "The Devil and Daniel Mouse",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1978-10-01"
+        }
+      ],
+      "name": "Annabel Kershaw",
+      "total_works": 1
+    },
+    {
+      "works": [
+        {
+          "title": "The Rocketeer",
+          "votes": "45706",
+          "rating": "6.4",
+          "release_date": "1991-06-21"
+        },
+        {
+          "title": "The Unborn II",
+          "votes": "293",
+          "rating": "4.0",
+          "release_date": "1994-04-20"
+        },
+        {
+          "title": "Star Trek VI: The Undiscovered Country",
+          "votes": "59829",
+          "rating": "7.2",
+          "release_date": "1991-12-05"
+        },
+        {
+          "title": "Beverly Hills Cop II",
+          "votes": "91341",
+          "rating": "6.5",
+          "release_date": "1987-05-18"
+        },
+        {
+          "title": "Vibes",
+          "votes": "2857",
+          "rating": "5.5",
+          "release_date": "1988-08-05"
+        }
+      ],
+      "name": "Darryl Henriques",
+      "total_works": 5
+    },
+    {
+      "works": [],
+      "name": "Robyn Driscoll",
+      "total_works": 0
+    },
+    {
+      "works": [
+        {
+          "title": "The Omen",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1995-09-08"
+        }
+      ],
+      "name": "Peter Bryant",
+      "total_works": 1
+    },
+    {
+      "works": [],
+      "name": "Sarah Gilson",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Florica Vlad",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "June Lion",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Brenda Lockmuller",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Frederick Richardson",
+      "total_works": 0
+    },
+    {
+      "works": [
+        {
+          "title": "Aladdin",
+          "votes": "288413",
+          "rating": "8.0",
+          "release_date": "1992-11-25"
+        },
+        {
+          "title": "The Transformers: The Movie",
+          "votes": "33679",
+          "rating": "7.3",
+          "release_date": "1986-08-08"
+        },
+        {
+          "title": "Pocahontas",
+          "votes": "134532",
+          "rating": "6.7",
+          "release_date": "1995-06-14"
+        },
+        {
+          "title": "Blondie & Dagwood",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-05-15"
+        },
+        {
+          "title": "The Rescuers Down Under",
+          "votes": "30314",
+          "rating": "6.9",
+          "release_date": "1990-11-16"
+        },
+        {
+          "title": "A Chipmunk Christmas",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1981-12-14"
+        },
+        {
+          "title": "Now You See Him, Now You Don't",
+          "votes": "1393",
+          "rating": "6.3",
+          "release_date": "1972-07-12"
+        },
+        {
+          "title": "The Lion King",
+          "votes": "727178",
+          "rating": "8.5",
+          "release_date": "1994-06-23"
+        },
+        {
+          "title": "Cartoon All-Stars to the Rescue",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-04-21"
+        },
+        {
+          "title": "The Little Engine That Could",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-01-01"
+        },
+        {
+          "title": "Up the Creek",
+          "votes": "2406",
+          "rating": "5.6",
+          "release_date": "1984-04-06"
+        },
+        {
+          "title": "The Computer Wore Tennis Shoes",
+          "votes": "3401",
+          "rating": "6.0",
+          "release_date": "1969-12-30"
+        },
+        {
+          "title": "Once Upon a Girl....",
+          "votes": "139",
+          "rating": "5.0",
+          "release_date": "1976-01-01"
+        },
+        {
+          "title": "Scooby-Doo Goes Hollywood",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1979-10-21"
+        },
+        {
+          "title": "Garfield Gets a Life",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-05-08"
+        },
+        {
+          "title": "The Pagemaster",
+          "votes": "17456",
+          "rating": "6.0",
+          "release_date": "1994-11-23"
+        },
+        {
+          "title": "A Goofy Movie",
+          "votes": "37071",
+          "rating": "6.8",
+          "release_date": "1995-04-07"
+        },
+        {
+          "title": "Garfield's Feline Fantasies",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-05-18"
+        },
+        {
+          "title": "Garfield: His 9 Lives",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1988-11-22"
+        },
+        {
+          "title": "Garfield Goes Hollywood",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-05-08"
+        },
+        {
+          "title": "Jetsons: The Movie",
+          "votes": "3927",
+          "rating": "5.5",
+          "release_date": "1990-06-06"
+        },
+        {
+          "title": "The Grinch Grinches the Cat in the Hat",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1982-05-20"
+        },
+        {
+          "title": "A Flintstones Christmas Carol",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-11-24"
+        },
+        {
+          "title": "The Nutcracker Scoob",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1984-12-01"
+        },
+        {
+          "title": "The Land Before Time III: The Time of the Great Giving",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1995-12-12"
+        },
+        {
+          "title": "Scruffy",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1980-10-04"
+        },
+        {
+          "title": "A Wish for Wings That Work",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1991-12-18"
+        },
+        {
+          "title": "The Return of Optimus Prime",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-11-17"
+        },
+        {
+          "title": "Roller Coaster Rabbit",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-06-15"
+        },
+        {
+          "title": "Trail Mix-Up",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-03-12"
+        },
+        {
+          "title": "Prehysteria!",
+          "votes": "1323",
+          "rating": "4.0",
+          "release_date": "1993-06-30"
+        },
+        {
+          "title": "The Itsy Bitsy Spider",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-07-30"
+        },
+        {
+          "title": "Jonny's Golden Quest",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-04-04"
+        },
+        {
+          "title": "How To Frame A Figg",
+          "votes": "640",
+          "rating": "6.6",
+          "release_date": "1971-02-01"
+        },
+        {
+          "title": "Gremlins 2: The New Batch",
+          "votes": "75702",
+          "rating": "6.3",
+          "release_date": "1990-06-15"
+        },
+        {
+          "title": "Teenage Mutant Ninja Turtles II: The Secret of the Ooze",
+          "votes": "45026",
+          "rating": "6.0",
+          "release_date": "1991-03-22"
+        },
+        {
+          "title": "The Return of Jafar",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-05-20"
+        },
+        {
+          "title": "The New Adventures of Pippi Longstocking",
+          "votes": "3482",
+          "rating": "5.9",
+          "release_date": "1988-07-28"
+        },
+        {
+          "title": "Tiny Toons - Spring Break",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1994-03-27"
+        },
+        {
+          "title": "Who Framed Roger Rabbit",
+          "votes": "154123",
+          "rating": "7.7",
+          "release_date": "1988-06-21"
+        },
+        {
+          "title": "I Yabba Dabba Do!",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1993-02-07"
+        },
+        {
+          "title": "H\u00e4gar the Horrible",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1989-11-01"
+        },
+        {
+          "title": "The Smurfs Springtime Special",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1982-04-07"
+        },
+        {
+          "title": "The Smurfic Games",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1984-05-20"
+        },
+        {
+          "title": "My Smurfy Valentine",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1983-02-13"
+        },
+        {
+          "title": "Have Yourself A Goofy Little Christmas",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-12-05"
+        },
+        {
+          "title": "Deck the Halls with Wacky Walls",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1983-12-11"
+        },
+        {
+          "title": "The Tiny Tree",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1975-12-14"
+        },
+        {
+          "title": "The Dogfather",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1974-06-27"
+        },
+        {
+          "title": "Deviled Yeggs",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1974-12-29"
+        },
+        {
+          "title": "Watch the Birdie",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1975-03-20"
+        },
+        {
+          "title": "Hug\u00f3, a v\u00edzil\u00f3",
+          "votes": "340",
+          "rating": "7.1",
+          "release_date": "1976-01-01"
+        },
+        {
+          "title": "Star Faries",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1985-10-08"
+        },
+        {
+          "title": "Raiders of the Lost Ark",
+          "votes": "726758",
+          "rating": "8.5",
+          "release_date": "1981-06-12"
+        },
+        {
+          "title": "The Chipmunk Adventure",
+          "votes": "4397",
+          "rating": "7.2",
+          "release_date": "1987-05-22"
+        },
+        {
+          "title": "Tis the Season to Be Smurfy",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-12-13"
+        },
+        {
+          "title": "This is America, Charlie Brown",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1988-10-21"
+        },
+        {
+          "title": "Species",
+          "votes": "64845",
+          "rating": "5.8",
+          "release_date": "1995-07-07"
+        },
+        {
+          "title": "The Mayflower Voyagers",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1988-10-21"
+        },
+        {
+          "title": "Inspector Gadget Saves Christmas",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1992-12-04"
+        },
+        {
+          "title": "Scooby-Doo Meets Batman",
+          "votes": "112",
+          "rating": "7.1",
+          "release_date": "1972-06-14"
+        },
+        {
+          "title": "Scooby-Doo Meets Batman",
+          "votes": "112",
+          "rating": "7.1",
+          "release_date": "1972-06-14"
+        },
+        {
+          "title": "Homeward Bound: The Incredible Journey",
+          "votes": "36184",
+          "rating": "6.9",
+          "release_date": "1993-02-03"
+        },
+        {
+          "title": "The Little Troll Prince",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1987-11-27"
+        },
+        {
+          "title": "The Transformers: More Than Meets The Eye",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1984-09-17"
+        },
+        {
+          "title": "The Prince and the Pauper",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1990-11-16"
+        },
+        {
+          "title": "Beastmaster 2: Through the Portal of Time",
+          "votes": "2475",
+          "rating": "3.8",
+          "release_date": "1991-08-30"
+        },
+        {
+          "title": "Blondie & Dagwood: Second Wedding Workout",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1989-11-01"
+        },
+        {
+          "title": "A Clue for Scooby-Doo",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1969-09-20"
+        },
+        {
+          "title": "The Shadow",
+          "votes": "20010",
+          "rating": "6.0",
+          "release_date": "1994-07-01"
+        },
+        {
+          "title": "Gordy",
+          "votes": "1703",
+          "rating": "3.9",
+          "release_date": "1995-05-12"
+        },
+        {
+          "title": "Christmas Comes to Pac-land",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1982-12-16"
+        },
+        {
+          "title": "A Pinky and the Brain Christmas",
+          "votes": "0",
+          "rating": "0",
+          "release_date": "1995-12-13"
+        }
+      ],
+      "name": "Frank Welker",
+      "total_works": 73
+    },
+    {
+      "works": [],
+      "name": "Jaysen Clough",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Daniel Olsen",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "Falko Schilling",
+      "total_works": 0
+    },
+    {
+      "works": [],
+      "name": "David Szehi",
+      "total_works": 0
+    },
+    {
+      "works": [
+        {
+          "title": "Alien\u00b3",
+          "votes": "232779",
+          "rating": "6.4",
+          "release_date": "1992-05-22"
+        },
+        {
+          "title": "Pumpkinhead",
+          "votes": "15819",
+          "rating": "6.2",
+          "release_date": "1988-10-14"
+        },
+        {
+          "title": "Alien\u00b3",
+          "votes": "232779",
+          "rating": "6.4",
+          "release_date": "1992-05-22"
+        },
+        {
+          "title": "The Monster Squad",
+          "votes": "21706",
+          "rating": "7.1",
+          "release_date": "1987-08-14"
+        }
+      ],
+      "name": "Tom Woodruff Jr.",
+      "total_works": 4
+    }
+  ]
+}
