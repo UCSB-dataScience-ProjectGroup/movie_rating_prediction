@@ -48,6 +48,7 @@ class GetParameters:
         Movie = GetParameters.getID(string)
         result["Date"] = int(Movie["release_date"].replace("-",""))
         result["Title"] = Movie["title"]
+        print(Movie["title"])
         
         details = GetParameters.getDetails(Movie["id"])
         #Find crew

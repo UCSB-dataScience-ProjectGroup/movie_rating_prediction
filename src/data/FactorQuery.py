@@ -52,6 +52,7 @@ class FactorQuery:
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
             if(val["media_type"] == "movie" and val["job"] == "Director" and "release_date" in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
                 dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
+                date = dateNow
                 if FactorQuery.dateMovie != 0:
                     dateNow = FactorQuery.dateMovie
                 if(val["release_date"] != ""):
@@ -84,7 +85,8 @@ class FactorQuery:
 
         for val in data["cast"]:
             if(val["media_type"] == "movie" and "release_date" in val):                                 #check movie type, if director, and contains release date
-                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))          #TODO: replace dateNow with date of movie being looked 
+                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))          #TODO: replace dateNow with date of movie being looked
+                date = dateNow
                 if FactorQuery.dateMovie != 0:
                     dateNow = FactorQuery.dateMovie
                 if(val["release_date"] != ""):
