@@ -1,14 +1,21 @@
 import json
-from data.FactorQuery import FactorQuery
-from data.SaveLoadJson import SaveLoadJson
+from data.FactorQuery import FactorQuery as FQ
+from data.SaveLoadJson import SaveLoadJson as SLJ
+from data.GetParameters import GetParameters as GP
 
-filename = 'ratings.txt'
+filename = 'parameters.txt'
+movie = "0"
 
-#getParameters() //Danielle and Brandon's code
+while movie != "":
+    print(" ")
+    movie = input("Enter a movie name! \n")
+    print(" ")
 
-FactorQuery.getFactors() #get ratings for those parameters //my code
+    GP.find(movie) #Danielle and Brandon's code
 
-#analyze() the ratings and get rating //Ari, Ivy, Jake's code
+    FQ.getFactors() #get ratings for those parameters //my code
 
-data = SaveLoadJson.load(filename) #to load ratings into json object
-print(json.dumps(data, indent=2))
+    #analyze() the ratings and get rating #Ari, Ivy, Jake's code
+
+    data = SLJ.load(filename) #to load ratings into json object
+    print(json.dumps(data, indent=2))
