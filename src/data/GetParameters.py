@@ -13,7 +13,9 @@ class GetParameters:
     tempJson = {"Date":0,
                 "Title":"",
                 "Directors":[],
-                "Actors":[]
+                "Actors":[],
+                "Writers":[],
+                "Producers":[]
                 }
 
     # Functions ----------------------------------------------------------------
@@ -51,11 +53,16 @@ class GetParameters:
         print(Movie["title"])
         
         details = GetParameters.getDetails(Movie["id"])
+        #print(json.dumps(details, indent=2))
         #Find crew
         for person in details["crew"]:
             #Find directors
             if person["job"] == "Director":
                 result["Directors"].append(person["id"])
+            if person["department"] == "Writing":
+                result["Writers"].append(person["id"])
+            if person["job"] == "Producer":
+                result["Producers"].append(person["id"])
 
         #find cast
         for person in details["cast"]:
