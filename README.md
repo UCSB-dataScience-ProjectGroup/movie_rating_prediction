@@ -48,7 +48,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 + Some sort of statistical analysis on ratings (Data algorithms) 
 + Create an interface or web app to take input and display results
 #
-+ Factors available to use: 
++ Paramaters available to use: 
   + Average movie rating
   + Actors
   + Director
@@ -59,19 +59,21 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Genre
   + Cinematographer
   + Music
-  + ect...
+  + etc..
 
 # <a name='datasources'></a>Data Sources
-+ API imdb
-+ API TheMovieDB
++ IMDb
++ TheMovieDB
 
 # <a name='languages'></a>Languages
-+ Python
-+ HTML
++ Python - scripting
++ HTML - website
++ Java - AWS API
 
 # <a name='blockers'></a>Blockers
-+ Themoviedb has a 40 query per 10 second limit per api key.
-+ Other api's probably have similar restrictions.
++ TheMovieDB has a 40 query per 10 second limit per api key.
++ AWS requires paid subscription
++ IMDb data must be refreshed manually
 
 # <a name='virtenv'></a>Creating a virtual environment
 + ### First time run:
@@ -158,8 +160,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
   #
   ## <a name='winterquarter'></a>Winter 2018
   ## <a name='goals'></a>Goals:
-  + blah
-  + blah
+  + Finish scripting programs to fetch parameters from movie names
+  + Focus on documentation, here and on Inertia7
 
 # <a name='structure'></a>Structure
 
