@@ -1,10 +1,17 @@
 ![Alt text](/TitlePoster.png?raw=true "Movie Rating Prediction")
 # REEL RATINGS
-### Contributors: Victoria Sneddon (Project Manager), Andrew Polk, Ivy Tran, Brandon Tran, Ari Gilmore, Danielle Robinson, Jake Hickey
+### Contributors: 
++ Victoria Sneddon (Project Manager)
++ Andrew Polk
++ Ivy Tran
++ Brandon Tran
++ Ari Gilmore
++ Danielle Robinson
++ Jake Hickey
 
 ## Abstract
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
-
+#
 # Table of Contents
 * [Flowchart](#flowchart)
 * [Aspects](#aspects)
@@ -29,10 +36,10 @@ We want to be able to predict the rating of a movie before it is released. We wa
 </details>
 	
 
-## <a name='flowchart'></a>Project Flowchart
+# <a name='flowchart'></a>Project Flowchart
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
 
-## <a name='aspects'></a>Aspects:
+# <a name='aspects'></a>Aspects:
 + Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
 + Data Algorithms (weighting actors vs. directors vs. budget…)
 #
@@ -58,19 +65,19 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Music
   + ect...
 
-## <a name='datasources'></a>Data Sources:
+# <a name='datasources'></a>Data Sources:
 + API imdb
 + API TheMovieDB
 
-## <a name='languages'></a>Languages:
+# <a name='languages'></a>Languages:
 + Python
 + HTML
 
-## <a name='blockers'></a>Blockers
+# <a name='blockers'></a>Blockers
 + Themoviedb has a 40 query per 10 second limit per api key.
 + Other api's probably have similar restrictions.
 
-## <a name='virtenv'></a>Creating a virtual environment
+# <a name='virtenv'></a>Creating a virtual environment
 + ### First time run:
    	+ > sudo apt install virtualenv (if needed)
    	+ > virtualenv peerenv
@@ -80,7 +87,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 + ### Closing virtualenv
 	+ > deactivate
 
-## <a name='runcode'></a>Running the code
+# <a name='runcode'></a>Running the code
 + ### Make sure you have:
 	+ api_keys.txt
 	+ IMDBRatings.tsv
@@ -98,7 +105,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	+ Run Module
 	+Enter Movie Name
 
-## Project Timeline
+# Project Timeline
   ## <a name='fallquarter'></a>Fall 2017
   ## <a name='weekthree'></a>Week 3:
   + Create an outline for the project
@@ -158,7 +165,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + blah
   + blah
 
-## <a name='structure'></a>Structure
+# <a name='structure'></a>Structure
 
 	├── LICENSE
 	├── README.md          <- The top-level README for developers using this project.
