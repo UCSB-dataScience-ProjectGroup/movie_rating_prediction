@@ -15,6 +15,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 * [Week 9](#weeknine)
 * [Week 10](#weekten)
 </details>
+
 * [Winter 2018](#winterquarter)
 
 	
