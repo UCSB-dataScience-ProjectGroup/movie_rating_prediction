@@ -6,13 +6,18 @@
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
 
 # Table of Contents
-* [Fall Quarter](#fallquarter)
+<details><summary>Fall 2017</summary>
+	
 * [Week 3](#weekthree)
 * [Week 4-6](#weekfour-six)
 * [Week 7](#weekseven)
 * [Week 8](#weekeight)
 * [Week 9](#weeknine)
 * [Week 10](#weekten)
+</details>
+* [Winter 2018](#winterquarter)
+
+	
 
 ## Basic flowchart outline of the project
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
@@ -84,7 +89,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	+Enter Movie Name
 
 ## Project Timeline
-  ## <a name='fallquarter'></a>Fall Quarter
+  ## <a name='fallquarter'></a>Fall 2017
   ## <a name='weekthree'></a>Week 3:
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
@@ -133,6 +138,11 @@ We want to be able to predict the rating of a movie before it is released. We wa
   ## <a name='weekten'></a>Week 10:
   + Bug fixes
   + Clean up project
+  
+  ## <a name='winterquarter'></a>Winter 2018
+  ## <a name='goals'></a>Goals:
+  + blah
+  + blah
 
 ## Structure
 
