@@ -3,6 +3,7 @@ import requests
 import json
 import copy
 from data.SaveLoadJson import SaveLoadJson
+from data.Search import Search
 
 # Class ------------------------------------------------------------------------
 class GetParameters:
@@ -12,13 +13,15 @@ class GetParameters:
 
     tempJson = {"Date":0,
                 "Title":"",
+                "Rating":0,
                 "Directors":[],
                 "Actors":[],
                 "Writers":[],
                 "Producers":[]
                 }
-
+    
     # Functions ----------------------------------------------------------------
+    # GetID - takes movie name, returns int ------------------------------------
     def getID(string):
         inpt = string.replace(' ', '%20')
 
@@ -30,9 +33,22 @@ class GetParameters:
         response = requests.request("GET", url[0]+api_key+url[1]+inpt+url[2], data=payload)
         
         data = response.json()
-        return data["results"][0]
+        return data["results"][0]["id"]
 
+    # GetDetails - takes ID, returns movie details -----------------------------
     def getDetails(ID):
+        api_key = SaveLoadJson.load(GetParameters.api_key_file)["TMDB"]["key"]
+
+        url = ["https://api.themoviedb.org/3/movie/","?api_key="]
+
+        payload = "{}"
+        response = requests.request("GET", url[0]+str(ID)+url[1]+api_key, data=payload)
+
+        data = response.json()
+        return data
+
+    # GetCredits - takes ID, returns movie credits -----------------------------
+    def getCredits(ID):
         api_key = SaveLoadJson.load(GetParameters.api_key_file)["TMDB"]["key"]
 
         url = ["https://api.themoviedb.org/3/movie/","/credits?api_key="]
@@ -43,20 +59,30 @@ class GetParameters:
         data = response.json()
         return data
 
-
-    def find(string):
+    #Takes in movie ID and queries parameters ----------------------------------
+    def get(ids, debug=False):
         result = copy.deepcopy(GetParameters.tempJson)
     
-        Movie = GetParameters.getID(string)
-        result["Date"] = int(Movie["release_date"].replace("-",""))
+        Movie = GetParameters.getDetails(ids)
+        if debug == True:
+            print(Movie["title"])
+
+        #Find date and title ----------------
+        if Movie["release_date"] != "":
+            result["Date"] = int(Movie["release_date"].replace("-",""))
         result["Title"] = Movie["title"]
-        print(Movie["title"])
+
+        #Find rating ------------------------
+        rating = "0\t0\t0\t0\n"
+        temprating = Search.find(Movie["id"])
+        if temprating != "NULL":
+            rating = temprating
+        rating = rating.split('\t')
+        result["Rating"] = rating[2]
         
-        details = GetParameters.getDetails(Movie["id"])
-        #print(json.dumps(details, indent=2))
-        #Find crew
+        details = GetParameters.getCredits(Movie["id"])
+        #Find crew --------------------------
         for person in details["crew"]:
-            #Find directors
             if person["job"] == "Director":
                 result["Directors"].append(person["id"])
             if person["department"] == "Writing":
@@ -64,9 +90,15 @@ class GetParameters:
             if person["job"] == "Producer":
                 result["Producers"].append(person["id"])
 
-        #find cast
+        #find cast --------------------------
         for person in details["cast"]:
             result["Actors"].append(person["id"])
 
+        #Save data --------------------------
         SaveLoadJson.save(GetParameters.filename, result)
-    
+
+    #Called when you have a movie name --------------------------------------
+    #Finds the movie ID from that string
+    def find(string, debug=False):
+        ids = GetParameters.getID(string)
+        GetParameters.get(ids, debug)

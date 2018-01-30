@@ -6,11 +6,11 @@ from data.SaveLoadJson import SaveLoadJson
 from data.Search import Search
 
 class FactorQuery:
+    debug = False
     filename = 'parameters.txt'
     api_key_file = 'api_keys.txt'
     outputFile = 'ratings.txt'
     
-    params = ["Directors","Actors","Writers"]
     resultStruct = {
                     "name":"",
                     "total_works":0,
@@ -72,7 +72,8 @@ class FactorQuery:
 
         results["total_works"] = total;#add total to list of works
         results["name"] = FactorQuery.getName(id, api_key)
-        print("Found " + str(total) + " work(s) for " + results["name"])
+        if FactorQuery.debug == True:
+            print("Found " + str(total) + " work(s) for " + results["name"])
         return results                                                                                  #return json data
 
     # Get Actor -----------------------------------------------------
@@ -106,7 +107,8 @@ class FactorQuery:
                     
         results["total_works"] = total;
         results["name"] = FactorQuery.getName(id, api_key)
-        print("Found " + str(total) + " work(s) for " + results["name"])
+        if FactorQuery.debug == True:
+            print("Found " + str(total) + " work(s) for " + results["name"])
         return results
 
     # Get Department -----------------------------------------------------
@@ -140,12 +142,15 @@ class FactorQuery:
 
         results["total_works"] = total;#add total to list of works
         results["name"] = FactorQuery.getName(id, api_key)
-        print("Found " + str(total) + " work(s) for " + results["name"])
+        if FactorQuery.debug == True:
+            print("Found " + str(total) + " work(s) for " + results["name"])
         return results                                                                                  #return json data
 
     # Get Factor ------------------------------------------------------    
-    def getFactors():
-        print("Getting factor")
+    def getFactors(debug=False):
+        FactorQuery.debug = debug
+        if debug == True:
+            print("Getting factors")
         api_key = SaveLoadJson.load(FactorQuery.api_key_file)["TMDB"]["key"]                         # get api key to be used for all queries
         parameters = SaveLoadJson.load(FactorQuery.filename)                                                #set data to something to prevent error
         
@@ -159,19 +164,23 @@ class FactorQuery:
             FactorQuery.dateMovie = parameters["Date"]
 
         if "Directors" in parameters:
-            print("Getting works for " + str(len(parameters["Directors"])) + " director(s)")
+            if debug == True:
+                print("Getting works for " + str(len(parameters["Directors"])) + " director(s)")
             for dctr in parameters["Directors"]:
                 data["Directors"].append(FactorQuery.getJob(dctr, api_key, "Director"))
         if "Actors" in parameters:
-            print("Getting works for " + str(len(parameters["Actors"])) + " actor(s)")
+            if debug == True:
+                print("Getting works for " + str(len(parameters["Actors"])) + " actor(s)")
             for actr in parameters["Actors"]:
                 data["Actors"].append(FactorQuery.getActor(actr, api_key))
         if "Writers" in parameters:
-            print("Getting works for " + str(len(parameters["Writers"])) + " writer(s)")
+            if debug == True:
+                print("Getting works for " + str(len(parameters["Writers"])) + " writer(s)")
             for wrtr in parameters["Writers"]:
                 data["Writers"].append(FactorQuery.getDepartment(wrtr, api_key, "Writing"))
         if "Producers" in parameters:
-            print("Getting works for " + str(len(parameters["Producers"])) + " producer(s)")
+            if debug == True:
+                print("Getting works for " + str(len(parameters["Producers"])) + " producer(s)")
             for prdcr in parameters["Producers"]:
                 data["Producers"].append(FactorQuery.getDepartment(prdcr, api_key, "Producer"))
         #print(json.dumps(data, indent=2))
