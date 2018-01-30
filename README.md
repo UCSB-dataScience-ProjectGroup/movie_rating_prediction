@@ -6,21 +6,15 @@
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
 
 # Table of Contents
-[Flowchart](#flowchart)
+* [Flowchart](#flowchart)
+* [Aspects](#aspects)
+* [Datasources](#datasources)
+* [Languages](#languages)
+* [Blockers](#blockers)
+* [Setting Up Virtual Environment](#virtenv)
+* [Running the Code](#runcode)
 
-[Aspects](#aspects)
-
-[Datasources](#datasources)
-
-[Languages](#languages)
-
-[Blockers](#blockers)
-
-[Setting Up Virtual Environment](#virtenv)
-
-[Running the Code](#runcode)
-
-<details><summary>Timeline</summary>
+&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Timeline</summary>
 
 <details><summary>Fall 2017</summary>
 	
@@ -32,10 +26,10 @@ We want to be able to predict the rating of a movie before it is released. We wa
 * [Week 10](#weekten)
 </details>
 
-[Winter 2018](#winterquarter)
+* [Winter 2018](#winterquarter)
 </details>
 
-[Structure](#structure)
+* [Structure](#structure)
 	
 
 ## <a name='flowchart'></a>Project Flowchart
