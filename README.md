@@ -102,7 +102,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 # Project Timeline
   ## <a name='fallquarter'></a>Fall 2017
-  ## <a name='weekthree'></a>Week 1-3:
+  ## <a name='weekone-three'></a>Week 1-3:
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
   + ### Week 1-3 Update:
