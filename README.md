@@ -13,6 +13,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 * [Blockers](#blockers)
 * [Setting Up Virtual Environment](#virtenv)
 * [Running the Code](#runcode)
+* [Structure](#structure)
 <details><summary>Timeline</summary>
 <details><summary>Fall 2017</summary>
 	
@@ -26,8 +27,6 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 * [Winter 2018](#winterquarter)
 </details>
-
-* [Structure](#structure)
 	
 
 ## <a name='flowchart'></a>Project Flowchart
