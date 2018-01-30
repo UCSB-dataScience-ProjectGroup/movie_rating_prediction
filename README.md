@@ -24,12 +24,9 @@ We want to be able to predict the rating of a movie before it is released. We wa
 <details><summary>Timeline</summary>
 <details><summary>Fall 2017</summary>
 	
-* [Week 3](#weekthree)
+* [Week 1-3](#weekone-three)
 * [Week 4-6](#weekfour-six)
-* [Week 7](#weekseven)
-* [Week 8](#weekeight)
-* [Week 9](#weeknine)
-* [Week 10](#weekten)
+* [Week 7-10](#weekseven-ten)
 </details>
 
 [Winter 2018](#winterquarter)
@@ -105,10 +102,10 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 # Project Timeline
   ## <a name='fallquarter'></a>Fall 2017
-  ## <a name='weekthree'></a>Week 3:
+  ## <a name='weekthree'></a>Week 1-3:
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
-  + ### Week 3 Update:
+  + ### Week 1-3 Update:
   	+ #### Brandon/Danielle: Data Collection
 		+ Made an account for Amazon Web Services (AWS)
 		+ Downloaded AWS SDK for Java
@@ -122,7 +119,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Award data? (how many oscars won) (later)
 		+ Age of the director (later)
 		+ Regression chart for when other factors come in
-  	+ #### Andrew/Victoria: Data Cleaning, Scripting
+  	+ #### Andrew/Victoria: Data Cleaning/Scripting
 		+ Created a simple script in python, using libraries: json, requests, datetime
 		+ The script accesses themoviedb and get the works and ratings for a director parsed into json
 		+ Working on ways to pass the information from the script to the stats team
@@ -131,7 +128,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
   ## <a name='weekfour-six'></a>Week 4-6:
   + Start putting together the different portions that the smaller groups have been working on
-  + ### Week 3-6 Update:
+  + ### Week 4-6 Update:
   	+ #### Brandon/Danielle:
 		+ Downloaded IMDb's datasets using AWS S3 services
 		+ Gave Andrew the data to merge
@@ -143,20 +140,11 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Created script to merge ratings and title info tsv files
 		+ Will utilize both Movie DB and IMDb as foundation of project's data
 		
-  ## <a name='weekseven'></a>Week 7:
+  ## <a name='weekseven-ten'></a>Week 7-10:
   + Finish merging different sections of the project
-  
-  ## <a name='weekeight'></a>Week 8:
-  + Bug fixes
-  + Add functionality (ex. Custom movies as input, Rate TV shows, add more parameters)
-  
-  ## <a name='weeknine'></a>Week 9:
-  + Bug fixes
-  + Clean up project 
-  
-  ## <a name='weekten'></a>Week 10:
-  + Bug fixes
-  + Clean up project
+  + ### Week 7-10 Update:
+  		+ Wrote data regression algorithm to weigh directors' previous films
+		+ Wrote scripting programs to input movie ID number and output parameters
   #
   ## <a name='winterquarter'></a>Winter 2018
   ## <a name='goals'></a>Goals:
