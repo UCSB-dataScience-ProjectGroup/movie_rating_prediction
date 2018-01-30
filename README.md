@@ -6,6 +6,22 @@
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
 
 # Table of Contents
+[Flowchart](#flowchart)
+
+[Aspects](#aspects)
+
+[Datasources](#datasources)
+
+[Languages](#languages)
+
+[Blockers](#blockers)
+
+[Setting Up Virtual Environment](#virtenv)
+
+[Running the Code](#runcode)
+
+<details><summary>Timeline</summary>
+
 <details><summary>Fall 2017</summary>
 	
 * [Week 3](#weekthree)
@@ -17,13 +33,15 @@ We want to be able to predict the rating of a movie before it is released. We wa
 </details>
 
 [Winter 2018](#winterquarter)
+</details>
 
+[Structure](#structure)
 	
 
-## Basic flowchart outline of the project
+## <a name='flowchart'></a>Project Flowchart
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
 
-## Aspects:
+## <a name='aspects'></a>Aspects:
 + Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
 + Data Algorithms (weighting actors vs. directors vs. budget…)
 #
@@ -49,19 +67,19 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Music
   + ect...
 
-## Data Sources:
+## <a name='datasources'></a>Data Sources:
 + API imdb
 + API TheMovieDB
 
-## Languages:
+## <a name='languages'></a>Languages:
 + Python
 + HTML
 
-## Blockers
+## <a name='blockers'></a>Blockers
 + Themoviedb has a 40 query per 10 second limit per api key.
 + Other api's probably have similar restrictions.
 
-## Creating a virtual environment
+## <a name='virtenv'></a>Creating a virtual environment
 + ### First time run:
    	+ > sudo apt install virtualenv (if needed)
    	+ > virtualenv peerenv
@@ -71,7 +89,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 + ### Closing virtualenv
 	+ > deactivate
 
-## Running the code
+## <a name='runcode'></a>Running the code
 + ### Make sure you have:
 	+ api_keys.txt
 	+ IMDBRatings.tsv
@@ -128,24 +146,28 @@ We want to be able to predict the rating of a movie before it is released. We wa
 		+ Created script to access IMBDb's title names, ratings, etc.
 		+ Created script to merge ratings and title info tsv files
 		+ Will utilize both Movie DB and IMDb as foundation of project's data
+		
   ## <a name='weekseven'></a>Week 7:
   + Finish merging different sections of the project
+  
   ## <a name='weekeight'></a>Week 8:
   + Bug fixes
   + Add functionality (ex. Custom movies as input, Rate TV shows, add more parameters)
+  
   ## <a name='weeknine'></a>Week 9:
   + Bug fixes
   + Clean up project 
+  
   ## <a name='weekten'></a>Week 10:
   + Bug fixes
   + Clean up project
-  
+  #
   ## <a name='winterquarter'></a>Winter 2018
   ## <a name='goals'></a>Goals:
   + blah
   + blah
 
-## Structure
+## <a name='structure'></a>Structure
 
 	├── LICENSE
 	├── README.md          <- The top-level README for developers using this project.
