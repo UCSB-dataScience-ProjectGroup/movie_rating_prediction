@@ -6,6 +6,7 @@
 We want to be able to predict the rating of a movie before it is released. We want to be able to input a movie or upcoming movie title and output the predicted movie rating.
 
 # Table of Contents
+* [Fall Quarter](#fallquarter)
 * [Week 3](#weekthree)
 * [Week 4-6](#weekfour-six)
 * [Week 7](#weekseven)
@@ -82,7 +83,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	+ Run Module
 	+Enter Movie Name
 
-## Basic Project Timeline
+## Project Timeline
+  ## <a name='fallquarter'></a>Fall Quarter
   ## <a name='weekthree'></a>Week 3:
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
