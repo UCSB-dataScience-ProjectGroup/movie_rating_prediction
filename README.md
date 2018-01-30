@@ -39,7 +39,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 # <a name='flowchart'></a>Project Flowchart
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
 
-# <a name='aspects'></a>Aspects:
+# <a name='aspects'></a>Aspects
 + Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
 + Data Algorithms (weighting actors vs. directors vs. budget…)
 #
@@ -65,11 +65,11 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Music
   + ect...
 
-# <a name='datasources'></a>Data Sources:
+# <a name='datasources'></a>Data Sources
 + API imdb
 + API TheMovieDB
 
-# <a name='languages'></a>Languages:
+# <a name='languages'></a>Languages
 + Python
 + HTML
 
@@ -111,20 +111,20 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Create an outline for the project
   + Split into smaller groups (Pair up)  to work on individual sections of the project
   + ### Week 3 Update:
-  	+ #### Brandon/Danielle:
+  	+ #### Brandon/Danielle: Data Collection
 		+ Made an account for Amazon Web Services (AWS)
 		+ Downloaded AWS SDK for Java
 		+ Downloaded legacy Java 6 for Eclipse
 		+ Downloaded JVM 1.8 for Eclipse
 		+ Configured AWS Toolkit for Eclipse, and samples successfully
 		+ https://569112368633.signin.aws.amazon.com/console log in
-  	+ #### Ari/Ivy/Jake
+  	+ #### Ari/Ivy/Jake: Stats/Algorithms
 		+ Will weight the ratings of directors previous films based on date.
 		+ Take the sample mean of the ratings of the director’s movies and that will be the prediction
 		+ Award data? (how many oscars won) (later)
 		+ Age of the director (later)
 		+ Regression chart for when other factors come in
-  	+ #### Andrew/Victoria
+  	+ #### Andrew/Victoria: Data Cleaning, Scripting
 		+ Created a simple script in python, using libraries: json, requests, datetime
 		+ The script accesses themoviedb and get the works and ratings for a director parsed into json
 		+ Working on ways to pass the information from the script to the stats team
