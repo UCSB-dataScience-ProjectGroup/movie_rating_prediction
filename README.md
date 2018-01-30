@@ -13,9 +13,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 * [Blockers](#blockers)
 * [Setting Up Virtual Environment](#virtenv)
 * [Running the Code](#runcode)
-
-&nbsp;&nbsp;&nbsp;&nbsp;<details><summary>Timeline</summary>
-
+<details><summary>Timeline</summary>
 <details><summary>Fall 2017</summary>
 	
 * [Week 3](#weekthree)
