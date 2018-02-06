@@ -1,6 +1,6 @@
 import linecache
 import math
-from data.LineCount import LineCount
+from utilities.LineCount import LineCount
 
 class Search:
     IMDB = 'IMDBRatings.tsv'

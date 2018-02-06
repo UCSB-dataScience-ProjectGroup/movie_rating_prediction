@@ -2,8 +2,8 @@ import requests #used for query
 import json     #used for parsing data
 import datetime #used to get current date
 import copy
-from data.SaveLoadJson import SaveLoadJson
-from data.Search import Search
+from utilities.SaveLoadJson import SaveLoadJson
+from utilities.Search import Search
 
 class FactorQuery:
     debug = False

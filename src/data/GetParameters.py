@@ -2,8 +2,8 @@
 import requests
 import json
 import copy
-from data.SaveLoadJson import SaveLoadJson
-from data.Search import Search
+from utilities.SaveLoadJson import SaveLoadJson
+from utilities.Search import Search
 
 # Class ------------------------------------------------------------------------
 class GetParameters:
