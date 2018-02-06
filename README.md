@@ -37,7 +37,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
 ![Alt Text](/MovieRatings.png?raw=true "flow chart")
 
 # <a name='aspects'></a>Aspects
-+ Rotten Tomatoes API (Kaggle, IMDB) -previous movies of that genre and their rating
++ TheMovieDb API -movie parameters (actors, directors, budget etc.)
++ IMDb dataset from AWS -ratings from previous movies
 + Data Algorithms (weighting actors vs. directors vs. budget…)
 + Query data about movie title or movie id to get parameters 
 + Query previous ratings of rating parameters
@@ -60,7 +61,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
 
 # <a name='datasources'></a>Data Sources
 + IMDb
-+ TheMovieDB
++ TheMovieDb
 
 # <a name='languages'></a>Languages
 + Python - scripting
@@ -107,14 +108,14 @@ We want to be able to predict the rating of a movie before it is released. We wa
   + Split into smaller groups (Pair up)  to work on individual sections of the project
   + ### Week 1-3 Update:
   	+ #### Brandon/Danielle:
-		+ Made an account for Amazon Web Services (AWS)
+		+ Made an account with Amazon Web Services (AWS)
 		+ Downloaded AWS SDK for Java
 		+ Downloaded legacy Java 6 for Eclipse
 		+ Downloaded JVM 1.8 for Eclipse
 		+ Configured AWS Toolkit for Eclipse, and samples successfully
 		+ https://569112368633.signin.aws.amazon.com/console log in
   	+ #### Ari/Ivy/Jake:
-		+ Will weight the ratings of directors previous films based on date.
+		+ Will weigh the ratings of directors previous films based on date
 		+ Take the sample mean of the ratings of the director’s movies and that will be the prediction
 		+ Award data? (how many oscars won) (later)
 		+ Age of the director (later)
@@ -138,7 +139,7 @@ We want to be able to predict the rating of a movie before it is released. We wa
   	+ #### Andrew/Victoria:
 		+ Created script to access IMBDb's title names, ratings, etc.
 		+ Created script to merge ratings and title info tsv files
-		+ Will utilize both Movie DB and IMDb as foundation of project's data
+		+ Will utilize both TheMovieDb and IMDb as foundation of project's data
 		
   ## <a name='weekseven-ten'></a>Week 7-10:
   + Finish merging different sections of the project
@@ -151,6 +152,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
   ## <a name='goals'></a>Goals:
   + Finish scripting programs to fetch parameters from movie names
   + Focus on documentation, here and on Inertia7
+  + Finish website to post project
+  + Refine algorithm (weights of different aspects) to predict ratings
 
 # <a name='structure'></a>Structure
 
