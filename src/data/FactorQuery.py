@@ -8,6 +8,7 @@ from utilities.Search import Search
 class FactorQuery:
     debug = False
     filename = 'parameters.txt'
+    averageRating = 'AverageRatings.txt'
     api_key_file = 'api_keys.txt'
     outputFile = 'ratings.txt'
     
@@ -153,13 +154,22 @@ class FactorQuery:
             print("Getting factors")
         api_key = SaveLoadJson.load(FactorQuery.api_key_file)["TMDB"]["key"]                         # get api key to be used for all queries
         parameters = SaveLoadJson.load(FactorQuery.filename)                                                #set data to something to prevent error
+        avgRating = SaveLoadJson.load(FactorQuery.averageRating)
         
         data = {
             "Directors":[],
             "Actors":[],
             "Writers":[],
-            "Producers":[]
+            "Producers":[],
+            "Genres":[],
+            "Average":[]
             }
+
+        for genre in parameters["Genre"]:
+            if genre in avgRating["Genres"]:
+                data["Genres"].append(avgRating["Genres"][genre])
+        data["Average"].append(avgRating["Average"])
+        
         if "Date" in parameters:
             FactorQuery.dateMovie = parameters["Date"]
 
@@ -169,9 +179,17 @@ class FactorQuery:
             for dctr in parameters["Directors"]:
                 data["Directors"].append(FactorQuery.getJob(dctr, api_key, "Director"))
         if "Actors" in parameters:
+            iMax = 10#Change this number for the number of Actors---------------------------------------------
+            i = 0
             if debug == True:
-                print("Getting works for " + str(len(parameters["Actors"])) + " actor(s)")
+                if len(parameters["Actors"]) > iMax:
+                    print("Getting works for " + str(iMax) + " actor(s)")
+                else:
+                    print("Getting works for " + str(len(parameters["Actors"])) + " actor(s)")
             for actr in parameters["Actors"]:
+                i+=1
+                if i > iMax:
+                    break
                 data["Actors"].append(FactorQuery.getActor(actr, api_key))
         if "Writers" in parameters:
             if debug == True:
