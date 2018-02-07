@@ -1,6 +1,6 @@
 import json
 from data.FactorQuery import FactorQuery as FQ
-from data.SaveLoadJson import SaveLoadJson as SLJ
+from utilities.SaveLoadJson import SaveLoadJson as SLJ
 from data.GetParameters import GetParameters as GP
 
 # Replace with statistics script -----------------------------------------------

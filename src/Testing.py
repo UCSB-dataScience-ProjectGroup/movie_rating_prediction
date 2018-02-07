@@ -1,9 +1,9 @@
 import json
 import random
 from data.FactorQuery import FactorQuery as FQ
-from data.SaveLoadJson import SaveLoadJson as SLJ
+from utilities.SaveLoadJson import SaveLoadJson as SLJ
 from data.GetParameters import GetParameters as GP
-from data.Search import Search
+from utilities.Search import Search
 
 # Replace with statistics python script ----------------------------------------
 from models.myStats import myStats as stats
@@ -12,7 +12,6 @@ from models.myStats import myStats as stats
 #Enter number of movie to check
 print(" ")
 loops = input("Enter movies to check: \n")
-print(" ")
 
 #Initialize average values
 totalError = 0.0
@@ -20,6 +19,7 @@ times = int(loops)
 
 #Loops chosen times
 for i in range(int(loops)):
+    print(" ")
 
     #Find random ID value
     ids = 2

@@ -13,6 +13,7 @@ class GetParameters:
 
     tempJson = {"Date":0,
                 "Title":"",
+                "Genre":[],
                 "Rating":0,
                 "Directors":[],
                 "Actors":[],
@@ -71,6 +72,10 @@ class GetParameters:
         if Movie["release_date"] != "":
             result["Date"] = int(Movie["release_date"].replace("-",""))
         result["Title"] = Movie["title"]
+
+        #Save genres ------------------------
+        for genre in Movie["genres"]:
+            result["Genre"].append(genre["name"])
 
         #Find rating ------------------------
         rating = "0\t0\t0\t0\n"
