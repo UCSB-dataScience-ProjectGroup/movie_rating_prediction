@@ -185,6 +185,8 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	    ├── data           <- Scripts to download or generate data
 	    │   └── GetParamters.py 	<- downloads parameters from movie name
 	    │   └── FactorQuery.py 	<- downloads paramter info and finds movie ratings
+	    |
+	    ├── data
 	    │   └── LineCount.py 	<- counts the lines in a file, used for searching IMDB ratings
 	    │   └── Search.py 		<- searches the IMDB rating files with either IMDB id or TMDB id
 	    │   └── SaveLoadJson.py 	<- standardizes the saving and loading of Json data between scripts
