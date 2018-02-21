@@ -1,29 +1,82 @@
-from data.parameter_query import GetParameter    #Get parameter class to call query
-import json                                 #json for output
+import json
+from utilities.SaveLoadJson import SaveLoadJson
 
-person = "0"
-data = ""
+class Stats:
+    filename = 'ratings.txt'
+    filename2 = 'parameters.txt'
+    outputFile = 'results.txt'
 
-while person != "": #if input is empty then exit
-    person = input("x(Spielberg = 488, Joss Whedon = 12891) \n Enter a director id: ") #Get input for director id from user
-    print("")
-    addition = 0
-    mean = 0
-    if(person != ""): #call director if not empty
+    def adjust(weights, avgHold):
+        total = 0
+        for key, value in weights.items():
+            if avgHold[key][0] > 0.0:
+                total += value
+        total = 1 / total
+        for key, value in weights.items():
+            weights[key] = total*value
+    
+    def analyze():
+
+        works = ["Actors","Directors","Writers","Producers"]
+        values = ["Genres", "Average"]
+
+        weights = {"Actors":0.05,
+                   "Directors":0.5,
+                   "Writers":0.05,
+                   "Producers":0.05,
+                   "Genres":0.05,
+                   "Average":0.3,
+                   "Max":0.3
+                   }
+
+        avgHold = {"Actors":[0.0,0,0.0],
+                   "Directors":[0.0,0,0.0],
+                   "Writers":[0.0,0,0.0],
+                   "Producers":[0.0,0,0.0],
+                   "Genres":[0.0,0,0.0],
+                   "Average":[0.0,0,0.0],
+                   "Max":[10.0,1,0.0]
+                   }
+
+        print("Doing math!")
+        factors = SaveLoadJson.load(Stats.filename)
+        parameters = SaveLoadJson.load(Stats.filename2)
+
+        observed = 0.0
+
+        #Stuff with works
+        for key in works:
+            for person in factors[key]:
+                for item in person["works"]:
+                    if item["rating"] != "0":
+                        avgHold[key][0] += float(item["rating"])
+                avgHold[key][1] += float(person["total_works"])
+
+        #Stuff with averages
+        for key in values:
+            avgHold[key][0] = sum(factors[key])
+            avgHold[key][1] = len(factors[key])
+
+        Stats.adjust(weights, avgHold)
+
+        for key, value in avgHold.items():
+            if(value[0] > 0):
+                avgHold[key][0] = value[0]/value[1]
+                avgHold[key][2] = (value[0])*weights[key]
+                observed += avgHold[key][2]
+
+        #Printing results --------------------------------------
+        print(json.dumps(weights, indent=2))
+        print(json.dumps(avgHold, indent=2))
+        print("Average movie Rating: ", format(observed,'.1f'))
         
-        ### This is the code you really need V
-        data = GetParameter.getFactor(person, parameter="Director")             #call getDirector method to start query
-        print(json.dumps(data, indent=2))                                        #print output with indents
-        length = 0
-        for val in data["works"]:
-            if("rating" in val):
-                if(val["rating"] != 0):
-                    length += 1
-                    addition += val["rating"]
-                    print(val["rating"])
-    
-    if(length > 0):
-        mean = addition/length
-    
-    print("The following preview has been approved for a", round(mean,1), "rating!")
+        print("Actual movie Rating: ", end="")
+        print(parameters["Rating"])
 
+        #Percent error and return ------------------------------
+        percentError = 0
+        if float(parameters["Rating"]) != 0:
+            percentError = (abs(float(parameters["Rating"])-observed)/float(parameters["Rating"]))*100
+        print("Percent error: ", format(percentError,'.3f'),"%")  
+
+        return percentError

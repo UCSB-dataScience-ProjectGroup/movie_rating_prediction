@@ -6,7 +6,7 @@ from data.GetParameters import GetParameters as GP
 from utilities.Search import Search
 
 # Replace with statistics python script ----------------------------------------
-from models.myStats import myStats as stats
+from models.Stats import Stats as stats
 # ------------------------------------------------------------------------------
 
 #Enter number of movie to check

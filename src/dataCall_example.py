@@ -4,7 +4,7 @@ from utilities.SaveLoadJson import SaveLoadJson as SLJ
 from data.GetParameters import GetParameters as GP
 
 # Replace with statistics script -----------------------------------------------
-from models.myStats import myStats as stats
+from models.Stats import Stats as stats
 # ------------------------------------------------------------------------------
 
 movie = "0"
