@@ -11,6 +11,9 @@ class GetParameters:
     filename = 'parameters.txt'
     api_key_file = 'api_keys.txt'
 
+    oldData = True
+    saveFile = 'oldRatings.txt'
+
     tempJson = {"Date":0,
                 "Title":"",
                 "Genre":[],
@@ -68,6 +71,12 @@ class GetParameters:
         if debug == True:
             print(Movie["title"])
 
+        #Check if already have the rating
+        if GetParameters.oldData == True:
+            oldRatings = SaveLoadJson.load(GetParameters.saveFile)
+            if Movie["title"] in oldRatings:
+                return oldRatings[Movie["title"]]
+
         #Find date and title ----------------
         if Movie["release_date"] != "":
             result["Date"] = int(Movie["release_date"].replace("-",""))
@@ -101,9 +110,12 @@ class GetParameters:
 
         #Save data --------------------------
         SaveLoadJson.save(GetParameters.filename, result)
+        return '0'
 
     #Called when you have a movie name --------------------------------------
     #Finds the movie ID from that string
-    def find(string, debug=False):
+    def find(string, debug=False, oldRatings=True):
+        GetParameters.oldData = oldRatings
+        
         ids = GetParameters.getID(string)
-        GetParameters.get(ids, debug)
+        return GetParameters.get(ids, debug)

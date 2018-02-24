@@ -5,6 +5,7 @@ class Stats:
     filename = 'ratings.txt'
     filename2 = 'parameters.txt'
     outputFile = 'results.txt'
+    saveFile = 'oldRatings.txt'
 
     def adjust(weights, avgHold):
         total = 0
@@ -20,13 +21,13 @@ class Stats:
         works = ["Actors","Directors","Writers","Producers"]
         values = ["Genres", "Average"]
 
-        weights = {"Actors":0.05,
+        weights = {"Actors":0.5,
                    "Directors":0.5,
-                   "Writers":0.05,
-                   "Producers":0.05,
-                   "Genres":0.05,
-                   "Average":0.3,
-                   "Max":0.3
+                   "Writers":0.5,
+                   "Producers":0.5,
+                   "Genres":0.5,
+                   "Average":0.5,
+                   "Max":0.5
                    }
 
         avgHold = {"Actors":[0.0,0,0.0],
@@ -66,12 +67,17 @@ class Stats:
                 observed += avgHold[key][2]
 
         #Printing results --------------------------------------
-        print(json.dumps(weights, indent=2))
-        print(json.dumps(avgHold, indent=2))
+        #print(json.dumps(weights, indent=2))
+        #print(json.dumps(avgHold, indent=2))
         print("Average movie Rating: ", format(observed,'.1f'))
         
         print("Actual movie Rating: ", end="")
         print(parameters["Rating"])
+
+        #Save Ratings to file
+        oldRatings = SaveLoadJson.load(Stats.saveFile)
+        oldRatings[parameters["Title"]] = str(format(observed, '.1f'))
+        SaveLoadJson.save(Stats.saveFile, oldRatings)
 
         #Percent error and return ------------------------------
         percentError = 0
@@ -79,4 +85,4 @@ class Stats:
             percentError = (abs(float(parameters["Rating"])-observed)/float(parameters["Rating"]))*100
         print("Percent error: ", format(percentError,'.3f'),"%")  
 
-        return percentError
+        return str(format(observed, '.1f'))
