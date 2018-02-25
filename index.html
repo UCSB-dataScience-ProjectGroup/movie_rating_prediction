@@ -100,7 +100,7 @@ input {
 		document.getElementById("input").style="w3-text-light-grey";
 		
 		var tunnel = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
-		xhr.open('GET', host=tunnel+"/"+input, true);
+		xhr.open('GET', host=tunnel+"/find/"+input, true);
 		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr.withCredentials = true;
 
