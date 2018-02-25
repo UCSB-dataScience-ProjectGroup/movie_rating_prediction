@@ -16,7 +16,7 @@ while movie != "":
 
     temp = GP.find(movie,debug=True, oldRatings=False) #Danielle and Brandon's code
 
-    if temp == '0':
+    if temp[1] == '0':
         FQ.getFactors(debug=True) #get ratings for those parameters //my code
         stats.analyze() #the ratings and get rating #Ari, Ivy, Jake's code
     else:
