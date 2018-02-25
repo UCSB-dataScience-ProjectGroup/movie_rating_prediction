@@ -26,3 +26,4 @@ def find(movie):
 if __name__ == "__main__":
     print("Starting REEL RATINGS server")
     app.run(host='0.0.0.0', port=5000)
+    app.add_command(threaded=True)
