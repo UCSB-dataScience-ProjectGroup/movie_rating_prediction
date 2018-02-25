@@ -1,4 +1,5 @@
-from bottle import Bottle, run, template
+from flask import Flask, request, redirect
+from flask_cors import CORS, cross_origin
 
 import json
 from data.FactorQuery import FactorQuery as FQ
@@ -6,21 +7,22 @@ from data.GetParameters import GetParameters as GP
 from utilities.SaveLoadJson import SaveLoadJson as SLJ
 from models.Stats import Stats as stats
 
-app = Bottle()
+app = Flask(__name__)
+CORS(app, support_credentials=True)
 
-@app.route('/')
-@app.route('/find/<movie>')
-def find(movie='ABC'):
-
+@app.route('/find/<movie>', methods=['GET'])
+@cross_origin(supports_credentials=True)
+def find(movie):
     temp = GP.find(movie,debug=True,oldRatings=True)
 
-    if temp == '0':
+    if temp[1] == '0':
         FQ.getFactors(debug=True)
         temp = stats.analyze()
 
-    msg = str('The predicted rating of:\n'+str(movie)+'\n'+temp+'/10')
+    msg = str(temp[0]+','+temp[1])
     
-    return template(msg)
+    return msg
 
-run(app, host='0.0.0.0', port=8080)
-#run(app, host='localhost', port=8080)
+if __name__ == "__main__":
+    print("Starting REEL RATINGS server")
+    app.run(debug=True)
