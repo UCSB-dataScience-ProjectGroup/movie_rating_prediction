@@ -91,7 +91,7 @@ input {
 		document.getElementById("input").value = "Enter another movie Title";
 		document.getElementById("input").style="w3-text-light-grey";
 		
-		xhr.open('GET', host="http://169.231.10.204:5000"+"/find/"+input, true);
+		xhr.open('GET', host="https://169.231.10.204:5000"+"/find/"+input, true);
 		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr.withCredentials = true;
 
