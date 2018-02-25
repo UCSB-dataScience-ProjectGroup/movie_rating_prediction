@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<?php
+header('Access-Control-Allow-Origins: *');
+?>
+
+<head>
+	<title>Display Movie Rating</title>
+</head>
+
+<body>
+	<p>Testing output below</p>
+	<p id="output">The Will Change</p>
+	<script>
+	var xhr = new XMLHttpRequest();
+
+	xhr.onreadystatechange = function() {
+		if(this.readyState == 4 && this.status == 200) {
+			document.getElementByID("output").innerHTML=this.responseText;
+		}
+	};
+	xhr.open('GET', host="http://localhost:8080/find/The Matrix", true);
+	xhr.send();
+	</script>
+
+</body>
+
+</html>
