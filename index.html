@@ -85,22 +85,13 @@ input {
 		document.getElementById("input").style="w3-text-black";
 	}
 
-	window.onload = function() {
-		var iframe = document.createElement('iframe');
-		iframe.id = 'iframe';
-		iframe.style.display = 'none';
-		iframe.src = 'ngrokTunnel.txt';
-		document.body.appendChild(iframe)
-	}
-
 	function getRating() {
 		var xhr = new XMLHttpRequest();
 		var input = document.getElementById("input").value;
 		document.getElementById("input").value = "Enter another movie Title";
 		document.getElementById("input").style="w3-text-light-grey";
 		
-		var tunnel = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
-		xhr.open('GET', host=tunnel+"/find/"+input, true);
+		xhr.open('GET', host="http://0.0.0.0:5000"+"/find/"+input, true);
 		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr.withCredentials = true;
 
