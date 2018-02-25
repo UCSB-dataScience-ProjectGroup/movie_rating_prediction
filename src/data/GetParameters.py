@@ -37,7 +37,9 @@ class GetParameters:
         response = requests.request("GET", url[0]+api_key+url[1]+inpt+url[2], data=payload)
         
         data = response.json()
-        return data["results"][0]["id"]
+        if len(data["results"]) > 0:
+            return data["results"][0]["id"]
+        return '-1'
 
     # GetDetails - takes ID, returns movie details -----------------------------
     def getDetails(ID):
@@ -75,7 +77,7 @@ class GetParameters:
         if GetParameters.oldData == True:
             oldRatings = SaveLoadJson.load(GetParameters.saveFile)
             if Movie["title"] in oldRatings:
-                return oldRatings[Movie["title"]]
+                return [Movie["title"], oldRatings[Movie["title"]]]
 
         #Find date and title ----------------
         if Movie["release_date"] != "":
@@ -110,7 +112,7 @@ class GetParameters:
 
         #Save data --------------------------
         SaveLoadJson.save(GetParameters.filename, result)
-        return '0'
+        return ['Getting Movie','0']
 
     #Called when you have a movie name --------------------------------------
     #Finds the movie ID from that string
@@ -118,4 +120,6 @@ class GetParameters:
         GetParameters.oldData = oldRatings
         
         ids = GetParameters.getID(string)
+        if ids == '-1':
+            return ['No Movie Found', '-1']
         return GetParameters.get(ids, debug)
