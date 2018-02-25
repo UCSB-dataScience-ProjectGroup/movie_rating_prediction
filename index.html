@@ -85,13 +85,22 @@ input {
 		document.getElementById("input").style="w3-text-black";
 	}
 
+	window.onload = function() {
+		var iframe = document.createElement('iframe');
+		iframe.id = 'iframe';
+		iframe.style.display = 'none';
+		iframe.src = 'ngrokTunnel.txt';
+		document.body.appendChild(iframe)
+	}
+
 	function getRating() {
 		var xhr = new XMLHttpRequest();
 		var input = document.getElementById("input").value;
 		document.getElementById("input").value = "Enter another movie Title";
 		document.getElementById("input").style="w3-text-light-grey";
 		
-		xhr.open('GET', host="https://ae6f7c91.ngrok.io/find/"+input, true);
+		var tunnel = document.getElementById('iframe').contentDocument.body.firstChild.innerHTML;
+		xhr.open('GET', host=tunnel+"/"+input, true);
 		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr.withCredentials = true;
 
