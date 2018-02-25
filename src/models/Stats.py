@@ -85,4 +85,4 @@ class Stats:
             percentError = (abs(float(parameters["Rating"])-observed)/float(parameters["Rating"]))*100
         print("Percent error: ", format(percentError,'.3f'),"%")  
 
-        return str(format(observed, '.1f'))
+        return [parameters["Title"], str(format(observed, '.1f'))]
