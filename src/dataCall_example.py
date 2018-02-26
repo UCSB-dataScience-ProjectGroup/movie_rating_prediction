@@ -14,7 +14,7 @@ while movie != "":
     movie = input("Enter a movie name! \n")
     print(" ")
 
-    temp = GP.find(movie,debug=True, oldRatings=False) #Danielle and Brandon's code
+    temp = GP.find(movie,debug=True, oldRatings=True) #Danielle and Brandon's code
 
     if temp[1] == '0':
         FQ.getFactors(debug=True) #get ratings for those parameters //my code

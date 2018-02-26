@@ -33,15 +33,17 @@ for i in range(int(loops)):
                 valid = True
 
     #Get parameters and ratings
-    GP.get(ids,debug=True)
-    FQ.getFactors(debug=True)
+    temp = GP.get(ids,debug=True)
 
-    #Get Average rating and average % error
-    Error = stats.analyze()
-    if Error != 100:
-        totalError += Error
-    else:
-        times -= 1
+    if temp[1] == '0':
+        FQ.getFactors(debug=True)
+
+        #Get Average rating and average % error
+        Error = float(stats.analyze()[1])
+        if Error != 100:
+            totalError += Error
+        else:
+            times -= 1
 
 #Print total error
 print("\nTotal Average error: ", format(totalError/int(loops),'.2f'),"%")

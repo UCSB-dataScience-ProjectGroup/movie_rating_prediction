@@ -1,0 +1,287 @@
+{
+  "ratings": [
+    [
+      "The Visitors II: The Corridors of Time",
+      "5.7"
+    ],
+    [
+      "Cotton Mill, Treadmill",
+      "5.8"
+    ],
+    [
+      "Playing Columbine",
+      "5.7"
+    ],
+    [
+      "The Gift",
+      "5.1"
+    ],
+    [
+      "Gladiator",
+      "5.9"
+    ],
+    [
+      "The Blue Exile",
+      "6.2"
+    ],
+    [
+      "War Without End",
+      "5.5"
+    ],
+    [
+      "7\u00bd Phere",
+      "6.0"
+    ],
+    [
+      "Un americano in vacanza",
+      "5.2"
+    ],
+    [
+      "En attendant Godard",
+      "6.1"
+    ],
+    [
+      "Beyond Here",
+      "6.2"
+    ],
+    [
+      "Shandra: The Jungle Girl",
+      "4.8"
+    ],
+    [
+      "U2: Rattle and Hum",
+      "5.8"
+    ],
+    [
+      "R.I.P.D.",
+      "5.6"
+    ],
+    [
+      "Strong Medicine",
+      "5.9"
+    ],
+    [
+      "El Canto del Loco - Personas: La pel\u00edcula",
+      "5.7"
+    ],
+    [
+      "Wherever You Are",
+      "5.9"
+    ],
+    [
+      "Penthouse North",
+      "5.7"
+    ],
+    [
+      "Shehar Aur Sapna",
+      "6.6"
+    ],
+    [
+      "Glenn Wool: You Don't Go to Hell for Eating Elephants",
+      "6.2"
+    ],
+    [
+      "Beware, My Lovely",
+      "6.2"
+    ],
+    [
+      "Mistaken Identity",
+      "6.1"
+    ],
+    [
+      "The Seven Little Foys",
+      "6.3"
+    ],
+    [
+      "Scent of Love",
+      "6.3"
+    ],
+    [
+      "Summer '04",
+      "4.2"
+    ],
+    [
+      "Liberation: Battle For Berlin",
+      "6.2"
+    ],
+    [
+      "El r\u00edo de oro",
+      "5.6"
+    ],
+    [
+      "The Danish Solution",
+      "6.4"
+    ],
+    [
+      "Swan Lake: The Zone",
+      "5.9"
+    ],
+    [
+      "Go There, Don't Know Where",
+      "5.4"
+    ],
+    [
+      "Ooops! Noah is Gone...",
+      "5.2"
+    ],
+    [
+      "Key House Mirror",
+      "6.1"
+    ],
+    [
+      "Location Hunting",
+      "6.3"
+    ],
+    [
+      "Kalvanin Kadhali",
+      "6.2"
+    ],
+    [
+      "The Night We Got the Bird",
+      "6.7"
+    ],
+    [
+      "Wild Games",
+      "5.9"
+    ],
+    [
+      "Magistrarna p\u00e5 sommarlov",
+      "6.2"
+    ],
+    [
+      "The Brandon Teena Story",
+      "6.7"
+    ],
+    [
+      "The Three Es",
+      "6.5"
+    ],
+    [
+      "The Beauty of the Devil",
+      "6.3"
+    ],
+    [
+      "Party Night",
+      "6.2"
+    ],
+    [
+      "Gabriel & Me",
+      "4.9"
+    ],
+    [
+      "The Rose on His Arm",
+      "6.6"
+    ],
+    [
+      "Enough",
+      "5.7"
+    ],
+    [
+      "New York Confidential",
+      "6.6"
+    ],
+    [
+      "Terror 2000",
+      "5.3"
+    ],
+    [
+      "Mookilla Rajyathu",
+      "5.6"
+    ],
+    [
+      "Joan the Maid 2: The Prisons",
+      "6.4"
+    ],
+    [
+      "The Next Voice You Hear....",
+      "6.7"
+    ],
+    [
+      "The Impatient Alchemist",
+      "6.4"
+    ],
+    [
+      "Hideouts",
+      "6.5"
+    ],
+    [
+      "From Up on Poppy Hill",
+      "5.8"
+    ],
+    [
+      "Indio",
+      "5.9"
+    ],
+    [
+      "The Misadventures of Merlin Jones",
+      "6.2"
+    ],
+    [
+      "15 Amore",
+      "6.0"
+    ],
+    [
+      "Grace Stirs Up Success",
+      "5.5"
+    ],
+    [
+      "Run for Cover",
+      "6.2"
+    ],
+    [
+      "Jak b\u00e1sn\u00edci \u010dekaj\u00ed na z\u00e1zrak",
+      "5.7"
+    ],
+    [
+      "Beauty on Duty",
+      "6.1"
+    ],
+    [
+      "Every Second Counts",
+      "6.6"
+    ],
+    [
+      "Fireworks",
+      "5.9"
+    ],
+    [
+      "Libidomania",
+      "5.9"
+    ],
+    [
+      "Love on the Debt",
+      "6.4"
+    ],
+    [
+      "Coyote",
+      "6.6"
+    ],
+    [
+      "Otai",
+      "4.4"
+    ],
+    [
+      "Queen of Kowloon",
+      "6.2"
+    ],
+    [
+      "Finding Nemo",
+      "6.5"
+    ],
+    [
+      "Ex Machina",
+      "6.3"
+    ]
+  ],
+  "weights": {
+    "Actors": 0.792,
+    "Min": 0.57,
+    "Max": 1.24,
+    "Producers": 1,
+    "Average": 1.55,
+    "Genres": 1.142,
+    "Directors": 1.272,
+    "Writers": 1.501
+  },
+  "totalAdjusts": 135
+}

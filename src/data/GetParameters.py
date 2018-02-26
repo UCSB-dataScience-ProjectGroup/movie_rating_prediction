@@ -12,7 +12,7 @@ class GetParameters:
     api_key_file = 'api_keys.txt'
 
     oldData = True
-    saveFile = 'oldRatings.txt'
+    saveFile = 'dataStore.txt'
 
     tempJson = {"Date":0,
                 "Title":"",
@@ -76,8 +76,9 @@ class GetParameters:
         #Check if already have the rating
         if GetParameters.oldData == True:
             oldRatings = SaveLoadJson.load(GetParameters.saveFile)
-            if Movie["title"] in oldRatings:
-                return [Movie["title"], oldRatings[Movie["title"]]]
+            for i in oldRatings['ratings']:
+                if i[0] == Movie['title']:
+                    return i
 
         #Find date and title ----------------
         if Movie["release_date"] != "":
