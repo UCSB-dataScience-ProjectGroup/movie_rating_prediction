@@ -1,21 +1,6 @@
 {
+  "totalAdjusts": 143,
   "ratings": [
-    [
-      "The Visitors II: The Corridors of Time",
-      "5.7"
-    ],
-    [
-      "Cotton Mill, Treadmill",
-      "5.8"
-    ],
-    [
-      "Playing Columbine",
-      "5.7"
-    ],
-    [
-      "The Gift",
-      "5.1"
-    ],
     [
       "Gladiator",
       "5.9"
@@ -271,17 +256,50 @@
     [
       "Ex Machina",
       "6.3"
+    ],
+    [
+      "Doctor Who",
+      "5.3"
+    ],
+    [
+      "Jumanji",
+      "6.2"
+    ],
+    [
+      "Tuk-Tuk",
+      "6.6"
+    ],
+    [
+      "Hello!",
+      "6.4"
+    ],
+    [
+      "Testing",
+      "6.6"
+    ],
+    [
+      "Happy Days",
+      "6.7"
+    ],
+    [
+      "The Long Kiss Goodnight",
+      "6.2"
+    ],
+    [
+      "Born in Deir Yassin",
+      "6.8"
     ]
   ],
+  "totalRequests": 11,
+  "totalQueries": 105,
   "weights": {
-    "Actors": 0.792,
-    "Min": 0.57,
-    "Max": 1.24,
+    "Max": 1.243,
     "Producers": 1,
-    "Average": 1.55,
-    "Genres": 1.142,
-    "Directors": 1.272,
-    "Writers": 1.501
-  },
-  "totalAdjusts": 135
+    "Min": 0.567,
+    "Genres": 1.139,
+    "Average": 1.551,
+    "Directors": 1.273,
+    "Writers": 1.503,
+    "Actors": 0.789
+  }
 }

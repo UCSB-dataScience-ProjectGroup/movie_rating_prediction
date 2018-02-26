@@ -76,9 +76,13 @@ class GetParameters:
         #Check if already have the rating
         if GetParameters.oldData == True:
             oldRatings = SaveLoadJson.load(GetParameters.saveFile)
+            oldRatings["totalRequests"] += 1
             for i in oldRatings['ratings']:
                 if i[0] == Movie['title']:
+                    oldRatings["totalQueries"] += 2
+                    SaveLoadJson.save(GetParameters.saveFile, oldRatings)
                     return i
+            SaveLoadJson.save(GetParameters.saveFile, oldRatings)
 
         #Find date and title ----------------
         if Movie["release_date"] != "":

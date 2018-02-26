@@ -40,11 +40,13 @@ class Stats:
 
         weights = data["weights"]
 
+        totalQueries = 3
         observed = 0.0
 
         #Stuff with works
         for key in works:
             for person in factors[key]:
+                totalQueries += 1
                 for item in person["works"]:
                     if item["rating"] != "0":
                         avgHold[key][0] += float(item["rating"])
@@ -94,6 +96,7 @@ class Stats:
 
         #Save data to file --------------------------------------
         data["weights"] = weights
+        data["totalQueries"] += totalQueries
         data["totalAdjusts"] += 1
         if len(data["ratings"]) > data["totalAdjusts"]/2 or len(data["ratings"]) > 1000:
             data["ratings"].pop(0)
