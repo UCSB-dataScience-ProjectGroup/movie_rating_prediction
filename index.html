@@ -105,7 +105,7 @@ input {
 		
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
-				var text = this.responseText.split(",");
+				var text = this.responseText.split("%314");
 				document.getElementById("output").innerHTML=("<b>"+text[0]+"</b> gets a <b>"+text[1]+"/10</b>");
 			}
 			else if(this.status == 0) {
