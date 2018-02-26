@@ -12,16 +12,21 @@ import subprocess
 app = Flask(__name__)
 CORS(app, support_credentials=True)
 
+@app.route('/')
+@cross_origin(supports_credentials=True)
+def hello():
+    return redirect("https://ucsb-datascience-projectgroup.github.io/movie_rating_prediction/", code=302)
+
 @app.route('/find/<movie>', methods=['GET'])
 @cross_origin(supports_credentials=True)
 def find(movie):
     temp = GP.find(movie,debug=True,oldRatings=True)
 
     if temp[1] == '0':
-        FQ.getFactors(debug=True)
+        FQ.getFactors(debug=False)
         temp = stats.analyze()
 
-    msg = str(temp[0]+','+temp[1])
+    msg = str(temp[0]+'%314'+temp[1])
     
     return msg
 
@@ -50,5 +55,5 @@ def getData():
 
 if __name__ == "__main__":
     print("Starting REEL RATINGS server")
-    app.run(host='localhost', port=5000)
+    app.run(port=8000)
     app.add_command(threaded=True)

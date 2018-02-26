@@ -1,58 +1,6 @@
 {
-  "totalAdjusts": 143,
+  "totalAdjusts": 215,
   "ratings": [
-    [
-      "Gladiator",
-      "5.9"
-    ],
-    [
-      "The Blue Exile",
-      "6.2"
-    ],
-    [
-      "War Without End",
-      "5.5"
-    ],
-    [
-      "7\u00bd Phere",
-      "6.0"
-    ],
-    [
-      "Un americano in vacanza",
-      "5.2"
-    ],
-    [
-      "En attendant Godard",
-      "6.1"
-    ],
-    [
-      "Beyond Here",
-      "6.2"
-    ],
-    [
-      "Shandra: The Jungle Girl",
-      "4.8"
-    ],
-    [
-      "U2: Rattle and Hum",
-      "5.8"
-    ],
-    [
-      "R.I.P.D.",
-      "5.6"
-    ],
-    [
-      "Strong Medicine",
-      "5.9"
-    ],
-    [
-      "El Canto del Loco - Personas: La pel\u00edcula",
-      "5.7"
-    ],
-    [
-      "Wherever You Are",
-      "5.9"
-    ],
     [
       "Penthouse North",
       "5.7"
@@ -288,18 +236,202 @@
     [
       "Born in Deir Yassin",
       "6.8"
+    ],
+    [
+      "Titanic",
+      "6.0"
+    ],
+    [
+      "Inside Out",
+      "5.7"
+    ],
+    [
+      "The Truman Show",
+      "6.4"
+    ],
+    [
+      "Marshall",
+      "6.0"
+    ],
+    [
+      "Moana",
+      "6.3"
+    ],
+    [
+      "The Post",
+      "6.4"
+    ],
+    [
+      "Avengers: Infinity War",
+      "5.9"
+    ],
+    [
+      "Three Billboards Outside Ebbing, Missouri",
+      "5.5"
+    ],
+    [
+      "The Aviator",
+      "6.0"
+    ],
+    [
+      "Gangs of New York",
+      "6.3"
+    ],
+    [
+      "Phantom Thread",
+      "5.6"
+    ],
+    [
+      "The Shape of Water",
+      "6.0"
+    ],
+    [
+      "Jelly",
+      "6.3"
+    ],
+    [
+      "Space Jam",
+      "6.1"
+    ],
+    [
+      "Willy Wonka & the Chocolate Factory",
+      "6.5"
+    ],
+    [
+      "Dude, Where's My Car?",
+      "5.5"
+    ],
+    [
+      "Rubber",
+      "5.4"
+    ],
+    [
+      "Jurassic World",
+      "6.0"
+    ],
+    [
+      "Johny Mera Naam",
+      "6.9"
+    ],
+    [
+      "Apocalypse Now",
+      "6.2"
+    ],
+    [
+      "Star Wars: The Last Jedi",
+      "5.4"
+    ],
+    [
+      "Star Wars: The Force Awakens",
+      "6.1"
+    ],
+    [
+      "Apocalypto",
+      "6.5"
+    ],
+    [
+      "A Juicy Turkey",
+      "6.7"
+    ],
+    [
+      "Ari",
+      "6.7"
+    ],
+    [
+      "Jake",
+      "6.2"
+    ],
+    [
+      "Amos & Andrew",
+      "6.3"
+    ],
+    [
+      "Brandon Semenuk's Rad Company",
+      "6.1"
+    ],
+    [
+      "In Bed with Victoria",
+      "5.3"
+    ],
+    [
+      "Danielle",
+      "5.4"
+    ],
+    [
+      "Bitch",
+      "5.8"
+    ],
+    [
+      "Poison Ivy",
+      "5.8"
+    ],
+    [
+      "Marley & Me",
+      "5.8"
+    ],
+    [
+      "Fuck",
+      "6.6"
+    ],
+    [
+      "The Waterboy",
+      "6.4"
+    ],
+    [
+      "Happy Death Day",
+      "5.5"
+    ],
+    [
+      "Madagascar",
+      "5.7"
+    ],
+    [
+      "Planet Earth",
+      "5.5"
+    ],
+    [
+      "Blades of Glory",
+      "6.2"
+    ],
+    [
+      "Black Mirror: White Christmas",
+      "6.1"
+    ],
+    [
+      "No Half Measures: Creating the Final Season of Breaking Bad",
+      "6.6"
+    ],
+    [
+      "The Best of Me",
+      "5.9"
+    ],
+    [
+      "Inception",
+      "5.9"
+    ],
+    [
+      "Harry Potter and the Chamber of Secrets",
+      "6.4"
+    ],
+    [
+      "The Dark Knight Rises",
+      "5.9"
+    ],
+    [
+      "The Hateful Eight",
+      "6.4"
     ]
   ],
-  "totalRequests": 11,
-  "totalQueries": 105,
+  "totalRequests": 101,
   "weights": {
-    "Max": 1.243,
+    "Max": 1.286,
+    "Min": 0.524,
+    "Genres": 1.158,
+    "Directors": 1.249,
+    "Average": 1.574,
+    "Writers": 1.496,
     "Producers": 1,
-    "Min": 0.567,
-    "Genres": 1.139,
-    "Average": 1.551,
-    "Directors": 1.273,
-    "Writers": 1.503,
-    "Actors": 0.789
-  }
+    "Actors": 0.75
+  },
+  "totalQueries": 1206
 }
