@@ -5,30 +5,23 @@ class Stats:
     filename = 'ratings.txt'
     filename2 = 'parameters.txt'
     outputFile = 'results.txt'
-    saveFile = 'oldRatings.txt'
+    dataFile = 'dataStore.txt'
 
-    def adjust(weights, avgHold):
+    def adjust(weights, newWeights, avgHold):
         total = 0
         for key, value in weights.items():
             if avgHold[key][0] > 0.0:
                 total += value
         total = 1 / total
         for key, value in weights.items():
-            weights[key] = total*value
+            newWeights[key] = total*value
     
     def analyze():
 
         works = ["Actors","Directors","Writers","Producers"]
         values = ["Genres", "Average"]
 
-        weights = {"Actors":0.5,
-                   "Directors":0.5,
-                   "Writers":0.5,
-                   "Producers":0.5,
-                   "Genres":0.5,
-                   "Average":0.5,
-                   "Max":0.5
-                   }
+        newWeights = {}
 
         avgHold = {"Actors":[0.0,0,0.0],
                    "Directors":[0.0,0,0.0],
@@ -36,12 +29,16 @@ class Stats:
                    "Producers":[0.0,0,0.0],
                    "Genres":[0.0,0,0.0],
                    "Average":[0.0,0,0.0],
-                   "Max":[10.0,1,0.0]
+                   "Max":[10.0,1,0.0],
+                   "Min":[0.0001,1,0.0]
                    }
 
         print("Doing math!")
         factors = SaveLoadJson.load(Stats.filename)
         parameters = SaveLoadJson.load(Stats.filename2)
+        data = SaveLoadJson.load(Stats.dataFile)
+
+        weights = data["weights"]
 
         observed = 0.0
 
@@ -58,26 +55,50 @@ class Stats:
             avgHold[key][0] = sum(factors[key])
             avgHold[key][1] = len(factors[key])
 
-        Stats.adjust(weights, avgHold)
+        Stats.adjust(weights, newWeights, avgHold)
 
         for key, value in avgHold.items():
             if(value[0] > 0):
                 avgHold[key][0] = value[0]/value[1]
-                avgHold[key][2] = (value[0])*weights[key]
+                avgHold[key][2] = (value[0])*newWeights[key]
                 observed += avgHold[key][2]
 
+        #Modify the weights for a better fit -------------------
+        if float(parameters["Rating"]) != 0:
+            modifier = 0.1
+            if data["totalAdjusts"] > 10000:
+                modifier = 0.00001
+            elif data["totalAdjusts"] > 1000:
+                modifier = 0.0001
+            elif data["totalAdjusts"] > 100:
+                modifier = 0.001
+            elif data["totalAdjusts"] > 10:
+                modifier = 0.01
+
+            for key, value in avgHold.items():
+                if value[0] != 0 and value[0] != float(parameters["Rating"]):
+                    if value[0] > observed and float(parameters["Rating"]) > observed:
+                        weights[key] = float("{0:.5f}".format(weights[key]+modifier))
+                    if value[0] < observed and float(parameters["Rating"]) < observed:
+                        weights[key] = float("{0:.5f}".format(weights[key]+modifier))
+                    if value[0] > observed and float(parameters["Rating"]) < observed:
+                        weights[key] = float("{0:.5f}".format(weights[key]-modifier))
+                    if value[0] < observed and float(parameters["Rating"]) > observed:
+                        weights[key] = float("{0:.5f}".format(weights[key]-modifier))
+
         #Printing results --------------------------------------
-        #print(json.dumps(weights, indent=2))
-        #print(json.dumps(avgHold, indent=2))
         print("Average movie Rating: ", format(observed,'.1f'))
         
         print("Actual movie Rating: ", end="")
         print(parameters["Rating"])
 
-        #Save Ratings to file
-        oldRatings = SaveLoadJson.load(Stats.saveFile)
-        oldRatings[parameters["Title"]] = str(format(observed, '.1f'))
-        SaveLoadJson.save(Stats.saveFile, oldRatings)
+        #Save data to file --------------------------------------
+        data["weights"] = weights
+        data["totalAdjusts"] += 1
+        if len(data["ratings"]) > data["totalAdjusts"]/2 or len(data["ratings"]) > 1000:
+            data["ratings"].pop(0)
+        data["ratings"].append([parameters["Title"], str(format(observed, '.1f'))])
+        SaveLoadJson.save(Stats.dataFile, data)
 
         #Percent error and return ------------------------------
         percentError = 0
