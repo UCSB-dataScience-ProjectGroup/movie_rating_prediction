@@ -3,14 +3,17 @@
 <?php
 header('Access-Control-Allow-Origins: *');
 ?>
-
+<head>
+	<link rel="shortcut icon" href="/images/reel.ico" type="image/x-icon"/>
+</head>
 <title>Reel Ratings</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Limelight">
 <style>
-body,h1,h2{font-family: "Raleway", sans-serif}
+body, h1, h2{font-family: "Raleway", sans-serif}
 body, html {height: 100%}
 p {line-height: 2}
 .bgimg, .bgimg2 {
@@ -31,7 +34,7 @@ input {
 <!-- Header / Home-->
 <header class="w3-display-container w3-wide bgimg2 w3-grayscale-min" id="home">
   <div class="w3-display-middle w3-text-white w3-center">
-    <h1 class="w3-jumbo">Reel Ratings</h1></br>
+    <h1 class="w3-jumbo" style="font-family: 'Limelight', cursive">Reel Ratings</h1></br>
     <h2 id="output">Your Movie Rating Awaits</h2></br>
     <input id="input" 
 		type="text" 
@@ -85,18 +88,20 @@ input {
 		document.getElementById("input").style="w3-text-black";
 	}
 
+	var loading = false;
+
 	function getRating() {
 		var xhr = new XMLHttpRequest();
 		var input = document.getElementById("input").value;
 		document.getElementById("input").value = "Enter another movie Title";
 		document.getElementById("input").style="w3-text-light-grey";
 		
-		xhr.open('GET', host="https://9166a461.ngrok.io"+"/find/"+input, true);
+		xhr.open('GET', host="https://047cdea0.ngrok.io"+"/find/"+input, true);
 		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr.withCredentials = true;
 
-		document.getElementById("output").innerHTML="Computing...";
-
+		document.getElementById("output").innerHTML="Computing<i id='dotting'></i>";
+		loading = true;
 		
 		xhr.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
@@ -106,10 +111,23 @@ input {
 			else if(this.status == 404) {
 				document.getElementById("output").innerHTML="Server Error: Please try again later."+input;
 			}
+			loading = false;
 		};
 		
 		xhr.send();
 	}
+
+	var dots = window.setInterval( function() {
+		if(loading == true) {
+		  var waiting = document.getElementById("dotting");
+		  if(waiting.innerHTML == "...."){ 
+			waiting.innerHTML="";
+		  }
+		  else { 
+			waiting.innerHTML+=".";
+		  }
+		}
+	}, 250);
 </script>
 
 </body>
