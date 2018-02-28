@@ -3,25 +3,11 @@ from flask_cors import CORS, cross_origin
 
 from werkzeug.contrib.fixers import ProxyFix
 
-import json
-from data.FactorQuery import FactorQuery
-from data.GetParameters import GetParameters
-from utilities.SaveLoadJson import SaveLoadJson
-from models.Stats import Stats
-from utilities.getInfo import getData
-
-import subprocess
+from utilities.getInfo import getData as GD
+from dataCall import dataCall as DC
 
 app = Flask(__name__)
 CORS(app, support_credentials=True)
-
-#Instances
-GD = getData()
-FQ = FactorQuery()
-GP = GetParameters()
-SLJ = SaveLoadJson
-stats = Stats()
-
 
 @app.route('/')
 @cross_origin(supports_credentials=True)
@@ -30,16 +16,8 @@ def hello():
 
 @app.route('/find/<movie>', methods=['GET'])
 @cross_origin(supports_credentials=True)
-def find(movie):
-    temp = GP.find(movie,debug=True,oldRatings=True)
-
-    if temp[1] == '0':
-        FQ.getFactors(debug=False)
-        temp = stats.analyze()
-
-    msg = str(temp[0]+'%314'+temp[1])
-    
-    return msg
+def find(movie): 
+    return DC.findMovie(movie)
 
 @app.route('/config', methods=['GET'])
 @cross_origin(supports_credentials=True)

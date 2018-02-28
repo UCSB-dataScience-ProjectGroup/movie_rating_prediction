@@ -8,12 +8,13 @@ from geolite2 import geolite2
 
 class getData:
     #Get Data Functions ------------------------------------------------------
-    def getDATA(self):
-        data = (self.getRequests()+'\t'+
-                self.getTime()+'\t'+
-                self.getUptime()+'\t'+
-                self.getTemp()+'\t'+
-                self.getIP())
+    @staticmethod
+    def getDATA():
+        data = (getData.getRequests()+'\t'+
+                getData.getTime()+'\t'+
+                getData.getUptime()+'\t'+
+                getData.getTemp()+'\t'+
+                getData.getIP())
         return data
 
     @staticmethod
@@ -27,29 +28,30 @@ class getData:
     def getTime():
         proc = subprocess.Popen(['uptime'],stdout=subprocess.PIPE, shell=False)
         (out, err) = proc.communicate()
-        return (str(out)[2:11] + '\t' +
-                str(float(str(out).split(',')[4][:-3])*100)+'%')
+        return (str(out)[1:9] + '\t' +
+                str(float(str(out).split(',')[4])*100)+'%')
 
     @staticmethod
     def getUptime():
         proc = subprocess.Popen(['uptime', '-p'],stdout=subprocess.PIPE, shell=False)
         (out, err) = proc.communicate()
-        return str(out)[2:-3]
+        return str(out)
 
     @staticmethod
     def getTemp():
         proc = subprocess.Popen(['vcgencmd', 'measure_temp'],stdout=subprocess.PIPE, shell=False)
         (out,err) = proc.communicate()
-        return str(out)[7:-3]
+        return str(out)[5:-1]
 
     @staticmethod
     def getIP():
         proc = subprocess.Popen(['hostname', '-I'],stdout=subprocess.PIPE, shell=False)
         (out, err) = proc.communicate()
-        return str(out)[2:-3]
+        return str(out)
 
     #Get Access Functions ---------------------------------------------------
-    def getAccess(self):
+    @staticmethod
+    def getAccess():
         mostRecentIP = '0.0.0.0'
         mostRecentAcc = '[01/Jan/2000:00:00:00 -0800]'
         mostRecentSearch = 'NONE'        
@@ -67,10 +69,10 @@ class getData:
                         if('GET /find' in line[3]):
                             reader = geolite2.reader()
                             match = reader.get(line[0])
-                            if match['country']['iso_code'] not in locations:
-                                locations[match['country']['iso_code']] = 1
+                            if match['country']['names']['en'] not in locations:
+                                locations[match['country']['names']['en']] = 1
                             else:
-                                locations[match['country']['iso_code']]+=1
+                                locations[match['country']['names']['en']]+=1
                             locations["total"]+=1
                             ips[line[0]]=1
                             if match['country']['iso_code'] == 'US':
@@ -84,14 +86,16 @@ class getData:
         totStr = 0
         for key, value in ips.items():
             totStr+=1
-        totStr = str(totStr)
+            
         for key, value in locations.items():
             if key != 'total':
-                avg = (value/locations['total'])*100
-                avg = '{0:0.2f}'.format(avg)
+                avg = (float(value)/float(locations['total']))*100
+                avg = "{0:.2f}".format(avg)
                 locStr+=key+':'+str(avg)+';'
+
         for key, value in usLoc.items():
             usStr += key + ','
+
         result = str(mostRecentIP)+'\t'
         result+= str(mostRecentSearch)+'\t'
         result+= str(mostRecentAcc)+'\t'

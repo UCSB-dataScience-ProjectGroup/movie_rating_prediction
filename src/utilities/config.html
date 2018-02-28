@@ -117,61 +117,52 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
           <tr>
             <td><i class="fa fa-wifi w3-text-green w3-large"></i></td>
             <td>Server IP</td>
-            <td><i>169.231.10.204</i></td>
+            <td><i id="ipAdr">169.231.10.204</i></td>
           </tr>
         </table>
       </div>
     </div>
   </div>
   <hr>
+  
   <div class="w3-container">
     <h5>General Stats</h5>
-    <p>New Visitors</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-green" style="width:25%">+25%</div>
-    </div>
-
-    <p>New Users</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-orange" style="width:50%">50%</div>
-    </div>
-
-    <p>Bounce Rate</p>
-    <div class="w3-grey">
-      <div class="w3-container w3-center w3-padding w3-red" style="width:75%">75%</div>
-    </div>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr class="w3-green">
+        <td>Most Recent Search</td>
+        <td id="MRS">65%</td>
+      </tr>
+      <tr class="w3-orange">
+        <td>Most Recent IP Address</td>
+        <td id="MRIP">65%</td>
+      </tr>
+      <tr class="w3-red">
+        <td>Most Recent Search Time</td>
+        <td id="MRT">65%</td>
+      </tr>
+    </table><br>
   </div>
-  <hr>
 
   <div class="w3-container">
     <h5>Countries</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white" id="iso_code">
       <tr>
         <td>United States</td>
         <td>65%</td>
       </tr>
+    </table><br>
+  </div>
+
+  <div class="w3-container">
+    <h5>States</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white" id="state_code">
       <tr>
-        <td>UK</td>
-        <td>15.7%</td>
-      </tr>
-      <tr>
-        <td>Russia</td>
-        <td>5.6%</td>
-      </tr>
-      <tr>
-        <td>Spain</td>
-        <td>2.1%</td>
-      </tr>
-      <tr>
-        <td>India</td>
-        <td>1.9%</td>
-      </tr>
-      <tr>
-        <td>France</td>
-        <td>1.5%</td>
+        <td>Temp</td>
+        <td>65%</td>
       </tr>
     </table><br>
   </div>
+  <hr>
 
   <!-- Footer -->
   <footer class="w3-container w3-padding-16 w3-light-grey">
@@ -183,25 +174,57 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <script>
 	window.onload = function() {
-		var xhr = new XMLHttpRequest();
+		var xhr1 = new XMLHttpRequest();
 		
-		xhr.open('GET', host="https://reelrating.net"+"/config/data/get", true);
-		xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
-		xhr.withCredentials = true;
+		//Data request
+		xhr1.open('GET', host="https://reelrating.net"+"/config/data/get/DATA", true);
+		xhr1.setRequestHeader("Access-Control-Allow-Origins", "*")
+		xhr1.withCredentials = true;
 		
-		xhr.onreadystatechange = function() {
+		xhr1.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
 				var text = this.responseText.split("\t");
 				document.getElementById("requests").innerHTML=(text[0]);
 				document.getElementById("TMDBQuer").innerHTML=(text[1]);
 				document.getElementById("Calculate").innerHTML=(text[2]);
-				document.getElementById("CPUload").innerHTML=(text[3] + " %");
-				document.getElementById("uptime").innerHTML=(text[4]);
-				document.getElementById("time").innerHTML=(text[5]);
+				document.getElementById("time").innerHTML=(text[3]);
+				document.getElementById("CPUload").innerHTML=(text[4]);
+				document.getElementById("uptime").innerHTML=(text[5]);
+				document.getElementById("temp").innerHTML=(text[6]);
+				document.getElementById("ipAdr").innerHTML=(text[7]);
 			}
 		};
+		xhr1.send();
+
+		var xhr2 = new XMLHttpRequest();
+		xhr2.open('GET', host="https://reelrating.net"+"/config/data/get/ACC", true);
+		xhr2.setRequestHeader("Access-Control-Allow-Origins", "*")
+		xhr2.withCredentials = true;
 		
-		xhr.send();
+		xhr2.onreadystatechange = function() {
+			if(this.readyState == 4 && this.status == 200) {
+				var text = this.responseText.split("\t");
+				document.getElementById("MRIP").innerHTML=(text[0]);
+				document.getElementById("MRS").innerHTML=(text[1]);
+				document.getElementById("MRT").innerHTML=(text[2]);
+				document.getElementById("Users").innerHTML=(text[3]);
+				var locs = text[4].split(";");
+				var tmpTxt = ''
+				for(var i = 0; i < locs.length; i++){
+					splt = locs[i].split(':');
+					tmpTxt += '<tr><td>' + splt[0] + '</td><td>' + splt[1] + '%</td></tr>';
+				}
+				document.getElementById("iso_code").innerHTML=tmpTxt;
+
+				locs = text[5].split(";");
+				tmpTxt = ''
+				for(var i = 0; i < locs.length; i++){
+					tmpTxt += '<tr><td>' + locs[i] + '</td></tr>';
+				}
+				document.getElementById("state_code").innerHTML=tmpTxt;
+			}
+		};
+		xhr2.send();
 	}
 </script>
 
