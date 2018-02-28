@@ -3,7 +3,8 @@ import os
 
 class SaveLoadJson:
     temp = {"data":"NULL"}
-    
+
+    @staticmethod
     def load(filename):
         if not os.path.exists(filename):
             return SaveLoadJson.temp
@@ -14,6 +15,7 @@ class SaveLoadJson:
         #print(string)
         return json.loads(string)
 
+    @staticmethod
     def save(filename, string):
         if os.path.exists(filename):
             os.remove(filename)

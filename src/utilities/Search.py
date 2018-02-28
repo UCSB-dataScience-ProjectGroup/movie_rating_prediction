@@ -6,7 +6,8 @@ class Search:
     IMDB = 'IMDBRatings.tsv'
     TMDB = 'TMDBRatings.tsv'
     maxTries = 25
-    
+
+    @staticmethod
     def findTMDB(searchID, minValue, maxValue, tries, file):
         tries = tries + 1
         half = int((maxValue-minValue)/2 + minValue)
@@ -22,6 +23,7 @@ class Search:
             return Search.findTMDB(searchID, minValue, half, tries, file)
         return string
 
+    @staticmethod
     def findIMDB(searchID, minValue, maxValue, tries, file):
         tries = tries + 1
         half = int((maxValue-minValue)/2 + minValue)
@@ -37,9 +39,11 @@ class Search:
             return Search.findIMDB(searchID, minValue, half, tries, file)
         return string
 
+    @staticmethod
     def setMaxTries(count):
         Search.maxTries = int(math.log(count)/math.log(2)+5)
 
+    @staticmethod
     def find(idString):
         if str(idString)[0:1] == 't':
             #print('IMDB: ', idString)

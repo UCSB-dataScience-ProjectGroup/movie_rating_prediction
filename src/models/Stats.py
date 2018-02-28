@@ -7,6 +7,7 @@ class Stats:
     outputFile = 'results.txt'
     dataFile = 'dataStore.txt'
 
+    @staticmethod
     def adjust(weights, newWeights, avgHold):
         total = 0
         for key, value in weights.items():
@@ -15,7 +16,8 @@ class Stats:
         total = 1 / total
         for key, value in weights.items():
             newWeights[key] = total*value
-    
+
+    @staticmethod
     def analyze():
 
         works = ["Actors","Directors","Writers","Producers"]
@@ -91,8 +93,7 @@ class Stats:
         #Printing results --------------------------------------
         print("Average movie Rating: ", format(observed,'.1f'))
         
-        print("Actual movie Rating: ", end="")
-        print(parameters["Rating"])
+        print("Actual movie Rating: " + str(parameters["Rating"]))
 
         #Save data to file --------------------------------------
         data["weights"] = weights

@@ -26,6 +26,7 @@ class GetParameters:
     
     # Functions ----------------------------------------------------------------
     # GetID - takes movie name, returns int ------------------------------------
+    @staticmethod
     def getID(string):
         inpt = string.replace(' ', '%20')
 
@@ -42,6 +43,7 @@ class GetParameters:
         return '-1'
 
     # GetDetails - takes ID, returns movie details -----------------------------
+    @staticmethod
     def getDetails(ID):
         api_key = SaveLoadJson.load(GetParameters.api_key_file)["TMDB"]["key"]
 
@@ -54,6 +56,7 @@ class GetParameters:
         return data
 
     # GetCredits - takes ID, returns movie credits -----------------------------
+    @staticmethod
     def getCredits(ID):
         api_key = SaveLoadJson.load(GetParameters.api_key_file)["TMDB"]["key"]
 
@@ -66,6 +69,7 @@ class GetParameters:
         return data
 
     #Takes in movie ID and queries parameters ----------------------------------
+    @staticmethod
     def get(ids, debug=False):
         result = copy.deepcopy(GetParameters.tempJson)
     
@@ -121,6 +125,7 @@ class GetParameters:
 
     #Called when you have a movie name --------------------------------------
     #Finds the movie ID from that string
+    @staticmethod
     def find(string, debug=False, oldRatings=True):
         GetParameters.oldData = oldRatings
         

@@ -1,4 +1,5 @@
 *~
+*.pyc
 #File with api keys
 api_keys.txt
 __pycache__

@@ -19,7 +19,8 @@ class FactorQuery:
                      }
 
     dateMovie = 0
-    
+
+    @staticmethod
     def getPerson(id, api_key):
         response = requests.get("https://api.themoviedb.org/3/person/" + str(id) + "/combined_credits?api_key=" + api_key + "&language=en-US") #query
         if(response.status_code != 200):
@@ -27,6 +28,7 @@ class FactorQuery:
         
         return response.json() #parse data into json
 
+    @staticmethod
     def getName(id, api_key):
         response = requests.get("https://api.themoviedb.org/3/person/" + str(id) + "?api_key=" + api_key + "&language=en-US")
         if(response.status_code != 200):
@@ -34,6 +36,7 @@ class FactorQuery:
         
         return response.json()["name"]
 
+    @staticmethod
     def getMovie(id, api_key):
         response = requests.get("https://api.themoviedb.org/3/movie/" + str(id) + "?api_key=" + api_key + "&language=en-US") #query
         if(response.status_code != 200):
@@ -43,6 +46,7 @@ class FactorQuery:
 
 
     # Get Job -----------------------------------------------------
+    @staticmethod
     def getJob(id, api_key, job):
 
         now = datetime.datetime.now()                                   #get current time to compare release date to
@@ -78,6 +82,7 @@ class FactorQuery:
         return results                                                                                  #return json data
 
     # Get Actor -----------------------------------------------------
+    @staticmethod
     def getActor(id, api_key):
         
         now = datetime.datetime.now()
@@ -113,6 +118,7 @@ class FactorQuery:
         return results
 
     # Get Department -----------------------------------------------------
+    @staticmethod
     def getDepartment(id, api_key, department):
 
         now = datetime.datetime.now()                                   #get current time to compare release date to
@@ -147,7 +153,8 @@ class FactorQuery:
             print("Found " + str(total) + " work(s) for " + results["name"])
         return results                                                                                  #return json data
 
-    # Get Factor ------------------------------------------------------    
+    # Get Factor ------------------------------------------------------
+    @staticmethod
     def getFactors(debug=False):
         FactorQuery.debug = debug
         if debug == True:
@@ -179,7 +186,7 @@ class FactorQuery:
             for dctr in parameters["Directors"]:
                 data["Directors"].append(FactorQuery.getJob(dctr, api_key, "Director"))
         if "Actors" in parameters:
-            iMax = 10#Change this number for the number of Actors---------------------------------------------
+            iMax = 4#Change this number for the number of Actors---------------------------------------------
             i = 0
             if debug == True:
                 if len(parameters["Actors"]) > iMax:
