@@ -104,14 +104,18 @@
   xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
   xhr.withCredentials = true;
   
-  document.getElementById("output").innerHTML="Computing "+input+"<i id='dotting'></i>";
+  document.getElementById("output").innerHTML="Computing '"+input+"'<i id='dotting'></i>";
   loading = true;
   
   xhr.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
   var obj = JSON.parse(this.responseText);
   document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
-  document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
+	  var rating = "unknown.</br>The movie may not have come out yet."
+	  if (obj.Actual != "0") {
+		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time"	  
+	  }
+  document.getElementById("info").innerHTML=("</br>The actual rating of '"+obj.Name+"' is "+rating);
   }
   else if(this.status == 0) {
   document.getElementById("output").innerHTML="Server Error: Please try again later.";
