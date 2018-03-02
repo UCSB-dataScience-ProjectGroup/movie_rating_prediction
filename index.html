@@ -167,8 +167,9 @@
   var obj = JSON.parse(this.responseText);
   document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
 	  var rating = "unknown.</br>I don't have that movie in my database."
-	  if (obj.Actual != "0") {
-		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time"	  
+	  if (obj.Actual != "0" && obj.Id != -1) {
+		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time";
+		rating += "</br><i href='https://www.themoviedb.org/movie/"+obj.Id+"'>The Movie Database</i>";
 	  }
   document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+rating);
   }
