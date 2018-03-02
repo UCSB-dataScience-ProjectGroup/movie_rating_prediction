@@ -48,7 +48,7 @@
 	       onfocus="focusFuntion()"
 	       value="Enter a movie Title" 
 	       class="w3-white w3-round w3-padding-large w3-large">
-	<p class="w3-center"><a onclick="getRating()" class="w3-button w3-black w3-round w3-padding-large w3-large">Get Rating</a></p>
+	<p class="w3-center"><a onclick="getRating()" class="w3-button w3-black w3-round w3-padding-large w3-large" id="enter">Get Rating</a></p>
 	</hr></br><p class="w3-center w3-round w3-padding-large w3-large" id="info" style="background: rgba(0,0,0,0.5)"></p>
       </div>
     </header>
@@ -150,6 +150,7 @@
   function getRating() {
   var xhr = new XMLHttpRequest();
   var input = document.getElementById("input").value;
+  document.getElementById("enter").focus()
   document.getElementById("input").value = "Enter another movie Title";
   document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for '"+input+"'.</br>Please be patient!";
   document.getElementById("input").style="w3-text-light-grey";
