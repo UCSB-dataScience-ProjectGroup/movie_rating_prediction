@@ -169,7 +169,9 @@
 	  var rating = "unknown.</br>I don't have that movie in my database."
 	  if (obj.Actual != "0" && obj.Id != -1) {
 		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time";
-		rating += "</br><i href='https://www.themoviedb.org/movie/"+obj.Id+"'>The Movie Database</i>";
+	  }
+	  if(obj.Id != -1){
+		rating += "</br><a href='https://www.themoviedb.org/movie/"+obj.Id+"' title='www.themoviedb.com' target='_blank'>The Movie Database</a>";	  
 	  }
   document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+rating);
   }
