@@ -171,7 +171,7 @@
 		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time";
 	  }
 	  if(obj.Id != -1){
-		if(obj.Imdb_id != NULL){
+		if(obj.hasOwnProperty('Imdb_id')){
 			rating += "</br><a href='https://www.imdb.com/title/"+obj.Imdb_id+"/' title='www.imdb.com' target='_blank'>IMDB</a>";	
 		}
 		rating += "</br><a href='https://www.themoviedb.org/movie/"+obj.Id+"' title='www.themoviedb.com' target='_blank'>The Movie Database</a>";	  
