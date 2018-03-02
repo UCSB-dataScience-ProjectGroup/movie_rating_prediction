@@ -46,92 +46,94 @@
 	</hr><p class="w3-center" id="info"></p>
       </div>
     </header>
-    
-    <!-- Navbar (sticky bottom) -->
-    <div class="w3-bottom w3-hide-small">
-      <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
-	<a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-	<a href="#us" style="width:25%" class="w3-bar-item w3-button">About us</a>
-	<a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" style="width:25%" class="w3-bar-item w3-button">GitHub: Reel Ratings</a>
-	<a href="https://www.facebook.com/DataScienceUCSB/" style="width:25%" class="w3-bar-item w3-button w3-hover-black">UCSB Data Science</a>
-      </div>
-    </div>
+</div>
+</header>
 
-    <!-- About / US -->
-    <div class="w3-container w3-padding-64 w3-khaki w3-grayscale-min" id="us">
-      <div class="w3-content">
-	<h1 class="w3-center w3-text-grey"><b>Reel Ratings Team</b></h1>
-	<img class="w3-round" src="images/ReelTeam.jpg" style="width:100%;margin:32px 0">
-	<p><i>Contributors:</br>
-	    Danielle Robinson</br>
-	    Victoria Sneddon (Project Manager)</br>
-	    Brandon Tran</br>
-	    Jake Hickey</br>
-	    Ari Gilmore</br>
-	    Andrew Polk</br>
-	    Ivy Tran</br></br>
-	    
-	    We wanted to be able to predict the rating of a movie before it is released. We wanted to be able to input a movie or upcoming movie title and output the predicted movie rating.</i>
-	</p><br>
-	<p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
-      </div>
-    </div>
-    
-    <!-- Footer -->
-    <footer class="w3-center w3-black w3-padding-16">
-      <p>Powered by <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" title="ReelRatings" target="_blank" class="w3-hover-text-green">ReelRatings</a></p>
-    </footer>
-    <div class="w3-hide-small" style="margin-bottom:32px"> </div>
-    
-    <script>
-      function focusFuntion() {
-      document.getElementById("input").value = "";
-      document.getElementById("input").style="w3-text-black";
-      }
-      
-      var loading = false;
-      
-      function getRating() {
-      var xhr = new XMLHttpRequest();
-      var input = document.getElementById("input").value;
-      document.getElementById("input").value = "Enter another movie Title";
-      document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for "+input+".</br>Please be patient!";
-      document.getElementById("input").style="w3-text-light-grey";
-      
-      xhr.open('GET', host="https://reelrating.net"+"/find/"+input, true);
-      xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
-      xhr.withCredentials = true;
-      
-      document.getElementById("output").innerHTML="Computing "+input+"<i id='dotting'></i>";
-      loading = true;
-      
-      xhr.onreadystatechange = function() {
-      if(this.readyState == 4 && this.status == 200) {
-      var obj = JSON.parse(this.responseText);
-      document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
-      document.getElementById("info").innerHTML=("The actual rating of '"+obj.name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
-      }
-      else if(this.status == 0) {
-      document.getElementById("output").innerHTML="Server Error: Please try again later.";
-      }
-      loading = false;
-      };
-      
-      xhr.send();
-      }
-      
-      var dots = window.setInterval( function() {
-      if(loading == true) {
-      var waiting = document.getElementById("dotting");
-      if(waiting.innerHTML == "...."){ 
-      waiting.innerHTML="";
-      }
-      else { 
-      waiting.innerHTML+=".";
-      }
-      }
-      }, 250);
-    </script>
+<!-- Navbar (sticky bottom) -->
+<div class="w3-bottom w3-hide-small">
+  <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
+    <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">About us</a>
+    <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" style="width:25%" class="w3-bar-item w3-button">GitHub: Reel Ratings</a>
+    <a href="https://www.facebook.com/DataScienceUCSB/" style="width:25%" class="w3-bar-item w3-button w3-hover-black">UCSB Data Science</a>
+  </div>
+</div>
 
-  </body>
+<!-- About / US -->
+<div class="w3-container w3-padding-64 w3-khaki w3-grayscale-min" id="us">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>Reel Ratings Team</b></h1>
+    <img class="w3-round" src="images/ReelTeam.jpg" style="width:100%;margin:32px 0">
+    <p><i>Contributors:</br>
+	Danielle Robinson</br>
+	Victoria Sneddon (Project Manager)</br>
+	Brandon Tran</br>
+	Jake Hickey</br>
+	Ari Gilmore</br>
+	Andrew Polk</br>
+	Ivy Tran</br></br>
+	
+	We wanted to be able to predict the rating of a movie before it is released. We wanted to be able to input a movie or upcoming movie title and output the predicted movie rating.</i>
+    </p><br>
+    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Powered by <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" title="ReelRatings" target="_blank" class="w3-hover-text-green">ReelRatings</a></p>
+</footer>
+<div class="w3-hide-small" style="margin-bottom:32px"> </div>
+
+<script>
+  function focusFuntion() {
+  document.getElementById("input").value = "";
+  document.getElementById("input").style="w3-text-black";
+  }
+  
+  var loading = false;
+  
+  function getRating() {
+  var xhr = new XMLHttpRequest();
+  var input = document.getElementById("input").value;
+  document.getElementById("input").value = "Enter another movie Title";
+  document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for "+input+".</br>Please be patient!";
+  document.getElementById("input").style="w3-text-light-grey";
+  
+  xhr.open('GET', host="https://pi1.polklabs.com"+"/find/"+input, true);
+  xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
+  xhr.withCredentials = true;
+  
+  document.getElementById("output").innerHTML="Computing "+input+"<i id='dotting'></i>";
+  loading = true;
+  
+  xhr.onreadystatechange = function() {
+  if(this.readyState == 4 && this.status == 200) {
+  var obj = JSON.parse(this.responseText);
+  document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
+  document.getElementById("info").innerHTML=("The actual rating of '"+obj.name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
+  }
+  else if(this.status == 0) {
+  document.getElementById("output").innerHTML="Server Error: Please try again later.";
+  }
+  loading = false;
+  };
+  
+  xhr.send();
+  }
+  
+  var dots = window.setInterval( function() {
+  if(loading == true) {
+  var waiting = document.getElementById("dotting");
+  if(waiting.innerHTML == "...."){ 
+  waiting.innerHTML="";
+  }
+  else { 
+  waiting.innerHTML+=".";
+  }
+  }
+  }, 250);
+</script>
+
+</body>
 </html>
