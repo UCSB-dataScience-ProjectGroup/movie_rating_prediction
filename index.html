@@ -111,7 +111,7 @@
   if(this.readyState == 4 && this.status == 200) {
   var obj = JSON.parse(this.responseText);
   document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
-  document.getElementById("info").innerHTML=("The actual rating of '"+obj.name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
+  document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
   }
   else if(this.status == 0) {
   document.getElementById("output").innerHTML="Server Error: Please try again later.";
