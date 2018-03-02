@@ -4,10 +4,10 @@ from utilities.SaveLoadJson import SaveLoadJson
 class Stats:
     filename = 'ratings.txt'
     filename2 = 'parameters.txt'
-    outputFile = 'results.txt'
     dataFile = 'dataStore.txt'
 
     @staticmethod
+    #Adjusts weights based on if ratings exists so they add up to 1
     def adjust(weights, newWeights, avgHold):
         total = 0
         for key, value in weights.items():
@@ -20,8 +20,10 @@ class Stats:
     @staticmethod
     def analyze():
 
+        #People to look at
         works = ["Actors","Directors","Writers","Producers"]
-        values = ["Genres", "Average"]
+        #Averages to look at
+        values = ["Genres", "Average","Company"]
 
         newWeights = {}
 
@@ -30,21 +32,30 @@ class Stats:
                    "Writers":[0.0,0,0.0],
                    "Producers":[0.0,0,0.0],
                    "Genres":[0.0,0,0.0],
+                   "Company":[0.0,0,0.0],
                    "Average":[0.0,0,0.0],
                    "Max":[10.0,1,0.0],
                    "Min":[0.0001,1,0.0]
                    }
 
+        #Output format
+        result = {"Name":"",
+                  "Average":"",
+                  "Actual":"",
+                  "Error":"",
+                  "Id":""}
+        
         print("Doing math!")
-        factors = SaveLoadJson.load(Stats.filename)
-        parameters = SaveLoadJson.load(Stats.filename2)
-        data = SaveLoadJson.load(Stats.dataFile)
+        factors = SaveLoadJson.load(Stats.filename) #Load factors
+        parameters = SaveLoadJson.load(Stats.filename2) #Load parameters
+        data = SaveLoadJson.load(Stats.dataFile) #Load data
 
-        weights = data["weights"]
+        weights = data["weights"] #Copy weights from Json
 
-        totalQueries = 3
-        observed = 0.0
+        totalQueries = 3 #Required to find name, get movie, and get credits
+        observed = 0.0 #Final average
 
+        #Moving through the data-------------------------------
         #Stuff with works
         for key in works:
             for person in factors[key]:
@@ -90,24 +101,25 @@ class Stats:
                     if value[0] < observed and float(parameters["Rating"]) > observed:
                         weights[key] = float("{0:.5f}".format(weights[key]-modifier))
 
-        #Printing results --------------------------------------
-        print("Average movie Rating: ", format(observed,'.1f'))
-        
-        print("Actual movie Rating: " + str(parameters["Rating"]))
+        #Formatting results --------------------------------------
+        #Percent error
+        percentError = 0
+        if float(parameters["Rating"]) != 0:
+            percentError = (abs(float(parameters["Rating"])-observed)/float(parameters["Rating"]))*100
 
+        result["Error"]=str(format(percentError,'.2f'))
+        result["Actual"]=str(parameters["Rating"])
+        result["Average"]=str(format(observed, '.1f'))
+        result["Name"]=str(parameters["Title"])
+        result["Id"]=str(parameters["Id"])
+        
         #Save data to file --------------------------------------
         data["weights"] = weights
         data["totalQueries"] += totalQueries
         data["totalAdjusts"] += 1
         if len(data["ratings"]) > data["totalAdjusts"]/2 or len(data["ratings"]) > 1000:
             data["ratings"].pop(0)
-        data["ratings"].append([parameters["Title"], str(format(observed, '.1f'))])
+        data["ratings"].append(json.dumps(result))
         SaveLoadJson.save(Stats.dataFile, data)
 
-        #Percent error and return ------------------------------
-        percentError = 0
-        if float(parameters["Rating"]) != 0:
-            percentError = (abs(float(parameters["Rating"])-observed)/float(parameters["Rating"]))*100
-        print("Percent error: ", format(percentError,'.3f'),"%")  
-
-        return [parameters["Title"], str(format(observed, '.1f'))]
+        return result

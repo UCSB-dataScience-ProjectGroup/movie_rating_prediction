@@ -11,9 +11,10 @@ class FactorQuery:
     averageRating = 'AverageRatings.txt'
     api_key_file = 'api_keys.txt'
     outputFile = 'ratings.txt'
+    companyFile = 'companies.tsv'
     
     resultStruct = {
-                    "name":"",
+                    "id":"",
                     "total_works":0,
                     "works":[]
                      }
@@ -28,22 +29,45 @@ class FactorQuery:
         
         return response.json() #parse data into json
 
-    @staticmethod
-    def getName(id, api_key):
-        response = requests.get("https://api.themoviedb.org/3/person/" + str(id) + "?api_key=" + api_key + "&language=en-US")
-        if(response.status_code != 200):
-            return "NULL"
-        
-        return response.json()["name"]
+    def getCompany(id, api_key):
+        page = 1
+        rating = 0.0
+        with open(FactorQuery.companyFile, 'r') as f:
+            for line in f:
+                line=line.split('\t')
+                if len(line) > 0 and int(line[0]) == id:
+                    return float(line[1])
+                    
+        rating=[]
+        total=0
+        while page != 0:
+            print("Getting company movies. Page: " + str(page))
+            response = requests.get("https://api.themoviedb.org/3/company/" + str(id) + "/movies?api_key=" + api_key + "&language=en-US&page=" + str(page))
+            if(response.status_code != 200):
+                return "NULL"
 
-    @staticmethod
-    def getMovie(id, api_key):
-        response = requests.get("https://api.themoviedb.org/3/movie/" + str(id) + "?api_key=" + api_key + "&language=en-US") #query
-        if(response.status_code != 200):
-            return "NULL"
-        
-        return response.json() #parse data into json
+            response = response.json()
+            for item in response["results"]:
+                temp = Search.find(str(item["id"]))
+                if temp != "NULL":
+                    rating.append(float(temp.split('\t')[2]))
+                    total += 1
+                    
+            if page == response["total_pages"]:
+                page = 0
+            else:
+                page += 1
 
+        avg = 0.0
+        for i in rating:
+            avg += float(i)
+        rating = avg/float(total)
+        with open(FactorQuery.companyFile, 'a') as f:
+            f.write(str(id) + '\t' + str(format(rating,'.1f')) + '\n')
+
+        print(str(rating))
+        return rating
+                    
 
     # Get Job -----------------------------------------------------
     @staticmethod
@@ -76,7 +100,7 @@ class FactorQuery:
                     total += 1                                                                          #add work to total
 
         results["total_works"] = total;#add total to list of works
-        results["name"] = FactorQuery.getName(id, api_key)
+        results["id"] = id
         if FactorQuery.debug == True:
             print("Found " + str(total) + " work(s) for " + results["name"])
         return results                                                                                  #return json data
@@ -112,7 +136,7 @@ class FactorQuery:
                     total += 1    
                     
         results["total_works"] = total;
-        results["name"] = FactorQuery.getName(id, api_key)
+        results["id"] = id
         if FactorQuery.debug == True:
             print("Found " + str(total) + " work(s) for " + results["name"])
         return results
@@ -148,7 +172,7 @@ class FactorQuery:
                     total += 1                                                                          #add work to total
 
         results["total_works"] = total;#add total to list of works
-        results["name"] = FactorQuery.getName(id, api_key)
+        results["id"] = id
         if FactorQuery.debug == True:
             print("Found " + str(total) + " work(s) for " + results["name"])
         return results                                                                                  #return json data
@@ -169,24 +193,37 @@ class FactorQuery:
             "Writers":[],
             "Producers":[],
             "Genres":[],
-            "Average":[]
+            "Average":[],
+            "Company":[]
             }
 
+        #Genres -------------------------------------------------
         for genre in parameters["Genre"]:
             if genre in avgRating["Genres"]:
                 data["Genres"].append(avgRating["Genres"][genre])
         data["Average"].append(avgRating["Average"])
-        
+
+        #Companies ----------------------------------------------
+        if "Production_companies" in parameters:
+            if debug == True:
+                print("Geting ratings for " + str(len(parameters["Production_companies"])) + " companies.")
+            for company in parameters["Production_companies"]:
+                data["Company"].append(FactorQuery.getCompany(company, api_key))
+
+        #Date ---------------------------------------------------
         if "Date" in parameters:
             FactorQuery.dateMovie = parameters["Date"]
 
+        #Directors ----------------------------------------------
         if "Directors" in parameters:
             if debug == True:
                 print("Getting works for " + str(len(parameters["Directors"])) + " director(s)")
             for dctr in parameters["Directors"]:
                 data["Directors"].append(FactorQuery.getJob(dctr, api_key, "Director"))
+
+        #Actors -------------------------------------------------
         if "Actors" in parameters:
-            iMax = 4#Change this number for the number of Actors---------------------------------------------
+            iMax = 4#Change this number for the number of Actors
             i = 0
             if debug == True:
                 if len(parameters["Actors"]) > iMax:
@@ -198,11 +235,20 @@ class FactorQuery:
                 if i > iMax:
                     break
                 data["Actors"].append(FactorQuery.getActor(actr, api_key))
+
+        #Writers ------------------------------------------------
         if "Writers" in parameters:
+            iMax = 4
+            i = 0
             if debug == True:
                 print("Getting works for " + str(len(parameters["Writers"])) + " writer(s)")
             for wrtr in parameters["Writers"]:
+                i+=1
+                if i > iMax:
+                    break
                 data["Writers"].append(FactorQuery.getDepartment(wrtr, api_key, "Writing"))
+
+        #Producers ---------------------------------------------
         if "Producers" in parameters:
             if debug == True:
                 print("Getting works for " + str(len(parameters["Producers"])) + " producer(s)")

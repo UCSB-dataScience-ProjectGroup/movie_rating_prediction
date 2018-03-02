@@ -9,9 +9,9 @@ class dataCall:
     def findMovie(movie):
         temp = GP.find(movie,debug=True,oldRatings=True)
         
-        if temp[1] == '0':
+        if temp["Id"] == '0':
             FQ.getFactors(debug=False)
             temp = stats.analyze()
 
-        msg = str(temp[0]+'%314'+temp[1])
+        msg = str(json.dumps(temp))
         return msg

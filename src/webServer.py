@@ -19,11 +19,12 @@ def hello():
 def find(movie): 
     return DC.findMovie(movie)
 
-@app.route('/config', methods=['GET'])
+@app.route('/config/<token>', methods=['GET'])
 @cross_origin(supports_credentials=True)
-def getCfg():
-    return send_file('utilities/config.html')
-
+def getCfg(token):
+    if token == 'aaaQlIstC5':
+        return send_file('utilities/config.html')
+    return''
 @app.route('/config/data/get/<typ>', methods=['GET'])
 @cross_origin(supports_credentials=True)
 def getData(typ):
@@ -31,8 +32,12 @@ def getData(typ):
         return GD.getDATA()
     if typ == 'ACC':
         return GD.getAccess()
-    return ''
+    return 'Denied'
 
+@app.route('/config/data/get/log/', methods=['GET'])
+@cross_origin(supports_credentials=True)
+def getLog():
+    return send_file('utilities/access.log')
 app.wsgi_app = ProxyFix(app.wsgi_app)
 
 if __name__ == "__main__":
