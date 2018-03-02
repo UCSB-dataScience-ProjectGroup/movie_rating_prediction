@@ -49,7 +49,7 @@
 	       value="Enter a movie Title" 
 	       class="w3-white w3-round w3-padding-large w3-large">
 	<p class="w3-center"><a onclick="getRating()" class="w3-button w3-black w3-round w3-padding-large w3-large">Get Rating</a></p>
-	</hr><p class="w3-center w3-light-grey w3-round w3-padding-large w3-large" id="info"></p>
+	</hr></br><p class="w3-center w3-round w3-padding-large w3-large" id="info" style="background: rgba(0,0,0,0.3)"></p>
       </div>
     </header>
 </div>
@@ -136,7 +136,7 @@
 <script>
   document.getElementById("input").onkeydown = function(event) {
 	if(event.keycode == 13) {
-		getRating()	
+		getRating();	
 	}
   }
 	
@@ -169,7 +169,7 @@
 	  if (obj.Actual != "0") {
 		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time"	  
 	  }
-  document.getElementById("info").innerHTML=("</br>The actual rating of '"+obj.Name+"' is "+rating);
+  document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+rating);
   }
   else if(this.status == 0) {
   document.getElementById("output").innerHTML="Server Error: Please try again later.";
