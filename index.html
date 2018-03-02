@@ -49,7 +49,7 @@
 	       value="Enter a movie Title" 
 	       class="w3-white w3-round w3-padding-large w3-large">
 	<p class="w3-center"><a onclick="getRating()" class="w3-button w3-black w3-round w3-padding-large w3-large">Get Rating</a></p>
-	</hr><p class="w3-center" id="info" style="text-shadow: -1px 0 #000000,0 2px #000000,2px 0 #000000,0 -1px #000000"></p>
+	</hr><p class="w3-center w3-light-grey w3-round w3-padding-large w3-large" id="info"></p>
       </div>
     </header>
 </div>
@@ -123,7 +123,7 @@
 	</ul></br>
 	<img class="w3-round" src="MovieRatings.png" style="width:100%;margin:32px 0">
     </p><br>
-    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Repository</a></p>
+    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Visit the Repo</a></p>
   </div>
 </div>
 
@@ -134,6 +134,12 @@
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
 <script>
+  document.getElementById("input").onkeydown = function(event) {
+	if(event.keycode == 13) {
+		getRating()	
+	}
+  }
+	
   function focusFuntion() {
   document.getElementById("input").value = "";
   document.getElementById("input").style="w3-text-black";
@@ -145,7 +151,7 @@
   var xhr = new XMLHttpRequest();
   var input = document.getElementById("input").value;
   document.getElementById("input").value = "Enter another movie Title";
-  document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for "+input+".</br>Please be patient!";
+  document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for '"+input+"'.</br>Please be patient!";
   document.getElementById("input").style="w3-text-light-grey";
   
   xhr.open('GET', host="https://pi1.polklabs.com"+"/find/"+input, true);
@@ -159,7 +165,7 @@
   if(this.readyState == 4 && this.status == 200) {
   var obj = JSON.parse(this.responseText);
   document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
-	  var rating = "unknown.</br>The movie may not have come out yet."
+	  var rating = "unknown.</br>I don't have that movie in my database."
 	  if (obj.Actual != "0") {
 		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time"	  
 	  }
