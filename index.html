@@ -28,6 +28,12 @@
     width:100%
     text-align: center
     }
+    ul.b {
+	    list-style-type: circle;
+	  }
+    ul.a {
+	    list-style-type: square;
+	  }
   </style>
   <body>
     
@@ -53,9 +59,50 @@
 <div class="w3-bottom w3-hide-small">
   <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
     <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-    <a href="#us" style="width:25%" class="w3-bar-item w3-button">About us</a>
-    <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" style="width:25%" class="w3-bar-item w3-button">GitHub: Reel Ratings</a>
+    <a href="#reel" style="width:25%" class="w3-bar-item w3-button">About Reel Ratings</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">About Us</a>
     <a href="https://www.facebook.com/DataScienceUCSB/" style="width:25%" class="w3-bar-item w3-button w3-hover-black">UCSB Data Science</a>
+  </div>
+</div>
+
+<!-- About / Reel Ratings -->
+<div class="w3-container w3-padding-64 w3-light-grey w3-grayscale-min" id="reel">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>About Reel Ratings</b></h1>
+    <p>
+	  <bold>Abstract</bold>
+		The goal of this program is to allow a user to enter a movie title and try to predict what the rating of that movie woudl be.
+	  </br>
+	<bold>Aspects</bold>
+	<ul class="a">
+		<li>TheMovieDb API -movie parameters (actors, directors, budget etc.)</li>
+    		<li>IMDb dataset from AWS -ratings from previous movies</li>
+    		<li>Data Algorithms (weighting actors vs. directors vs. budget…)</li>
+    		<li>Query data about movie title or movie id to get parameters</li>
+    		<li>Query previous ratings of rating parameters</li>
+    		<li>Storing data to be accessed and used from different parts of the program</li>
+    		<li>Statistical analysis on ratings (Data algorithms, linear recursion)</li>
+    		<li>An interface/web app to take input and display results</li>
+	</ul></br>
+	<bold>Parameters in Use</bold>
+	<ul class="a">
+		<li>Average movie rating</li>
+		<li>Actor movie ratings</li>
+		<li>Directors</li>
+		<li>Producers</li>
+		<li>Studio</li>
+		<li>Writers</li>
+		<li>Genre</li>
+	</ul>
+	<ul class="b">
+		<li>Budget</li>
+		<li>Cinematographer</li>
+		<li>Music Composer</li>
+		<li>More to Come...</li>
+	</ul></br>
+	<img class="w3-round" src="MovieRatings.png" style="width:100%;margin:32px 0">
+    </p><br>
+    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Repository</a></p>
   </div>
 </div>
 
@@ -64,16 +111,17 @@
   <div class="w3-content">
     <h1 class="w3-center w3-text-grey"><b>Reel Ratings Team</b></h1>
     <img class="w3-round" src="images/ReelTeam.jpg" style="width:100%;margin:32px 0">
-    <p><i>Contributors:</br>
-	Danielle Robinson</br>
-	Victoria Sneddon (Project Manager)</br>
-	Brandon Tran</br>
-	Jake Hickey</br>
-	Ari Gilmore</br>
-	Andrew Polk</br>
-	Ivy Tran</br></br>
+    <p><i>Contributors: (Left to Right)</br>
+	<ul class="a">
+	<li>Danielle Robinson (Data Query)</li>
+	<li>Victoria Sneddon (Project Manager)</li>
+	<li>Brandon Tran (Data Query)</li>
+	<li>Jake Hickey (Statistical Analysis)</li>
+	<li>Ari Gilmore (Statistical Analysis)</li>
+	<li>Andrew Polk (Everything)</li>
+	<li>Ivy Tran (Statistical Analysis)</li>
 	
-	We wanted to be able to predict the rating of a movie before it is released. We wanted to be able to input a movie or upcoming movie title and output the predicted movie rating.</i>
+	We are a small group of UCSB students with majors ranging from Computer Engineering to Actuarial Science.</i>
     </p><br>
     <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
   </div>
@@ -81,7 +129,7 @@
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" title="ReelRatings" target="_blank" class="w3-hover-text-green">ReelRatings</a></p>
+  <p>Powered by <a href="https://polklabs.com" title="PolkLabs.com" target="_blank" class="w3-hover-text-green">ReelRatings</a></p>
 </footer>
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
