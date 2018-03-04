@@ -29,6 +29,7 @@ class FactorQuery:
         
         return response.json() #parse data into json
 
+    @staticmethod
     def getCompany(id, api_key):
         page = 1
         rating = 0.0

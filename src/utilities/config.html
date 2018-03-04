@@ -4,229 +4,286 @@
 header('Access-Control-Allow-Origins: *');
 ?>
 <head>
-	<link rel="shortcut icon" href="images/reel.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <title>Reel Ratings Config</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+  </style>
 </head>
-<title>Reel Ratings Config</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
-</style>
 <body class="w3-light-grey">
-
-<!-- Top container -->
-<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
-  <span class="w3-bar-item w3-right">Reel Ratings</span>
-  <div class="w3-col s8 w3-bar">
-      <span class="w3-bar-item">Welcome, <Strong>Andrew!</strong>      Time: <i style="w3-padding-16" id="time"></i></span><br>
-  </div>
-</div>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-top:43px;">
-
-  <!-- Header -->
-  <header class="w3-container" style="padding-top:22px">
-    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
-  </header>
-
-  <div class="w3-row-padding w3-margin-bottom">
-    <div class="w3-quarter">
-      <div class="w3-container w3-red w3-padding-16">
-        <div class="w3-left"><i class="fa fa-desktop w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3 id="requests">0</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Requests</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-blue w3-padding-16">
-        <div class="w3-left"><i class="fa fa-server w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3 id="Calculate">0</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Rating Calculations</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-teal w3-padding-16">
-        <div class="w3-left"><i class="fa fa-download w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3 id="TMDBQuer">0</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>TMDB Queries</h4>
-      </div>
-    </div>
-    <div class="w3-quarter">
-      <div class="w3-container w3-orange w3-text-white w3-padding-16">
-        <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
-        <div class="w3-right">
-          <h3 id="Users">0</h3>
-        </div>
-        <div class="w3-clear"></div>
-        <h4>Users</h4>
-      </div>
-    </div>
-  </div>
-
-  <div class="w3-panel">
-    <div class="w3-row-padding">
-      <div>
-        <h5>INFO</h5>
-        <table class="w3-table w3-striped w3-white">
-          <tr>
-            <td><i class="fa fa-plug w3-text-blue w3-large"></i></td>
-            <td>Server uptime</td>
-            <td><i id="uptime">10 mins</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-thermometer-half w3-text-red w3-large"></i></td>
-            <td>Server Temp</td>
-            <td><i id="temp">15 c</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-desktop w3-text-yellow w3-large"></i></td>
-            <td>CPU Load</td>
-            <td><i id="CPUload">50 %</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-file w3-text-red w3-large"></i></td>
-            <td>Memory Load</td>
-            <td><i id="MemLoad">9.0/15.9 GB</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-cloud-upload w3-text-blue w3-large"></i></td>
-            <td>Data Send Rate</td>
-            <td><i>120 Kbps</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-cloud-download w3-text-red w3-large"></i></td>
-            <td>Data Reveive Rate</td>
-            <td><i>6.2 Mbps</i></td>
-          </tr>
-          <tr>
-            <td><i class="fa fa-wifi w3-text-green w3-large"></i></td>
-            <td>Server IP</td>
-            <td><i id="ipAdr">169.231.10.204</i></td>
-          </tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <hr>
   
-  <div class="w3-container">
-    <h5>General Stats</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
-      <tr class="w3-green">
-        <td>Most Recent Search</td>
-        <td id="MRS">65%</td>
-      </tr>
-      <tr class="w3-orange">
-        <td>Most Recent IP Address</td>
-        <td id="MRIP">65%</td>
-      </tr>
-      <tr class="w3-red">
-        <td>Most Recent Search Time</td>
-        <td id="MRT">65%</td>
-      </tr>
-    </table><br>
+  <!-- Top container -->
+  <div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+    <span class="w3-bar-item w3-right">Reel Ratings</span>
+    <div class="w3-col s8 w3-bar">
+      <span class="w3-bar-item">Welcome, <Strong>Andrew!</strong>      Time: <i style="w3-padding-16" id="time"></i></span><br>
+    </div>
   </div>
+  
+  <!-- Overlay effect when opening sidebar on small screens -->
+  <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+  
+  <!-- !PAGE CONTENT! -->
+  <div class="w3-main" style="margin-top:43px;">
+    
+    <!-- Header -->
+    <header class="w3-container" style="padding-top:22px">
+      <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+    </header>
+    
+    <div class="w3-row-padding w3-margin-bottom">
+      <div class="w3-quarter">
+	<div class="w3-container w3-red w3-padding-16">
+          <div class="w3-left"><i class="fa fa-desktop w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3 id="requests">0</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Requests</h4>
+	</div>
+      </div>
+      <div class="w3-quarter">
+	<div class="w3-container w3-blue w3-padding-16">
+          <div class="w3-left"><i class="fa fa-server w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3 id="Calculate">0</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Rating Calculations</h4>
+	</div>
+      </div>
+      <div class="w3-quarter">
+	<div class="w3-container w3-teal w3-padding-16">
+          <div class="w3-left"><i class="fa fa-download w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3 id="TMDBQuer">0</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>TMDB Queries</h4>
+	</div>
+      </div>
+      <div class="w3-quarter">
+	<div class="w3-container w3-orange w3-text-white w3-padding-16">
+          <div class="w3-left"><i class="fa fa-users w3-xxxlarge"></i></div>
+          <div class="w3-right">
+            <h3 id="Users">0</h3>
+          </div>
+          <div class="w3-clear"></div>
+          <h4>Users</h4>
+	</div>
+      </div>
+    </div>
 
-  <div class="w3-container">
-    <h5>Countries</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white" id="iso_code">
-      <tr>
-        <td>United States</td>
-        <td>65%</td>
-      </tr>
-    </table><br>
+    <div class="container">
+      <div class="w3-panel">
+	<div class="w3-row-padding">
+	  <div>
+            <h5>INFO</h5>
+            <table class="w3-table w3-striped w3-white">
+              <tr>
+		<td><i class="fa fa-plug w3-text-blue w3-large"></i></td>
+		<td>Server uptime</td>
+		<td><div align="right" id="uptime">10 mins</div></td>
+            </tr>
+              <tr>
+		<td><i class="fa fa-thermometer-half w3-text-red w3-large"></i></td>
+		<td>Server Temp</td>
+		<td><div align="right" id="temp">15 c</div></td>
+              </tr>
+            <tr>
+              <td><i class="fa fa-desktop w3-text-yellow w3-large"></i></td>
+              <td>CPU Load</td>
+              <td><div align="right" id="CPUload">50 %</div></td>
+            </tr>
+              <tr>
+		<td><i class="fa fa-wifi w3-text-green w3-large"></i></td>
+		<td>Server IP</td>
+		<td><div align="right" id="ipAdr">169.231.10.204</div></td>
+              </tr>
+            </table>
+	  </div>
+	</div>
+      </div>
+    </div>
+    <hr>
+    
+    <div class="container">
+      <h5>General Stats</h5>
+      <a class="w3-button w3-black w3-padding w3-large" href="https://pi1.polklabs.com/config/data/get/log/">Download Log</a><hr>
+      <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+	<tr class="w3-green">
+          <td>Most Recent Search</td>
+          <td id="MRS">Unknown</td>
+	</tr>
+	<tr class="w3-blue">
+	  <td>Most Recent Location</td>
+	  <td id="MRL">Unknown</td>
+	</tr>
+	<tr class="w3-orange">
+          <td>Most Recent IP Address</td>
+          <td id="MRIP">Unknown</td>
+	</tr>
+	<tr class="w3-red">
+          <td>Most Recent Search Time</td>
+          <td id="MRT">Unknown</td>
+	</tr>
+      </table><br>
+    </div>
+    
+    <div class="w3-container">
+      <div class="panel-group">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse1">Locations</a>
+            </h4>
+	  </div>
+	  <div id="collapse1" class="panel-collapse collapse">
+            <ul class="list-group" id="locations">
+              <li class="list-group-item">One</li>
+            </ul>
+	  </div>
+	</div>
+      </div>
+    </div></br>
+    
+    <div class="w3-container">
+      <div class="panel-group">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse2">Devices</a>
+            </h4>
+	  </div>
+	  <div id="collapse2" class="panel-collapse collapse">
+            <ul class="list-group" id="devices">
+              <li class="list-group-item">One</li>
+            </ul>
+	  </div>
+	</div>
+      </div>
+    </div></br>
+    
+    <div class="w3-container">
+      <div class="panel-group">
+	<div class="panel panel-default">
+	  <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#collapse3">Recent Searches: New To Old</a>
+            </h4>
+	  </div>
+	  <div id="collapse3" class="panel-collapse collapse">
+            <ul class="list-group" id="recentSearches">
+              <li class="list-group-item">One</li>
+            </ul>
+	  </div>
+	</div>
+      </div>
+    </div></br>
+    <hr>
+    
+    <!-- Footer -->
+    <footer class="w3-container w3-padding-16 w3-light-grey">
+      <p>Powered by <a href="https://polklabs.com" target="_blank">PolkLabs</a></p>
+    </footer>
+    
+    <!-- End page content -->
   </div>
-
-  <div class="w3-container">
-    <h5>States</h5>
-    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white" id="state_code">
-      <tr>
-        <td>Temp</td>
-        <td>65%</td>
-      </tr>
-    </table><br>
-  </div>
-  <hr>
-
-  <!-- Footer -->
-  <footer class="w3-container w3-padding-16 w3-light-grey">
-    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">Reel Ratings</a></p>
-  </footer>
-
-  <!-- End page content -->
-</div>
-
-<script>
-	window.onload = function() {
+  
+  <script>
+    window.onload = function() {
 		var xhr1 = new XMLHttpRequest();
 		
 		//Data request
-		xhr1.open('GET', host="https://reelrating.net"+"/config/data/get/DATA", true);
+		xhr1.open('GET', host="https://pi1.polklabs.com"+"/config/data/get/DATA", true);
 		xhr1.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr1.withCredentials = true;
 		
 		xhr1.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
-				var text = this.responseText.split("\t");
-				document.getElementById("requests").innerHTML=(text[0]);
-				document.getElementById("TMDBQuer").innerHTML=(text[1]);
-				document.getElementById("Calculate").innerHTML=(text[2]);
-				document.getElementById("time").innerHTML=(text[3]);
-				document.getElementById("CPUload").innerHTML=(text[4]);
-				document.getElementById("uptime").innerHTML=(text[5]);
-				document.getElementById("temp").innerHTML=(text[6]);
-				document.getElementById("ipAdr").innerHTML=(text[7]);
+	                    var obj = JSON.parse(this.responseText);
+	document.getElementById("requests").innerHTML=obj.requests.totalRequests;
+	document.getElementById("Calculate").innerHTML=obj.requests.totalAdjusts;
+	document.getElementById("TMDBQuer").innerHTML=obj.requests.totalQueries;
+	document.getElementById("uptime").innerHTML=obj.uptime;
+	document.getElementById("temp").innerHTML=obj.temp;
+	document.getElementById("CPUload").innerHTML=obj.cpuload;
+	document.getElementById("time").innerHTML=obj.time;
+	document.getElementById("ipAdr").innerHTML=obj.ip;
 			}
 		};
 		xhr1.send();
 
 		var xhr2 = new XMLHttpRequest();
-		xhr2.open('GET', host="https://reelrating.net"+"/config/data/get/ACC", true);
+		xhr2.open('GET', host="https://pi1.polklabs.com"+"/config/data/get/ACC", true);
 		xhr2.setRequestHeader("Access-Control-Allow-Origins", "*")
 		xhr2.withCredentials = true;
 		
 		xhr2.onreadystatechange = function() {
 			if(this.readyState == 4 && this.status == 200) {
-				var text = this.responseText.split("\t");
-				document.getElementById("MRIP").innerHTML=(text[0]);
-				document.getElementById("MRS").innerHTML=(text[1]);
-				document.getElementById("MRT").innerHTML=(text[2]);
-				document.getElementById("Users").innerHTML=(text[3]);
-				var locs = text[4].split(";");
-				var tmpTxt = ''
-				for(var i = 0; i < locs.length; i++){
-					splt = locs[i].split(':');
-					tmpTxt += '<tr><td>' + splt[0] + '</td><td>' + splt[1] + '%</td></tr>';
-				}
-				document.getElementById("iso_code").innerHTML=tmpTxt;
-
-				locs = text[5].split(";");
-				tmpTxt = ''
-				for(var i = 0; i < locs.length; i++){
-					tmpTxt += '<tr><td>' + locs[i] + '</td></tr>';
-				}
-				document.getElementById("state_code").innerHTML=tmpTxt;
+    var obj = JSON.parse(this.responseText);
+    document.getElementById("Users").innerHTML=obj.Users;
+    document.getElementById("MRS").innerHTML="<div align='center'>"+obj.mostRecentSearch+"</div>";
+    document.getElementById("MRIP").innerHTML="<div align='center'>"+obj.mostRecentIP+"</div>";
+    document.getElementById("MRL").innerHTML="<div align='center'>"+obj.mostRecentLoc+"</div>";
+    document.getElementById("MRT").innerHTML="<div align='center'>"+obj.mostRecentAcc+"</div>";
+    
+    var lst = '';
+    var coll=0;
+    for(const [key, value] of Object.entries(obj.Countries)){
+    lst+="<li class='list-group-item'>";
+      lst+="<div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#collapseL"+coll+"'>";
+	lst+=key+": "+obj.CountrySrs[key]+"%</a></h4></div>";
+	  lst+= "<div id='collapseL"+coll+"' class='panel-collapse collapse'><ul class='list-group' id='states'>";
+	      for(const [key1, value1] of Object.entries(value)){
+	      lst+="<li class='list-group-item'>";
+		lst+="<div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#collapseS"+coll+"'>"+key1+"</a></h4></div>";
+		    lst+= "<div id='collapseS"+coll+"' class='panel-collapse collapse'><ul class='list-group' id='states'>";
+			for(const [key2, value2] of Object.entries(value1)){
+			lst+="<li class='list-group-item'>";
+			  lst+="<div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#collapseC"+coll+"'>"+key2+"</a></h4></div>";
+			      lst+= "<div id='collapseC"+coll+"' class='panel-collapse collapse'><ul class='list-group' id='cities'>";
+				  lst+="<table class='w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white'>";
+				  for(var s of value2){
+				    lst+="<tr class='w3-white'><td>"+s+"</td></tr>";
+				  }
+				  lst+="</table></ul></div></div></div></li>";
+			coll+=1
 			}
-		};
-		xhr2.send();
-	}
-</script>
+			lst+="</ul></div></div></div></li>";
+	      coll+=1
+	      }
+	      lst+="</ul></div></div></div></li>";
+    coll+=1
+    }
+    document.getElementById("locations").innerHTML=lst;
 
+    lst='';
+    for(const [key, value] of Object.entries(obj.devices)){
+      lst+="<li class='list-group-item'>"+key+": "+value+"%</li>";
+      }
+    document.getElementById("devices").innerHTML=lst; 
+ 
+    lst='';
+    lst+="<table class='w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white'>";
+    for(var s of obj.recentSearches){
+      lst+="<tr class='w3-white'><td>"+s+"</td></tr>";
+      }
+      lst+="</table></ul></div></div></div></li>";
+    document.getElementById("recentSearches").innerHTML=lst;
+    }
+
+    };
+    xhr2.send();
+    }
+  </script>
+  
 </body>
 </html>

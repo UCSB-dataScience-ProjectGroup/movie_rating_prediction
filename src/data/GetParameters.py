@@ -19,10 +19,12 @@ class GetParameters:
               "Average":"0.0",
               "Actual":"0.0",
               "Error":"0",
-              "Id":"-1"}
+              "Id":"-1",
+              "Imdb_id":"tt0000000"}
     
     tempJson = {"Date":0,
                 "Id":"0",
+                "Imdb_id":"tt0000000",
                 "Title":"",
                 "Genre":[],
                 "Rating":0,
@@ -47,8 +49,13 @@ class GetParameters:
         response = requests.request("GET", url[0]+GetParameters.api_key+url[1]+inpt+url[2], data=payload)
         
         data = response.json()
+        iMax = 3
+        i = 0
         if len(data["results"]) > 0:
             for item in data["results"]:
+                i+=1
+                if i > iMax:
+                    break
                 #print(string +"=="+item["title"].lower())
                 if string == item["title"].lower():
                     return item["id"]
@@ -93,6 +100,7 @@ class GetParameters:
             result["Date"] = int(Movie["release_date"].replace("-",""))
         result["Title"] = Movie["title"]
         result["Id"]=str(ids)
+        result["Imdb_id"]=Movie["imdb_id"]
         
         #Save genres ------------------------
         for genre in Movie["genres"]:

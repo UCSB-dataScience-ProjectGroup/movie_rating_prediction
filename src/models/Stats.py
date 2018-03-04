@@ -38,12 +38,13 @@ class Stats:
                    "Min":[0.0001,1,0.0]
                    }
 
-        #Output format
+        #Output format - what we're sending back to the user
         result = {"Name":"",
                   "Average":"",
                   "Actual":"",
                   "Error":"",
-                  "Id":""}
+                  "Id":"",
+                  "Imdb_id":""}
         
         print("Doing math!")
         factors = SaveLoadJson.load(Stats.filename) #Load factors
@@ -112,6 +113,7 @@ class Stats:
         result["Average"]=str(format(observed, '.1f'))
         result["Name"]=str(parameters["Title"])
         result["Id"]=str(parameters["Id"])
+        result["Imdb_id"]=str(parameters["Imdb_id"])
         
         #Save data to file --------------------------------------
         data["weights"] = weights

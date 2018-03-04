@@ -1,4 +1,5 @@
 import json
+import os
 from utilities.SaveLoadJson import SaveLoadJson as SLJ
 from utilities.LineCount import LineCount as LC
 
@@ -10,19 +11,29 @@ class getData:
     #Get Data Functions ------------------------------------------------------
     @staticmethod
     def getDATA():
-        data = (getData.getRequests()+'\t'+
-                getData.getTime()+'\t'+
-                getData.getUptime()+'\t'+
-                getData.getTemp()+'\t'+
-                getData.getIP())
-        return data
+
+        result = {"requests":{},
+                  "time":'',
+                  "cpuload":'',
+                  "uptime":'',
+                  "temp":'',
+                  "ip":''}
+
+        result["requests"]=getData.getRequests()
+        time = getData.getTime().split('\t')
+        result["time"] = time[0]
+        result["cpuload"]=time[1]
+        result["uptime"]=getData.getUptime()
+        result["temp"]=getData.getTemp()
+        result["ip"]=getData.getIP()
+        return json.dumps(result)
 
     @staticmethod
     def getRequests():
         data = SLJ.load('dataStore.txt')
-        return (str(data["totalRequests"])+'\t'+
-                str(data["totalQueries"])+'\t'+
-                str(data["totalAdjusts"]))
+        return {"totalRequests":str(data["totalRequests"]),
+                "totalQueries":str(data["totalQueries"]),
+                "totalAdjusts":str(data["totalAdjusts"])}
     
     @staticmethod
     def getTime():
@@ -52,54 +63,107 @@ class getData:
     #Get Access Functions ---------------------------------------------------
     @staticmethod
     def getAccess():
-        mostRecentIP = '0.0.0.0'
-        mostRecentAcc = '[01/Jan/2000:00:00:00 -0800]'
-        mostRecentSearch = 'NONE'        
 
-        locations={"total":0}
-        usLoc=dict()
+        result={"Countries":dict(),
+                "CountrySrs":dict(),
+                "devices":dict(),
+                "mostRecentSearch":'',
+                "mostRecentAcc":'',
+                "mostRecentIP":'',
+                "recentSearches":[],
+                "Users":0}
+
+        lastNum = 200
+
+        total=0
+        mostRecentIP = ''
+        mostRecentAcc = ''
+        mostRecentSearch = ''
+        Cname='Unknown'
+        Sname='Unknown'
+        Ctyname='Unknown'
         ips=dict()
-        
+
         logFile = 'utilities/access.log'
-        with open(logFile) as fp:
-            for item in fp:
-                line = item.split(';')
-                if(len(line)>1):
-                    if(line[2] == '200'):
-                        if('GET /find' in line[3]):
+        newFile='utilities/new.log'
+
+        #f = open(newFile, 'w')
+        with open(logFile, 'r') as lf:
+            for temp in lf:
+                line = temp.split(';')
+                if len(line) > 1:
+                    if line[2] == '200':
+                        if 'GET /find' in line[3]:
+                            #f.write(temp)
+                            mostRecentIP=line[0]
+                            mostRecentAcc=line[1]
+                            
                             reader = geolite2.reader()
-                            match = reader.get(line[0])
-                            if match['country']['names']['en'] not in locations:
-                                locations[match['country']['names']['en']] = 1
+                            loc = reader.get(line[0])
+
+                            Cname = loc['country']['names']['en']
+                            if 'subdivisions' in loc:
+                                Sname = loc['subdivisions'][0]['names']['en']
                             else:
-                                locations[match['country']['names']['en']]+=1
-                            locations["total"]+=1
+                                Sname='Unknown'
+                            if 'city' in loc:
+                                Ctyname = loc['city']['names']['en']
+                            else:
+                                Ctyname='Unknown'
+                            
+                            if Cname not in result["Countries"]:
+                                result["Countries"][Cname]=dict()
+                                result["CountrySrs"][Cname]=0
+                            if Sname not in result["Countries"][Cname]:
+                                result["Countries"][Cname][Sname]=dict()
+                            if Ctyname not in result["Countries"][Cname][Sname]:
+                                result["Countries"][Cname][Sname][Ctyname] = []
+                            result["CountrySrs"][Cname]+=1
+                            total+=1
+
+                            search = (line[3].split(' ')[1][6:]).replace('%20',' ')
+                            mostRecentSearch=search
+                            if search not in result["Countries"][Cname][Sname][Ctyname]:
+                                result["Countries"][Cname][Sname][Ctyname].append(search)
+                                if len(result["Countries"][Cname][Sname][Ctyname]) >= lastNum:
+                                    result["Countries"][Cname][Sname][Ctyname].pop(0)
+
+                            if search not in result["recentSearches"]:
+                                result["recentSearches"].insert(0,search)
+                                if len(result["recentSearches"]) >= lastNum:
+                                    result["recentSearches"].pop(-1)
+
                             ips[line[0]]=1
-                            if match['country']['iso_code'] == 'US':
-                                usLoc[match['subdivisions'][0]['names']['en']]=1
-                            mostRecentIP = line[0]
-                            mostRecentAcc = str(line[1])
-                            mostRecentSearch = (line[3].split(' ')[1][6:]).replace("%20"," ")
-        #Format data
-        locStr = ''
-        usStr = ''
-        totStr = 0
+                            device=(line[4].split('('))
+                            if len(device)>1:
+                                device=device[1]
+                            else:
+                                device="Unknown"
+                            if device not in result["devices"]:
+                                result["devices"][device]=0
+                            result["devices"][device]+=1
+
+        #f.close()
+
+        #Most recent stuff
+        result["mostRecentIP"]=mostRecentIP
+        result["mostRecentAcc"]=mostRecentAcc
+        result["mostRecentSearch"]=mostRecentSearch
+        result["mostRecentLoc"]=str(Ctyname+', '+Sname+', '+Cname)
+
+        #Unique Users
         for key, value in ips.items():
-            totStr+=1
+            result["Users"]+=1
+
+        #Device percents
+        for key, value in result["devices"].items():
+            percnt = (float(value)/float(total))*100
+            result["devices"][key]=format(percnt, '.2f')
+
+        #Country percents
+        for key, value in result["CountrySrs"].items():
+            percnt = (float(value)/float(total))*100
+            result["CountrySrs"][key]=format(percnt,'.2f')
             
-        for key, value in locations.items():
-            if key != 'total':
-                avg = (float(value)/float(locations['total']))*100
-                avg = "{0:.2f}".format(avg)
-                locStr+=key+':'+str(avg)+';'
-
-        for key, value in usLoc.items():
-            usStr += key + ','
-
-        result = str(mostRecentIP)+'\t'
-        result+= str(mostRecentSearch)+'\t'
-        result+= str(mostRecentAcc)+'\t'
-        result+= str(totStr)+'\t'
-        result+= str(locStr)[:-1]+'\t'
-        result+= str(usStr)[:-1]
-        return result
+        #os.system("sudo mv -f "+newFile+" "+logFile)
+        return json.dumps(result)
