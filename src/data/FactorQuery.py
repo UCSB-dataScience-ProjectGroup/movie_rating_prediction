@@ -103,7 +103,7 @@ class FactorQuery:
         results["total_works"] = total;#add total to list of works
         results["id"] = id
         if FactorQuery.debug == True:
-            print("Found " + str(total) + " work(s) for " + results["name"])
+            print("Found " + str(total) + " work(s) for " + str(ids))
         return results                                                                                  #return json data
 
     # Get Actor -----------------------------------------------------
@@ -139,7 +139,7 @@ class FactorQuery:
         results["total_works"] = total;
         results["id"] = id
         if FactorQuery.debug == True:
-            print("Found " + str(total) + " work(s) for " + results["name"])
+            print("Found " + str(total) + " work(s) for " + str(ids))
         return results
 
     # Get Department -----------------------------------------------------
@@ -175,7 +175,7 @@ class FactorQuery:
         results["total_works"] = total;#add total to list of works
         results["id"] = id
         if FactorQuery.debug == True:
-            print("Found " + str(total) + " work(s) for " + results["name"])
+            print("Found " + str(total) + " work(s) for " + str(ids))
         return results                                                                                  #return json data
 
     # Get Factor ------------------------------------------------------
