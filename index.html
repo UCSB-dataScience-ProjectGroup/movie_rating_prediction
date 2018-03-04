@@ -28,6 +28,12 @@
     width:100%
     text-align: center
     }
+    ul.b {
+	    list-style-type: circle;
+	  }
+    ul.a {
+	    list-style-type: square;
+	  }
   </style>
   <body>
     
@@ -43,7 +49,7 @@
 	       value="Enter a movie Title" 
 	       class="w3-white w3-round w3-padding-large w3-large">
 	<p class="w3-center"><a onclick="getRating()" class="w3-button w3-black w3-round w3-padding-large w3-large">Get Rating</a></p>
-	</hr><p class="w3-center" id="info"></p>
+	</hr></br><p class="w3-center w3-round w3-padding-large w3-large" id="info" style="background: rgba(0,0,0,0.5)"></p>
       </div>
     </header>
 </div>
@@ -53,8 +59,8 @@
 <div class="w3-bottom w3-hide-small">
   <div class="w3-bar w3-white w3-center w3-padding w3-opacity-min w3-hover-opacity-off">
     <a href="#home" style="width:25%" class="w3-bar-item w3-button">Home</a>
-    <a href="#us" style="width:25%" class="w3-bar-item w3-button">About us</a>
-    <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" style="width:25%" class="w3-bar-item w3-button">GitHub: Reel Ratings</a>
+    <a href="#us" style="width:25%" class="w3-bar-item w3-button">About Us</a>
+    <a href="#reel" style="width:25%" class="w3-bar-item w3-button">About Reel Ratings</a>
     <a href="https://www.facebook.com/DataScienceUCSB/" style="width:25%" class="w3-bar-item w3-button w3-hover-black">UCSB Data Science</a>
   </div>
 </div>
@@ -64,28 +70,76 @@
   <div class="w3-content">
     <h1 class="w3-center w3-text-grey"><b>Reel Ratings Team</b></h1>
     <img class="w3-round" src="images/ReelTeam.jpg" style="width:100%;margin:32px 0">
-    <p><i>Contributors:</br>
-	Danielle Robinson</br>
-	Victoria Sneddon (Project Manager)</br>
-	Brandon Tran</br>
-	Jake Hickey</br>
-	Ari Gilmore</br>
-	Andrew Polk</br>
-	Ivy Tran</br></br>
+    <p><i>Contributors: (Left to Right)</br>
+	<ul class="a">
+	<li>Danielle Robinson (Data Query)</li>
+	<li>Victoria Sneddon (Project Manager)</li>
+	<li>Brandon Tran (Data Query)</li>
+	<li>Jake Hickey (Statistical Analysis)</li>
+	<li>Ari Gilmore (Statistical Analysis)</li>
+	<li>Andrew Polk (Everything)</li>
+	<li>Ivy Tran (Statistical Analysis)</li></br></br>
 	
-	We wanted to be able to predict the rating of a movie before it is released. We wanted to be able to input a movie or upcoming movie title and output the predicted movie rating.</i>
+	We are a small group of UCSB students with majors ranging from Computer Engineering to Actuarial Science.</i>
     </p><br>
-    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+    <p class="w3-center"><a class="w3-button w3-black w3-round w3-padding-large w3-large">Details</a></p>
+  </div>
+</div>
+
+<!-- About / Reel Ratings -->
+<div class="w3-container w3-padding-64 w3-white w3-grayscale-min" id="reel">
+  <div class="w3-content">
+    <h1 class="w3-center w3-text-grey"><b>About Reel Ratings</b></h1>
+    <p>
+	  <b>Abstract</b>
+		The goal of this program is to allow a user to enter a movie title and try to predict what the rating of that movie woudl be.
+	  </br></br>
+	<b>Aspects</b>
+	<ul class="a">
+		<li>TheMovieDb API -movie parameters (actors, directors, budget etc.)</li>
+    		<li>IMDb dataset from AWS -ratings from previous movies</li>
+    		<li>Data Algorithms (weighting actors vs. directors vs. budget…)</li>
+    		<li>Query data about movie title or movie id to get parameters</li>
+    		<li>Query previous ratings of rating parameters</li>
+    		<li>Storing data to be accessed and used from different parts of the program</li>
+    		<li>Statistical analysis on ratings (Data algorithms, linear recursion)</li>
+    		<li>An interface/web app to take input and display results</li>
+	</ul></br>
+	<b>Parameters in Use/Planned</b>
+	<ul class="a">
+		<li>Average movie rating</li>
+		<li>Actor movie ratings</li>
+		<li>Directors</li>
+		<li>Producers</li>
+		<li>Studio</li>
+		<li>Writers</li>
+		<li>Genre</li>
+	</ul>
+	<ul class="b">
+		<li>Budget</li>
+		<li>Cinematographer</li>
+		<li>Music Composer</li>
+		<li>More to Come...</li>
+	</ul></br>
+	<img class="w3-round" src="MovieRatings.png" style="width:100%;margin:32px 0">
+    </p><br>
+    <p class="w3-center"><a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" class="w3-button w3-black w3-round w3-padding-large w3-large">Visit the Repo</a></p>
   </div>
 </div>
 
 <!-- Footer -->
 <footer class="w3-center w3-black w3-padding-16">
-  <p>Powered by <a href="https://github.com/UCSB-dataScience-ProjectGroup/movie_rating_prediction" title="ReelRatings" target="_blank" class="w3-hover-text-green">ReelRatings</a></p>
+  <p>Powered by <a href="https://polklabs.com" title="PolkLabs.com" target="_blank" class="w3-hover-text-green">PolkLabs</a></p>
 </footer>
 <div class="w3-hide-small" style="margin-bottom:32px"> </div>
 
 <script>
+  document.getElementById("input").onkeydown = function(event) {
+	if(event.keyCode == 13) {
+		getRating();	
+	}
+  }
+	
   function focusFuntion() {
   document.getElementById("input").value = "";
   document.getElementById("input").style="w3-text-black";
@@ -96,22 +150,33 @@
   function getRating() {
   var xhr = new XMLHttpRequest();
   var input = document.getElementById("input").value;
+  document.getElementById("input").blur()
   document.getElementById("input").value = "Enter another movie Title";
-  document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for "+input+".</br>Please be patient!";
+  document.getElementById("info").innerHTML = "This can take a minute if you're the first one searching for '"+input+"'.</br>Please be patient!";
   document.getElementById("input").style="w3-text-light-grey";
   
   xhr.open('GET', host="https://pi1.polklabs.com"+"/find/"+input, true);
   xhr.setRequestHeader("Access-Control-Allow-Origins", "*")
   xhr.withCredentials = true;
   
-  document.getElementById("output").innerHTML="Computing "+input+"<i id='dotting'></i>";
+  document.getElementById("output").innerHTML="Computing '"+input+"'<i id='dotting'></i>";
   loading = true;
   
   xhr.onreadystatechange = function() {
   if(this.readyState == 4 && this.status == 200) {
   var obj = JSON.parse(this.responseText);
   document.getElementById("output").innerHTML=("<b>"+obj.Name+"</b> gets a <b>"+obj.Average+"/10</b>");
-  document.getElementById("info").innerHTML=("The actual rating of '"+obj.name+"' is "+obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time");
+	  var rating = "unknown.</br>I don't have that movie in my database."
+	  if (obj.Actual != "0" && obj.Id != -1) {
+		rating = obj.Actual+"/10, I was off by "+obj.Error+"%. </br>I'll do better next time";
+	  }
+	  if(obj.Id != -1){
+		if(obj.hasOwnProperty('Imdb_id')){
+			rating += "</br><a href='https://www.imdb.com/title/"+obj.Imdb_id+"/' title='www.imdb.com' target='_blank'>IMDB</a>";	
+		}
+		rating += "</br><a href='https://www.themoviedb.org/movie/"+obj.Id+"' title='www.themoviedb.com' target='_blank'>The Movie Database</a>";	  
+	  }
+  document.getElementById("info").innerHTML=("The actual rating of '"+obj.Name+"' is "+rating);
   }
   else if(this.status == 0) {
   document.getElementById("output").innerHTML="Server Error: Please try again later.";
