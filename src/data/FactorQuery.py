@@ -253,6 +253,6 @@ class FactorQuery:
             if debug == True:
                 print("Getting works for " + str(len(parameters["Producers"])) + " producer(s)")
             for prdcr in parameters["Producers"]:
-                data["Producers"].append(FactorQuery.getDepartment(prdcr, api_key, "Producer"))
+                data["Producers"].append(FactorQuery.getDepartment(prdcr, api_key, "Production"))
         #print(json.dumps(data, indent=2))
         SaveLoadJson.save(FactorQuery.outputFile, data)
