@@ -160,39 +160,46 @@ We want to be able to predict the rating of a movie before it is released. We wa
 	├── LICENSE
 	├── README.md          <- The top-level README for developers using this project.
 	│
-	├── data	<- We cant save the data online so this is empty
-	│   ├── external       <- Data from third party sources.
-	│   ├── interim        <- Intermediate data that has been transformed.
-	│   ├── processed      <- The final, canonical data sets for modeling.
-	│   └── raw            <- The original, immutable data dump.
+	├── index.html	       <- Website that runs code off server
+	├── images
+	│   └── chairs.jpg     <- images for website
+	│   └── ReelTeam.jpg   <- image of the team
 	│
-	├── references         <- Data dictionaries, manuals, and all other explanatory materials.
-	│
-	├── reports            <- Generated analysis as HTML, PDF, LaTeX, etc.
+	├── reports            <- Generated analysis as Graphs and other analysis.
 	│   └── figures        <- Generated graphics and figures to be used in reporting
 	│
-	├── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
-	│                         generated with `pip freeze > requirements.txt`
+	├── requirements.txt   <- The requirements file for reproducing the analysis environment.
 	│
 	└── src                <- Source code for use in this project.
 	    ├── __init__.py    <- Makes src a Python module
-	    ├── dataCall_example.py    <- Whole script run from here
+	    ├── dataCall_example.py    <- Run this to test one at a time
+	    ├── dataCall.py    <- Whole script run from here
+	    ├── webServer.py   <- Code running that the website calls
+	    ├── Testing.py     <- Make N dataCalls
 	    │
+	    │	<-- Files used during analysis and that save data -->
 	    ├── api_keys.txt 	<- stores api keys to be used in query (Not online)
-	    ├── IMDBRatings.tsv <- stores the ratings sorted by IMDB ids
-	    ├── TMDBRatings.tsv <- stores the ratings sorted by TMDB ids
+	    ├── TMDBRatings.tsv <- stores the ratings sorted by TMDB ids (Not online)
+	    ├── AverageRatings.txt <- stores the total average rating and average rating for each Genre
+	    ├── dataStore.txt <- stores weights and recent searches
+	    ├── parameters.txt <- stores the parameters of the current movie it's calculating
+	    ├── ratings.txt <- stores the ratings of the current movie it's calculating
 	    │
 	    ├── data           <- Scripts to download or generate data
+	    │   └── __init__.py
 	    │   └── GetParamters.py 	<- downloads parameters from movie name
 	    │   └── FactorQuery.py 	<- downloads paramter info and finds movie ratings
 	    |
 	    ├── data
+	    │   └── __init__.py
 	    │   └── LineCount.py 	<- counts the lines in a file, used for searching IMDB ratings
 	    │   └── Search.py 		<- searches the IMDB rating files with either IMDB id or TMDB id
 	    │   └── SaveLoadJson.py 	<- standardizes the saving and loading of Json data between scripts
+	    │   └── GetAverageRating.py <- Searches TMDB.tsv to get the average rating of all movies
 	    |
 	    ├── models         <- Scripts to train models and then use trained models to make
 	    │   │                 predictions
+	    │   └── __init__.py
 	    │   └── Stats.py <- generates some guess based on ratings.txt
 	    │
 	    └── visualization  <- Scripts to create exploratory and results oriented visualizations
