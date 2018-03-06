@@ -1,437 +1,98 @@
 {
-  "totalAdjusts": 215,
-  "ratings": [
-    [
-      "Penthouse North",
-      "5.7"
-    ],
-    [
-      "Shehar Aur Sapna",
-      "6.6"
-    ],
-    [
-      "Glenn Wool: You Don't Go to Hell for Eating Elephants",
-      "6.2"
-    ],
-    [
-      "Beware, My Lovely",
-      "6.2"
-    ],
-    [
-      "Mistaken Identity",
-      "6.1"
-    ],
-    [
-      "The Seven Little Foys",
-      "6.3"
-    ],
-    [
-      "Scent of Love",
-      "6.3"
-    ],
-    [
-      "Summer '04",
-      "4.2"
-    ],
-    [
-      "Liberation: Battle For Berlin",
-      "6.2"
-    ],
-    [
-      "El r\u00edo de oro",
-      "5.6"
-    ],
-    [
-      "The Danish Solution",
-      "6.4"
-    ],
-    [
-      "Swan Lake: The Zone",
-      "5.9"
-    ],
-    [
-      "Go There, Don't Know Where",
-      "5.4"
-    ],
-    [
-      "Ooops! Noah is Gone...",
-      "5.2"
-    ],
-    [
-      "Key House Mirror",
-      "6.1"
-    ],
-    [
-      "Location Hunting",
-      "6.3"
-    ],
-    [
-      "Kalvanin Kadhali",
-      "6.2"
-    ],
-    [
-      "The Night We Got the Bird",
-      "6.7"
-    ],
-    [
-      "Wild Games",
-      "5.9"
-    ],
-    [
-      "Magistrarna p\u00e5 sommarlov",
-      "6.2"
-    ],
-    [
-      "The Brandon Teena Story",
-      "6.7"
-    ],
-    [
-      "The Three Es",
-      "6.5"
-    ],
-    [
-      "The Beauty of the Devil",
-      "6.3"
-    ],
-    [
-      "Party Night",
-      "6.2"
-    ],
-    [
-      "Gabriel & Me",
-      "4.9"
-    ],
-    [
-      "The Rose on His Arm",
-      "6.6"
-    ],
-    [
-      "Enough",
-      "5.7"
-    ],
-    [
-      "New York Confidential",
-      "6.6"
-    ],
-    [
-      "Terror 2000",
-      "5.3"
-    ],
-    [
-      "Mookilla Rajyathu",
-      "5.6"
-    ],
-    [
-      "Joan the Maid 2: The Prisons",
-      "6.4"
-    ],
-    [
-      "The Next Voice You Hear....",
-      "6.7"
-    ],
-    [
-      "The Impatient Alchemist",
-      "6.4"
-    ],
-    [
-      "Hideouts",
-      "6.5"
-    ],
-    [
-      "From Up on Poppy Hill",
-      "5.8"
-    ],
-    [
-      "Indio",
-      "5.9"
-    ],
-    [
-      "The Misadventures of Merlin Jones",
-      "6.2"
-    ],
-    [
-      "15 Amore",
-      "6.0"
-    ],
-    [
-      "Grace Stirs Up Success",
-      "5.5"
-    ],
-    [
-      "Run for Cover",
-      "6.2"
-    ],
-    [
-      "Jak b\u00e1sn\u00edci \u010dekaj\u00ed na z\u00e1zrak",
-      "5.7"
-    ],
-    [
-      "Beauty on Duty",
-      "6.1"
-    ],
-    [
-      "Every Second Counts",
-      "6.6"
-    ],
-    [
-      "Fireworks",
-      "5.9"
-    ],
-    [
-      "Libidomania",
-      "5.9"
-    ],
-    [
-      "Love on the Debt",
-      "6.4"
-    ],
-    [
-      "Coyote",
-      "6.6"
-    ],
-    [
-      "Otai",
-      "4.4"
-    ],
-    [
-      "Queen of Kowloon",
-      "6.2"
-    ],
-    [
-      "Finding Nemo",
-      "6.5"
-    ],
-    [
-      "Ex Machina",
-      "6.3"
-    ],
-    [
-      "Doctor Who",
-      "5.3"
-    ],
-    [
-      "Jumanji",
-      "6.2"
-    ],
-    [
-      "Tuk-Tuk",
-      "6.6"
-    ],
-    [
-      "Hello!",
-      "6.4"
-    ],
-    [
-      "Testing",
-      "6.6"
-    ],
-    [
-      "Happy Days",
-      "6.7"
-    ],
-    [
-      "The Long Kiss Goodnight",
-      "6.2"
-    ],
-    [
-      "Born in Deir Yassin",
-      "6.8"
-    ],
-    [
-      "Titanic",
-      "6.0"
-    ],
-    [
-      "Inside Out",
-      "5.7"
-    ],
-    [
-      "The Truman Show",
-      "6.4"
-    ],
-    [
-      "Marshall",
-      "6.0"
-    ],
-    [
-      "Moana",
-      "6.3"
-    ],
-    [
-      "The Post",
-      "6.4"
-    ],
-    [
-      "Avengers: Infinity War",
-      "5.9"
-    ],
-    [
-      "Three Billboards Outside Ebbing, Missouri",
-      "5.5"
-    ],
-    [
-      "The Aviator",
-      "6.0"
-    ],
-    [
-      "Gangs of New York",
-      "6.3"
-    ],
-    [
-      "Phantom Thread",
-      "5.6"
-    ],
-    [
-      "The Shape of Water",
-      "6.0"
-    ],
-    [
-      "Jelly",
-      "6.3"
-    ],
-    [
-      "Space Jam",
-      "6.1"
-    ],
-    [
-      "Willy Wonka & the Chocolate Factory",
-      "6.5"
-    ],
-    [
-      "Dude, Where's My Car?",
-      "5.5"
-    ],
-    [
-      "Rubber",
-      "5.4"
-    ],
-    [
-      "Jurassic World",
-      "6.0"
-    ],
-    [
-      "Johny Mera Naam",
-      "6.9"
-    ],
-    [
-      "Apocalypse Now",
-      "6.2"
-    ],
-    [
-      "Star Wars: The Last Jedi",
-      "5.4"
-    ],
-    [
-      "Star Wars: The Force Awakens",
-      "6.1"
-    ],
-    [
-      "Apocalypto",
-      "6.5"
-    ],
-    [
-      "A Juicy Turkey",
-      "6.7"
-    ],
-    [
-      "Ari",
-      "6.7"
-    ],
-    [
-      "Jake",
-      "6.2"
-    ],
-    [
-      "Amos & Andrew",
-      "6.3"
-    ],
-    [
-      "Brandon Semenuk's Rad Company",
-      "6.1"
-    ],
-    [
-      "In Bed with Victoria",
-      "5.3"
-    ],
-    [
-      "Danielle",
-      "5.4"
-    ],
-    [
-      "Bitch",
-      "5.8"
-    ],
-    [
-      "Poison Ivy",
-      "5.8"
-    ],
-    [
-      "Marley & Me",
-      "5.8"
-    ],
-    [
-      "Fuck",
-      "6.6"
-    ],
-    [
-      "The Waterboy",
-      "6.4"
-    ],
-    [
-      "Happy Death Day",
-      "5.5"
-    ],
-    [
-      "Madagascar",
-      "5.7"
-    ],
-    [
-      "Planet Earth",
-      "5.5"
-    ],
-    [
-      "Blades of Glory",
-      "6.2"
-    ],
-    [
-      "Black Mirror: White Christmas",
-      "6.1"
-    ],
-    [
-      "No Half Measures: Creating the Final Season of Breaking Bad",
-      "6.6"
-    ],
-    [
-      "The Best of Me",
-      "5.9"
-    ],
-    [
-      "Inception",
-      "5.9"
-    ],
-    [
-      "Harry Potter and the Chamber of Secrets",
-      "6.4"
-    ],
-    [
-      "The Dark Knight Rises",
-      "5.9"
-    ],
-    [
-      "The Hateful Eight",
-      "6.4"
-    ]
-  ],
-  "totalRequests": 101,
+  "totalRequests": 394, 
   "weights": {
-    "Max": 1.286,
-    "Min": 0.524,
-    "Genres": 1.158,
-    "Directors": 1.249,
-    "Average": 1.574,
-    "Writers": 1.496,
-    "Producers": 1,
-    "Actors": 0.75
-  },
-  "totalQueries": 1206
+    "Genres": 1.166, 
+    "Min": 0.469, 
+    "Max": 1.341, 
+    "Average": 1.599, 
+    "Producers": 1.002, 
+    "Directors": 1.223, 
+    "Writers": 1.48, 
+    "Actors": 0.702, 
+    "Company": 1.017
+  }, 
+  "totalQueries": 3122, 
+  "totalAdjusts": 349, 
+  "ratings": [
+    "{\"Id\": \"12\", \"Average\": \"6.7\", \"Name\": \"Finding Nemo\", \"Error\": \"17.84\", \"Actual\": \"8.1\"}", 
+    "{\"Name\": \"Ex Machina\", \"Id\": \"264660\", \"Average\": \"6.4\", \"Actual\": \"7.7\", \"Error\": \"16.56\"}", 
+    "{\"Average\": \"5.4\", \"Name\": \"Black Panther\", \"Id\": \"284054\", \"Error\": \"0.00\", \"Actual\": \"0\"}", 
+    "{\"Actual\": \"8.4\", \"Name\": \"The Dark Knight Rises\", \"Error\": \"28.64\", \"Average\": \"6.0\", \"Id\": \"49026\"}", 
+    "{\"Name\": \"The Dark Knight\", \"Average\": \"5.8\", \"Id\": \"155\", \"Actual\": \"9.0\", \"Error\": \"35.73\"}", 
+    "{\"Average\": \"6.3\", \"Name\": \"Jumanji\", \"Actual\": \"6.9\", \"Id\": \"8844\", \"Error\": \"9.33\"}", 
+    "{\"Average\": \"5.9\", \"Id\": \"299536\", \"Actual\": \"0\", \"Name\": \"Avengers: Infinity War\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"5.9\", \"Id\": \"8247\", \"Actual\": \"6.1\", \"Name\": \"Jumper\", \"Error\": \"3.27\"}", 
+    "{\"Average\": \"5.8\", \"Id\": \"120\", \"Actual\": \"8.8\", \"Name\": \"The Lord of the Rings: The Fellowship of the Ring\", \"Error\": \"34.04\"}", 
+    "{\"Average\": \"6.5\", \"Id\": \"603\", \"Actual\": \"8.7\", \"Name\": \"The Matrix\", \"Error\": \"25.27\"}", 
+    "{\"Average\": \"6.1\", \"Id\": \"767\", \"Actual\": \"7.5\", \"Name\": \"Harry Potter and the Half-Blood Prince\", \"Error\": \"18.78\"}", 
+    "{\"Average\": \"5.8\", \"Id\": \"400617\", \"Actual\": \"0\", \"Name\": \"Phantom Thread\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"6.1\", \"Id\": \"329\", \"Actual\": \"8.1\", \"Name\": \"Jurassic Park\", \"Error\": \"24.64\"}", 
+    "{\"Average\": \"5.3\", \"Id\": \"235303\", \"Actual\": \"0\", \"Name\": \"Hostess Confidential: Three Juicy Sisters\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"5.6\", \"Id\": \"383498\", \"Actual\": \"0\", \"Name\": \"The Untitled Deadpool Sequel\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"6.0\", \"Id\": \"278\", \"Actual\": \"9.3\", \"Name\": \"The Shawshank Redemption\", \"Error\": \"35.23\"}", 
+    "{\"Average\": \"6.7\", \"Id\": \"269981\", \"Actual\": \"0\", \"Name\": \"Twelve Angry Men\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"5.8\", \"Id\": \"398818\", \"Actual\": \"8.2\", \"Name\": \"Call Me by Your Name\", \"Error\": \"29.17\"}", 
+    "{\"Average\": \"6.0\", \"Id\": \"27205\", \"Actual\": \"8.8\", \"Name\": \"Inception\", \"Error\": \"31.81\"}", 
+    "{\"Average\": \"6.3\", \"Id\": \"308266\", \"Actual\": \"7.1\", \"Name\": \"War Dogs\", \"Error\": \"10.83\"}", 
+    "{\"Average\": \"5.7\", \"Id\": \"24428\", \"Actual\": \"8.1\", \"Name\": \"The Avengers\", \"Error\": \"29.71\"}", 
+    "{\"Average\": \"6.3\", \"Id\": \"620\", \"Actual\": \"7.8\", \"Name\": \"Ghostbusters\", \"Error\": \"19.87\"}", 
+    "{\"Average\": \"5.7\", \"Id\": \"272\", \"Actual\": \"8.3\", \"Name\": \"Batman Begins\", \"Error\": \"30.76\"}", 
+    "{\"Average\": \"5.6\", \"Id\": \"363088\", \"Actual\": \"0\", \"Name\": \"Ant-Man and the Wasp\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"6.6\", \"Id\": \"77467\", \"Actual\": \"6.7\", \"Name\": \"Edo Porn\", \"Error\": \"0.76\"}", 
+    "{\"Average\": \"6.4\", \"Id\": \"103139\", \"Actual\": \"4.9\", \"Name\": \"A Lady Called Andrew\", \"Error\": \"29.70\"}", 
+    "{\"Average\": \"6.6\", \"Id\": \"466190\", \"Actual\": \"8.4\", \"Name\": \"The Killer\", \"Error\": \"21.17\"}", 
+    "{\"Average\": \"6.8\", \"Id\": \"328020\", \"Actual\": \"0\", \"Name\": \"Blah Blah Blah\", \"Error\": \"0.00\"}", 
+    "{\"Average\": \"5.6\", \"Id\": \"20365\", \"Actual\": \"3.4\", \"Name\": \"Hello\", \"Error\": \"63.45\"}", 
+    "{\"Average\": \"6.6\", \"Id\": \"249836\", \"Actual\": \"4.8\", \"Name\": \"Nemo\", \"Error\": \"36.46\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"The Hobbit\", \"Average\": \"4.8\", \"Imdb_id\": \"tt0077687\", \"Error\": \"0.00\", \"Id\": \"1362\"}", 
+    "{\"Actual\": \"7.9\", \"Name\": \"The Hobbit: An Unexpected Journey\", \"Average\": \"5.9\", \"Imdb_id\": \"tt0903624\", \"Error\": \"25.59\", \"Id\": \"49051\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"List\", \"Average\": \"6.7\", \"Imdb_id\": \"tt2947260\", \"Error\": \"0.00\", \"Id\": \"396553\"}", 
+    "{\"Actual\": \"4.3\", \"Name\": \"Hannah Montana: The Movie\", \"Average\": \"5.1\", \"Imdb_id\": \"tt1114677\", \"Error\": \"19.18\", \"Id\": \"18126\"}", 
+    "{\"Actual\": \"8.5\", \"Name\": \"Godfather\", \"Average\": \"7.2\", \"Imdb_id\": \"tt0353496\", \"Error\": \"15.84\", \"Id\": \"134474\"}", 
+    "{\"Actual\": \"9.2\", \"Name\": \"The Godfather\", \"Average\": \"6.4\", \"Imdb_id\": \"tt0068646\", \"Error\": \"30.16\", \"Id\": \"238\"}", 
+    "{\"Actual\": \"9.0\", \"Name\": \"The Godfather: Part II\", \"Average\": \"6.7\", \"Imdb_id\": \"tt0071562\", \"Error\": \"25.66\", \"Id\": \"240\"}", 
+    "{\"Actual\": \"8.3\", \"Name\": \"Three Billboards Outside Ebbing, Missouri\", \"Average\": \"5.6\", \"Imdb_id\": \"tt5027774\", \"Error\": \"32.97\", \"Id\": \"359940\"}", 
+    "{\"Actual\": \"7.5\", \"Name\": \"The Shape of Water\", \"Average\": \"6.2\", \"Imdb_id\": \"tt5580390\", \"Error\": \"17.84\", \"Id\": \"399055\"}", 
+    "{\"Actual\": \"8.0\", \"Name\": \"The Sound of Music\", \"Average\": \"6.8\", \"Imdb_id\": \"tt0059742\", \"Error\": \"15.34\", \"Id\": \"15121\"}", 
+    "{\"Actual\": \"7.2\", \"Name\": \"The Outsiders\", \"Average\": \"6.4\", \"Imdb_id\": \"tt0086066\", \"Error\": \"10.47\", \"Id\": \"227\"}", 
+    "{\"Actual\": \"7.4\", \"Name\": \"Harry Potter and the Chamber of Secrets\", \"Average\": \"6.5\", \"Imdb_id\": \"tt0295297\", \"Error\": \"11.70\", \"Id\": \"672\"}", 
+    "{\"Actual\": \"7.8\", \"Name\": \"The Hangover\", \"Average\": \"6.3\", \"Imdb_id\": \"tt1119646\", \"Error\": \"19.09\", \"Id\": \"18785\"}", 
+    "{\"Actual\": \"6.8\", \"Name\": \"Pretty in Pink\", \"Average\": \"6.5\", \"Imdb_id\": \"tt0091790\", \"Error\": \"4.03\", \"Id\": \"11522\"}", 
+    "{\"Actual\": \"3.3\", \"Name\": \"Captain America\", \"Average\": \"6.0\", \"Imdb_id\": \"tt0103923\", \"Error\": \"82.18\", \"Id\": \"13995\"}", 
+    "{\"Actual\": \"7.9\", \"Name\": \"Captain America: Civil War\", \"Average\": \"5.8\", \"Imdb_id\": \"tt3498820\", \"Error\": \"26.68\", \"Id\": \"271110\"}", 
+    "{\"Actual\": \"6.9\", \"Name\": \"Captain America: The First Avenger\", \"Average\": \"6.0\", \"Imdb_id\": \"tt0458339\", \"Error\": \"13.38\", \"Id\": \"1771\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Johnny\", \"Average\": \"6.2\", \"Imdb_id\": \"None\", \"Error\": \"0.00\", \"Id\": \"482423\"}", 
+    "{\"Actual\": \"7.1\", \"Name\": \"Stargate\", \"Average\": \"5.8\", \"Imdb_id\": \"tt0111282\", \"Error\": \"17.65\", \"Id\": \"2164\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Parks and Recreation: Cast and Creators Live at PALEYFEST 2014\", \"Average\": \"6.8\", \"Imdb_id\": \"None\", \"Error\": \"0.00\", \"Id\": \"306058\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"A Smallville Man\", \"Average\": \"6.8\", \"Imdb_id\": \"None\", \"Error\": \"0.00\", \"Id\": \"369307\"}", 
+    "{\"Actual\": \"8.7\", \"Name\": \"Star Wars\", \"Average\": \"5.0\", \"Imdb_id\": \"tt0076759\", \"Error\": \"42.47\", \"Id\": \"11\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Solo: A Star Wars Story\", \"Average\": \"5.9\", \"Imdb_id\": \"tt3778644\", \"Error\": \"0.00\", \"Id\": \"348350\"}", 
+    "{\"Actual\": \"8.1\", \"Name\": \"Star Wars: The Force Awakens\", \"Average\": \"6.2\", \"Imdb_id\": \"tt2488496\", \"Error\": \"24.05\", \"Id\": \"140607\"}", 
+    "{\"Actual\": \"8.4\", \"Name\": \"Return of the Jedi\", \"Average\": \"5.8\", \"Imdb_id\": \"tt0086190\", \"Error\": \"31.30\", \"Id\": \"1892\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"The Post\", \"Average\": \"6.3\", \"Imdb_id\": \"tt6294822\", \"Error\": \"0.00\", \"Id\": \"446354\"}", 
+    "{\"Actual\": \"4.9\", \"Name\": \"The Darkest Hour\", \"Average\": \"6.2\", \"Imdb_id\": \"tt1093357\", \"Error\": \"27.05\", \"Id\": \"71469\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Asdfmovie9\", \"Average\": \"6.9\", \"Imdb_id\": \"tt4952110\", \"Error\": \"0.00\", \"Id\": \"493471\"}", 
+    "{\"Actual\": \"6.2\", \"Name\": \"Life Partners\", \"Average\": \"6.5\", \"Imdb_id\": \"tt2870808\", \"Error\": \"4.13\", \"Id\": \"260001\"}", 
+    "{\"Actual\": \"6.4\", \"Name\": \"A Piece of Our Life\", \"Average\": \"6.6\", \"Imdb_id\": \"tt1512184\", \"Error\": \"3.43\", \"Id\": \"62390\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Jumanji: Welcome to the Jungle\", \"Average\": \"5.8\", \"Imdb_id\": \"tt2283362\", \"Error\": \"0.00\", \"Id\": \"353486\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Red Sparrow\", \"Average\": \"5.9\", \"Imdb_id\": \"tt2873282\", \"Error\": \"0.00\", \"Id\": \"401981\"}", 
+    "{\"Actual\": \"6.8\", \"Name\": \"21\", \"Average\": \"5.8\", \"Imdb_id\": \"tt0478087\", \"Error\": \"14.46\", \"Id\": \"8065\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Annihilation\", \"Average\": \"6.6\", \"Imdb_id\": \"tt2798920\", \"Error\": \"0.00\", \"Id\": \"300668\"}", 
+    "{\"Actual\": \"8.0\", \"Name\": \"Black Swan\", \"Average\": \"5.7\", \"Imdb_id\": \"tt0947798\", \"Error\": \"28.82\", \"Id\": \"44214\"}", 
+    "{\"Actual\": \"8.0\", \"Name\": \"Her\", \"Average\": \"4.9\", \"Imdb_id\": \"tt1798709\", \"Error\": \"39.36\", \"Id\": \"152601\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Dinner in Abruzzo: A Journey Home With My Culinary Godfather\", \"Average\": \"6.3\", \"Imdb_id\": \"None\", \"Error\": \"0.00\", \"Id\": \"466488\"}", 
+    "{\"Actual\": \"7.6\", \"Name\": \"Mulan\", \"Average\": \"6.6\", \"Imdb_id\": \"tt0120762\", \"Error\": \"12.76\", \"Id\": \"10674\"}", 
+    "{\"Actual\": \"7.4\", \"Name\": \"Finding Dory\", \"Average\": \"6.4\", \"Imdb_id\": \"tt2277860\", \"Error\": \"13.28\", \"Id\": \"127380\"}", 
+    "{\"Actual\": \"5.8\", \"Name\": \"Real\", \"Average\": \"5.9\", \"Imdb_id\": \"tt2280964\", \"Error\": \"2.55\", \"Id\": \"180891\"}", 
+    "{\"Actual\": \"8.2\", \"Name\": \"La La Land\", \"Average\": \"6.1\", \"Imdb_id\": \"tt3783958\", \"Error\": \"26.15\", \"Id\": \"313369\"}", 
+    "{\"Actual\": \"7.9\", \"Name\": \"The Notebook\", \"Average\": \"5.8\", \"Imdb_id\": \"tt0332280\", \"Error\": \"26.70\", \"Id\": \"11036\"}", 
+    "{\"Actual\": \"6.3\", \"Name\": \"God the Father\", \"Average\": \"5.5\", \"Imdb_id\": \"tt3722118\", \"Error\": \"13.30\", \"Id\": \"295134\"}", 
+    "{\"Actual\": \"5.9\", \"Name\": \"Ouch\", \"Average\": \"6.4\", \"Imdb_id\": \"tt0236000\", \"Error\": \"9.15\", \"Id\": \"78657\"}", 
+    "{\"Actual\": \"6.3\", \"Name\": \"Honey, I Shrunk the Kids\", \"Average\": \"5.8\", \"Imdb_id\": \"tt0097523\", \"Error\": \"7.78\", \"Id\": \"9354\"}", 
+    "{\"Actual\": \"6.2\", \"Name\": \"Sky High\", \"Average\": \"6.1\", \"Imdb_id\": \"tt0405325\", \"Error\": \"2.25\", \"Id\": \"11459\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"Hello & Goodbye\", \"Average\": \"6.9\", \"Imdb_id\": \"tt3100938\", \"Error\": \"0.00\", \"Id\": \"507531\"}", 
+    "{\"Actual\": \"8.1\", \"Name\": \"Gandhi\", \"Average\": \"6.7\", \"Imdb_id\": \"tt0083987\", \"Error\": \"17.12\", \"Id\": \"783\"}", 
+    "{\"Actual\": \"0\", \"Name\": \"A Wrinkle in Time\", \"Average\": \"5.7\", \"Imdb_id\": \"tt1620680\", \"Error\": \"0.00\", \"Id\": \"407451\"}", 
+    "{\"Actual\": \"5.3\", \"Name\": \"Darkest Hour\", \"Average\": \"6.6\", \"Imdb_id\": \"tt4555426\", \"Error\": \"25.46\", \"Id\": \"399404\"}"
+  ]
 }
