@@ -80,13 +80,15 @@ class FactorQuery:
         results = copy.deepcopy(FactorQuery.resultStruct)
 
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
-            if(val["media_type"] == "movie" and val["job"] == job and "release_date" in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
-                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
-                date = dateNow
-                if FactorQuery.dateMovie != 0:
-                    dateNow = FactorQuery.dateMovie
-                if(val["release_date"] != ""):
-                    date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
+            if(val["media_type"] == "movie" and val["job"] == job in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
+                dateNow = 1
+                date = 0
+                #dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
+                #date = dateNow
+                #if FactorQuery.dateMovie != 0:
+                #    dateNow = FactorQuery.dateMovie
+                #if(val["release_date"] != ""):
+                #    date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
                 if(dateNow > date):
                     rating = "0\t0\t0\t0\n"
                     temprating = Search.find(val["id"])
@@ -116,13 +118,15 @@ class FactorQuery:
         results = copy.deepcopy(FactorQuery.resultStruct)
 
         for val in data["cast"]:
-            if(val["media_type"] == "movie" and "release_date" in val):                                 #check movie type, if director, and contains release date
-                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))          #TODO: replace dateNow with date of movie being looked
-                date = dateNow
-                if FactorQuery.dateMovie != 0:
-                    dateNow = FactorQuery.dateMovie
-                if(val["release_date"] != ""):
-                    date = int(val["release_date"].replace("-", ""))
+            if(val["media_type"] == "movie" in val):                                 #check movie type, if director, and contains release date
+                dateNow = 1
+                date = 0
+                #dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))          #TODO: replace dateNow with date of movie being looked
+                #date = dateNow
+                #if FactorQuery.dateMovie != 0:
+                #    dateNow = FactorQuery.dateMovie
+                #if(val["release_date"] != ""):
+                #    date = int(val["release_date"].replace("-", ""))
                 if(dateNow > date):                                                                     #check if movie has been released yet....
                     rating = "0\t0\t0\t0\n"
                     temprating = Search.find(val["id"])
@@ -152,13 +156,15 @@ class FactorQuery:
         results = copy.deepcopy(FactorQuery.resultStruct)
 
         for val in data["crew"]:                                                                        #loop through all keys in json dictionary
-            if(val["media_type"] == "movie" and val["department"] == department and "release_date" in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
-                dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
-                date = dateNow
-                if FactorQuery.dateMovie != 0:
-                    dateNow = FactorQuery.dateMovie
-                if(val["release_date"] != ""):
-                    date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
+            if(val["media_type"] == "movie" and val["department"] == department in val):    #check movie type, if director, and contains release date						#divide release date up into comparable parts
+                #dateNow = int(str(now.year) + str(now.month).zfill(2) + str(now.day).zfill(2))
+                dateNow = 1
+                date = 0
+                #date = dateNow
+                #if FactorQuery.dateMovie != 0:
+                #    dateNow = FactorQuery.dateMovie
+                #if(val["release_date"] != ""):
+                #    date = int(val["release_date"].replace("-", ""))                                    #TODO: replace dateNow with date of movie being looked at
                 if(dateNow > date):
                     rating = "0\t0\t0\t0\n"
                     temprating = Search.find(val["id"])
@@ -195,7 +201,8 @@ class FactorQuery:
             "Producers":[],
             "Genres":[],
             "Average":[],
-            "Company":[]
+            "Company":[],
+            "Year":[]
             }
 
         #Genres -------------------------------------------------
@@ -203,6 +210,9 @@ class FactorQuery:
             if genre in avgRating["Genres"]:
                 data["Genres"].append(avgRating["Genres"][genre])
         data["Average"].append(avgRating["Average"])
+
+        #Year ---------------------------------------------------
+        data["Year"].append(avgRating["Years"][str(parameters["Date"])[:4]])
 
         #Companies ----------------------------------------------
         if "Production_companies" in parameters:

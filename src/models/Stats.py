@@ -23,7 +23,7 @@ class Stats:
         #People to look at
         works = ["Actors","Directors","Writers","Producers"]
         #Averages to look at
-        values = ["Genres", "Average","Company"]
+        values = ["Genres", "Average","Company","Year"]
 
         newWeights = {}
 
@@ -33,6 +33,7 @@ class Stats:
                    "Producers":[0.0,0,0.0],
                    "Genres":[0.0,0,0.0],
                    "Company":[0.0,0,0.0],
+                   "Year":[0.0,0,0.0],
                    "Average":[0.0,0,0.0],
                    "Max":[10.0,1,0.0],
                    "Min":[0.0001,1,0.0]
